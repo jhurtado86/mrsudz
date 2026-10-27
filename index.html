@@ -3,34 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Services in [City] | Your Business Name</title>
-  <meta name="description" content="Professional home services in [City], [ST] and across the [Region]. Same-day appointments, free estimates, and clear, upfront pricing. Call (555) 000-0000." />
-  <meta name="keywords" content="home services [City] [ST], home services [City], local home services [Region], home services near me [City], [City 2] home services, professional home services [Region], Your Business Name [City]" />
+  <title>Laundromat in Pharr, TX | Mr. Sudz Laundromat</title>
+  <meta name="description" content="Clean laundromat in Pharr, TX with self-service machines, wash &amp; fold, ironing, and pickup &amp; delivery. Open daily 7am–10pm. Book a pickup today." />
+  <meta name="keywords" content="laundromat Pharr TX, laundromat near me, wash and fold Pharr, laundry pickup and delivery Pharr, self-service laundry Pharr, dry cleaning Pharr, laundromat McAllen, laundromat Rio Grande Valley, Mr. Sudz Laundromat" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://www.mrsudzrgv.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Home Services in [City] | Your Business Name" />
-  <meta property="og:description" content="Professional home services across [City] &amp; the [Region]. Same-day appointments, free estimates, and mobile service to your door. Call (555) 000-0000." />
+  <meta property="og:title" content="Laundromat in Pharr, TX | Mr. Sudz Laundromat" />
+  <meta property="og:description" content="Family-owned laundromat in Pharr, TX. Self-service, wash, dry &amp; fold, ironing, dry cleaning, and pickup &amp; delivery. Open daily 7am–10pm." />
   <meta property="og:url" content="https://www.mrsudzrgv.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: brand_assets/og-image.jpg does not exist yet — create 1200×630 social share image before launch -->
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:site_name" content="Your Business Name" />
+  <meta property="og:site_name" content="Mr. Sudz Laundromat" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Home Services in [City] | Your Business Name" />
-  <meta name="twitter:description" content="Professional home services across [City] &amp; the [Region]. Same-day appointments, free estimates, and clear, upfront pricing. Call (555) 000-0000." />
+  <meta name="twitter:title" content="Laundromat in Pharr, TX | Mr. Sudz Laundromat" />
+  <meta name="twitter:description" content="Family-owned laundromat in Pharr, TX. Self-service, wash, dry &amp; fold, and pickup &amp; delivery. Open daily 7am–10pm." />
   <meta name="twitter:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: same 1200×630 image -->
+
+  <!-- GHL EXTERNAL TRACKING SCRIPT -->
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/brand.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..900&family=IBM+Plex+Mono:wght@500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <script>
     tailwind.config = {
@@ -39,23 +41,18 @@
           colors: {
             /* Semantic palette — values resolve from /brand.css tokens */
             primary: { DEFAULT: 'var(--color-primary)', mid: 'var(--color-primary-mid)' },
-            accent:  { DEFAULT: 'var(--color-accent)', deep: 'var(--color-accent-deep)' },
+            accent:  { DEFAULT: 'var(--color-accent)', deep: 'var(--color-accent-deep)', bright: 'var(--color-accent-bright)' },
             dark:    { DEFAULT: 'var(--color-dark)', 3: 'var(--color-dark-3)' },
             ink:     'var(--color-ink)',
             muted:   { DEFAULT: 'var(--color-muted)', light: 'var(--color-muted-light)' },
+            silver:  'var(--color-silver)',
             line:    'var(--color-line)',
             bg:      { DEFAULT: 'var(--color-bg)', 2: 'var(--color-bg-2)' },
-            rating:  'var(--color-rating)',
           },
           fontFamily: {
-            display: ['Barlow', 'sans-serif'],
+            display: ['Archivo', 'sans-serif'],
             body:    ['Nunito', 'sans-serif'],
-          },
-          boxShadow: {
-            'card':    '0 2px 8px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)',
-            'card-lg': '0 8px 32px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.05)',
-            'glow':    '0 0 28px rgba(var(--color-dark-rgb),0.16)',
-            'cta':     '0 4px 20px rgba(var(--color-accent-rgb),0.30)',
+            mono:    ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
           },
           letterSpacing: { tight: '-0.03em' },
           lineHeight:    { body: '1.7' },
@@ -70,7 +67,22 @@
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Nunito', sans-serif; background: var(--color-bg); color: var(--color-ink); }
-    h1,h2,h3,h4 { font-family: 'Barlow', sans-serif; }
+
+    /* ── Type system ──
+       Display: Archivo set wide (font-stretch) + heavy — echoes the logo's wide, chunky wordmark.
+       Body: Nunito (rounded, friendly). Utility: IBM Plex Mono — hours/status data only. */
+    h1,h2,h3,h4, .font-display { font-family: 'Archivo', sans-serif; font-stretch: 112%; }
+    .display-xl { font-stretch: 122%; font-weight: 900; letter-spacing: -0.035em; line-height: 0.98; }
+    .h2 { font-size: clamp(2rem, 4.2vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.06; }
+    .h2-split { font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.08; }
+    .lede { font-size: 1.125rem; line-height: 1.72; }
+    .eyebrow {
+      font-family: 'Archivo', sans-serif; font-stretch: 118%;
+      font-size: 12px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--color-accent-deep); margin-bottom: 14px;
+    }
+    .dark-section .eyebrow, .hero-bg .eyebrow { color: var(--color-accent-bright); }
+    .mono { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
 
     .section-dark { background: var(--color-bg); }
     .section-mid  {
@@ -78,9 +90,14 @@
         radial-gradient(ellipse 100% 60% at 50% 0%, rgba(var(--color-dark-rgb), 0.05) 0%, transparent 55%),
         var(--color-bg-2);
     }
-    .dark-section { background: var(--color-dark); }
+    .dark-section {
+      background:
+        radial-gradient(ellipse 70% 60% at 100% 0%, rgba(var(--color-accent-rgb), 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 55% at 0% 100%, rgba(var(--color-dark-3-rgb), 0.55) 0%, transparent 60%),
+        var(--color-dark);
+    }
 
-    /* ---- Atmospheric depth for light sections (grain + corner wash) ---- */
+    /* ---- Atmospheric depth (grain + corner wash) ---- */
     .atmo { position: relative; overflow: hidden; }
     .atmo > * { position: relative; z-index: 1; }
     .atmo::before {
@@ -93,89 +110,40 @@
       background: var(--wash, transparent);
     }
     .wash-navy-tr  { --wash: radial-gradient(ellipse 55% 48% at 100% 0%,   rgba(var(--color-dark-rgb), 0.06) 0%, transparent 60%); }
-    .wash-navy-br  { --wash: radial-gradient(ellipse 55% 48% at 100% 100%, rgba(var(--color-dark-rgb), 0.06) 0%, transparent 60%); }
     .wash-navy-bl  { --wash: radial-gradient(ellipse 55% 48% at 0% 100%,   rgba(var(--color-dark-rgb), 0.06) 0%, transparent 60%); }
-    .wash-ember-tl { --wash: radial-gradient(ellipse 55% 48% at 0% 0%,     rgba(var(--color-accent-rgb), 0.05) 0%, transparent 60%); }
-    .wash-ember-tr { --wash: radial-gradient(ellipse 55% 48% at 100% 0%,   rgba(var(--color-accent-rgb), 0.05) 0%, transparent 60%); }
+    .wash-sky-tl   { --wash: radial-gradient(ellipse 55% 48% at 0% 0%,     rgba(var(--color-accent-rgb), 0.08) 0%, transparent 60%); }
+    .wash-sky-tr   { --wash: radial-gradient(ellipse 55% 48% at 100% 0%,   rgba(var(--color-accent-rgb), 0.08) 0%, transparent 60%); }
 
-    /* ---- Insurance section: deep-navy treatment (page rhythm) ---- */
-    #insurance.dark-section {
-      background:
-        radial-gradient(ellipse 90% 70% at 12% 0%,   rgba(var(--color-dark-rgb), 0.20) 0%, transparent 55%),
-        radial-gradient(ellipse 85% 65% at 100% 100%, rgba(var(--color-accent-rgb), 0.08) 0%, transparent 52%),
-        var(--color-dark);
-    }
-    #insurance .area-card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.055) 0%, rgba(255,255,255,0.02) 100%), rgba(var(--color-dark-rgb), 0.45);
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 20px 50px rgba(0,0,0,0.38), inset 0 1px 0 rgba(255,255,255,0.06);
-    }
-    #insurance .area-card > .text-center span { color: var(--color-muted-light) !important; }
-    #insurance .area-card p { color: var(--color-muted-light) !important; }
-    #insurance .insurer-pill {
-      background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.16); color: var(--color-line);
-    }
-    #insurance .insurer-pill:hover {
-      background: rgba(255,255,255,0.12); border-color: rgba(var(--color-accent-rgb), 0.45); transform: translateY(-1px);
-    }
-
-    /* ---- Reviews section: deep-navy treatment (page rhythm) ---- */
-    #reviews.dark-section {
-      background:
-        radial-gradient(ellipse 80% 60% at 12% 6%, rgba(var(--color-accent-rgb), 0.07) 0%, transparent 50%),
-        var(--color-dark);
-    }
-    #reviews .area-card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.055) 0%, rgba(255,255,255,0.02) 100%), rgba(var(--color-dark-rgb), 0.45) !important;
-      border-color: rgba(255,255,255,0.10) !important;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 20px 50px rgba(0,0,0,0.38), inset 0 1px 0 rgba(255,255,255,0.06);
-    }
-
-    .dark-section .text-white        { color: var(--color-bg) !important; }
-    .dark-section .text-muted  { color: var(--color-muted-light) !important; }
-    .dark-section .btn-outline       { color: var(--color-bg); border-color: rgba(255,255,255,0.28); }
-    .dark-section .btn-outline:hover { border-color: rgba(255,255,255,0.60); background: rgba(255,255,255,0.06); }
-    .dark-section .divider           { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent); }
-    .dark-section .section-title-accent { background: linear-gradient(90deg, transparent 0%, var(--color-accent) 25%, var(--color-accent) 75%, transparent 100%); }
-    .dark-section .link-arrow        { color: var(--color-accent-bright); }
-    .dark-section .link-arrow:hover  { color: var(--color-line); }
+    .dark-section .text-white { color: var(--color-bg) !important; }
+    .dark-section .text-muted { color: var(--color-silver) !important; }
+    .dark-section .divider    { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.10), transparent); }
+    .dark-section .link-arrow       { color: var(--color-accent-bright); }
+    .dark-section .link-arrow:hover { color: var(--color-bg); }
 
     .section-dark .text-white,
-    .section-mid  .text-white       { color: var(--color-ink); }
+    .section-mid  .text-white { color: var(--color-ink); }
     .section-dark .text-muted,
     .section-mid  .text-muted { color: var(--color-muted); }
-    .hero-bg .text-muted      { color: var(--color-muted-light); }
+    .hero-bg .text-muted      { color: var(--color-silver); }
 
     .divider {
       height: 1px;
       background: linear-gradient(90deg, transparent 0%, rgba(var(--color-dark-rgb), 0.12) 30%, rgba(var(--color-dark-rgb), 0.12) 70%, transparent 100%);
     }
 
-    .dark-cta-ramp {
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 90px; pointer-events: none; z-index: 3;
-      background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, transparent 100%);
+    /* ── Logo chip — logo.png is RGB on solid white (no alpha), so it always sits on white ── */
+    .logo-chip {
+      display: inline-flex; align-items: center; background: var(--color-bg);
+      padding: 4px 10px; border-radius: 12px;
+      box-shadow: 0 1px 2px rgba(var(--color-ink-rgb), 0.10), 0 8px 22px -8px rgba(var(--color-ink-rgb), 0.45);
+      transition: transform 0.24s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.24s cubic-bezier(0.4,0,0.2,1);
     }
-
-    .nav-wordmark {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 800; font-size: 24px;
-      letter-spacing: -0.02em; color: var(--color-bg); line-height: 1;
-      transition: color 0.25s cubic-bezier(0.4,0,0.2,1);
-    }
-    #navbar.scrolled .nav-wordmark { color: var(--color-ink); }
-
-    /* Nav bar + logo sizing — driven by --nav-height / --nav-logo-height /
-       --footer-logo-height in brand.css (size the nav off the client logo). */
-    #navbar .nav-row { height: var(--nav-height); }
+    a.logo-chip:hover  { transform: translateY(-1px) rotate(-1deg); }
+    a.logo-chip:active { transform: translateY(0); }
+    #navbar.scrolled .logo-chip { box-shadow: 0 0 0 1px rgba(var(--color-dark-rgb), 0.06); }
     .nav-logo    { height: var(--nav-logo-height); width: auto; display: block; }
     .footer-logo { height: var(--footer-logo-height); width: auto; display: block; }
-
-    .footer-wordmark {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 800; font-size: 28px;
-      letter-spacing: -0.02em; color: var(--color-bg); line-height: 1;
-    }
+    #navbar .nav-row { height: var(--nav-height); }
 
     #navbar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 50;
@@ -185,21 +153,21 @@
                   border-color 0.40s cubic-bezier(0.4,0,0.2,1),
                   box-shadow 0.40s cubic-bezier(0.4,0,0.2,1);
     }
-    #navbar .text-muted          { color: rgba(255,255,255,0.68) !important; }
+    #navbar .text-muted                { color: rgba(255,255,255,0.78) !important; }
     #navbar .hover\:text-white:hover   { color: rgba(255,255,255,1) !important; }
-    #navbar #hamburger                 { color: rgba(255,255,255,0.80) !important; border-color: rgba(255,255,255,0.18) !important; }
-    #mobile-menu                       { background: rgba(var(--color-dark-rgb), 0.96); backdrop-filter: blur(18px); }
-    #mobile-menu a.mobile-nav-link     { color: rgba(255,255,255,0.68) !important; }
+    #navbar #hamburger                 { color: rgba(255,255,255,0.85) !important; border-color: rgba(255,255,255,0.22) !important; }
+    #mobile-menu                       { background: rgba(var(--color-dark-rgb), 0.97); backdrop-filter: blur(18px); }
+    #mobile-menu a.mobile-nav-link     { color: rgba(255,255,255,0.78) !important; }
     #mobile-menu a.mobile-nav-link:hover { color: rgba(255,255,255,1) !important; background: rgba(255,255,255,0.06) !important; }
     #mobile-menu                       { border-top-color: rgba(255,255,255,0.08) !important; }
 
     #navbar.scrolled {
-      background: rgba(255,255,255,0.72);
+      background: rgba(255,255,255,0.82);
       backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
-      border-bottom-color: rgba(var(--color-dark-rgb), 0.07);
-      box-shadow: 0 1px 24px rgba(0,0,0,0.06);
+      border-bottom-color: rgba(var(--color-dark-rgb), 0.08);
+      box-shadow: 0 1px 24px rgba(var(--color-dark-rgb), 0.08);
     }
-    #navbar.scrolled .text-muted         { color: var(--color-muted) !important; }
+    #navbar.scrolled .text-muted               { color: var(--color-muted) !important; }
     #navbar.scrolled .hover\:text-white:hover  { color: var(--color-ink) !important; }
     #navbar.scrolled #hamburger                { color: var(--color-ink) !important; border-color: rgba(var(--color-dark-rgb), 0.16) !important; }
     #navbar.scrolled #mobile-menu              { background: var(--color-bg); }
@@ -209,13 +177,14 @@
 
     .nav-link { position: relative; }
     .nav-link::after {
-      content: ''; position: absolute; bottom: -2px; left: 0;
-      width: 0; height: 2px; background: var(--color-accent);
-      transition: width 0.25s cubic-bezier(0.4,0,0.2,1);
+      content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 2px; background: var(--color-accent); border-radius: 2px;
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
     }
-    .nav-link:hover::after { width: 100%; }
+    .nav-link:hover::after { transform: scaleX(1); }
 
-    /* ── Services dropdown (desktop) ── */
+    /* ── Dropdowns (desktop) ── */
     .nav-dropdown { position: relative; height: var(--nav-height); display: flex; align-items: center; }
     .nav-dropdown-trigger { display: inline-flex; align-items: center; gap: 5px; }
     .nav-dropdown-trigger .nav-chev { transition: transform 0.25s cubic-bezier(0.4,0,0.2,1); }
@@ -226,7 +195,7 @@
       margin-top: 14px; min-width: 252px; padding: 8px;
       background: rgba(var(--color-dark-rgb), 0.97); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
       border: 1px solid rgba(255,255,255,0.08); border-radius: 14px;
-      box-shadow: 0 18px 48px rgba(0,0,0,0.34), 0 2px 8px rgba(0,0,0,0.18);
+      box-shadow: 0 18px 48px rgba(var(--color-ink-rgb),0.40), 0 2px 8px rgba(var(--color-ink-rgb),0.20);
       opacity: 0; visibility: hidden; pointer-events: none;
       transform: translateX(-50%) translateY(8px);
       transition: opacity 0.22s cubic-bezier(0.4,0,0.2,1), transform 0.22s cubic-bezier(0.4,0,0.2,1);
@@ -240,25 +209,26 @@
     }
     .nav-dropdown-menu a {
       display: block; padding: 10px 14px; border-radius: 9px;
-      font-size: 14px; font-weight: 500; line-height: 1.3; white-space: nowrap;
-      color: rgba(255,255,255,0.70);
+      font-size: 14px; font-weight: 600; line-height: 1.3; white-space: nowrap;
+      color: rgba(255,255,255,0.78);
       transition: color 0.15s cubic-bezier(0.4,0,0.2,1), background 0.15s cubic-bezier(0.4,0,0.2,1);
     }
-    .nav-dropdown-menu a:hover { color: var(--color-bg); background: rgba(255,255,255,0.07); }
-    .nav-dropdown-menu a[aria-current="page"] { color: var(--color-bg); font-weight: 700; background: rgba(var(--color-accent-rgb), 0.16); }
+    .nav-dropdown-menu a:hover { color: var(--color-bg); background: rgba(255,255,255,0.08); }
+    .nav-dropdown-menu a:active { background: rgba(255,255,255,0.12); }
+    .nav-dropdown-menu a[aria-current="page"] { color: var(--color-bg); font-weight: 700; background: rgba(var(--color-accent-rgb), 0.18); }
     #navbar.scrolled .nav-dropdown-menu {
       background: rgba(255,255,255,0.98); border-color: rgba(var(--color-dark-rgb), 0.08);
-      box-shadow: 0 18px 48px rgba(var(--color-dark-rgb), 0.14), 0 2px 8px rgba(var(--color-dark-rgb), 0.06);
+      box-shadow: 0 18px 48px rgba(var(--color-dark-rgb), 0.16), 0 2px 8px rgba(var(--color-dark-rgb), 0.06);
     }
     #navbar.scrolled .nav-dropdown-menu a { color: var(--color-muted); }
-    #navbar.scrolled .nav-dropdown-menu a:hover { color: var(--color-ink); background: rgba(var(--color-dark-rgb), 0.04); }
-    #navbar.scrolled .nav-dropdown-menu a[aria-current="page"] { color: var(--color-ink); background: rgba(var(--color-accent-rgb), 0.12); }
+    #navbar.scrolled .nav-dropdown-menu a:hover { color: var(--color-ink); background: rgba(var(--color-dark-rgb), 0.05); }
+    #navbar.scrolled .nav-dropdown-menu a[aria-current="page"] { color: var(--color-ink); background: rgba(var(--color-accent-rgb), 0.14); }
 
-    /* ── Services dropdown (mobile) ── */
+    /* ── Dropdowns (mobile) ── */
     .mobile-services-toggle {
       display: flex; align-items: center; justify-content: space-between; width: 100%;
       background: none; border: none; cursor: pointer; font: inherit; text-align: left;
-      color: rgba(255,255,255,0.68);
+      color: rgba(255,255,255,0.78);
       transition: color 0.15s cubic-bezier(0.4,0,0.2,1), background 0.15s cubic-bezier(0.4,0,0.2,1);
     }
     .mobile-services-toggle:hover { color: var(--color-bg); background: rgba(255,255,255,0.06); }
@@ -271,8 +241,8 @@
     }
     .mobile-services-submenu.open { display: flex; }
     .mobile-services-submenu a {
-      padding: 9px 12px; border-radius: 8px; font-size: 14px; font-weight: 500;
-      color: rgba(255,255,255,0.58);
+      padding: 9px 12px; border-radius: 8px; font-size: 14px; font-weight: 600;
+      color: rgba(255,255,255,0.70);
       transition: color 0.15s cubic-bezier(0.4,0,0.2,1), background 0.15s cubic-bezier(0.4,0,0.2,1);
     }
     .mobile-services-submenu a:hover { color: var(--color-bg); background: rgba(255,255,255,0.06); }
@@ -283,108 +253,177 @@
     #navbar.scrolled .mobile-services-submenu a { color: var(--color-muted); }
     #navbar.scrolled .mobile-services-submenu a:hover { color: var(--color-ink); background: rgba(var(--color-dark-rgb), 0.04); }
 
+    /* ── Hero ── */
     .hero-bg { background: var(--color-dark); }
     .hero-vignette {
-      background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 35%, rgba(0,0,0,0.50) 100%);
+      background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 35%, rgba(var(--color-ink-rgb),0.55) 100%);
       pointer-events: none;
     }
-    .hero-bg .btn-outline { color: rgba(255,255,255,0.88); border-color: rgba(255,255,255,0.20); }
-    .hero-bg .btn-outline:hover { border-color: rgba(var(--color-accent-rgb), 0.50); background: rgba(var(--color-dark-rgb), 0.14); transform: translateY(-2px); }
-    @media (max-width: 767px) { .hero-text-block h1 { font-size: 2.15rem !important; } }
+    @media (max-width: 767px) { .hero-text-block h1 { font-size: 2.6rem !important; } }
 
+    /* ── Buttons ──
+       Primary = sky fill with INK text (white on sky is 2.63:1 — never). */
     .btn-primary {
-      background: var(--color-accent); color: var(--color-bg);
-      font-weight: 700; border-radius: 8px; padding: 14px 28px; font-size: 15px;
-      letter-spacing: 0.01em;
-      box-shadow: 0 4px 18px rgba(var(--color-accent-rgb), 0.30);
-      transition: transform 0.18s cubic-bezier(0.4,0,0.2,1),
-                  box-shadow 0.18s cubic-bezier(0.4,0,0.2,1),
+      background: var(--color-accent); color: var(--color-ink);
+      font-family: 'Archivo', sans-serif; font-stretch: 110%;
+      font-weight: 800; border-radius: 10px; padding: 14px 26px; font-size: 15px;
+      letter-spacing: 0.005em;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 4px 14px -2px rgba(var(--color-accent-rgb), 0.45), 0 14px 32px -12px rgba(var(--color-dark-rgb), 0.50);
+      transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1),
+                  box-shadow 0.22s cubic-bezier(0.4,0,0.2,1),
                   background 0.18s cubic-bezier(0.4,0,0.2,1);
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-flex; align-items: center; gap: 9px;
     }
-    .btn-primary:hover  { background: var(--color-accent-deep); transform: translateY(-2px); box-shadow: 0 8px 26px rgba(var(--color-accent-rgb), 0.38); }
-    .btn-primary:active { transform: translateY(0); box-shadow: 0 2px 10px rgba(var(--color-accent-rgb), 0.22); }
-    .btn-primary:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+    .btn-primary:hover  { background: var(--color-accent-bright); transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,0.40) inset, 0 8px 22px -4px rgba(var(--color-accent-rgb), 0.55), 0 20px 40px -14px rgba(var(--color-dark-rgb), 0.55); }
+    .btn-primary:active { transform: translateY(0) scale(0.98); box-shadow: 0 2px 8px rgba(var(--color-accent-rgb), 0.30); }
 
     .btn-outline {
       background: transparent; color: var(--color-ink);
-      font-weight: 600; border: 1.5px solid rgba(var(--color-dark-rgb), 0.22);
-      border-radius: 8px; padding: 13px 28px; font-size: 15px;
-      transition: transform 0.18s cubic-bezier(0.4,0,0.2,1),
+      font-family: 'Archivo', sans-serif; font-stretch: 110%;
+      font-weight: 700; border: 1.5px solid rgba(var(--color-dark-rgb), 0.24);
+      border-radius: 10px; padding: 13px 24px; font-size: 15px;
+      transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1),
                   border-color 0.18s cubic-bezier(0.4,0,0.2,1),
                   background 0.18s cubic-bezier(0.4,0,0.2,1);
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-flex; align-items: center; gap: 9px;
     }
-    .btn-outline:hover  { border-color: var(--color-accent); background: rgba(var(--color-dark-rgb), 0.05); transform: translateY(-2px); }
-    .btn-outline:active { transform: translateY(0); }
-    .btn-outline:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+    .btn-outline:hover  { border-color: var(--color-accent-deep); background: rgba(var(--color-accent-rgb), 0.08); transform: translateY(-2px); }
+    .btn-outline:active { transform: translateY(0) scale(0.98); }
+    .dark-section .btn-outline, .hero-bg .btn-outline, .visit-panel .btn-outline { color: var(--color-bg); border-color: rgba(255,255,255,0.32); }
+    .dark-section .btn-outline:hover, .hero-bg .btn-outline:hover, .visit-panel .btn-outline:hover { border-color: var(--color-accent-bright); background: rgba(255,255,255,0.07); }
 
+    /* ── Focus (every clickable) ── */
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 2px solid var(--color-accent-deep); outline-offset: 3px; border-radius: 8px;
+    }
+    .dark-section a:focus-visible, .dark-section button:focus-visible,
+    .hero-bg a:focus-visible, #navbar a:focus-visible, #navbar button:focus-visible,
+    .visit-panel a:focus-visible { outline-color: var(--color-accent-bright); }
+    #navbar.scrolled a:focus-visible, #navbar.scrolled button:focus-visible { outline-color: var(--color-accent-deep); }
+
+    /* ── Depth system: base (flat) → elevated (cards) → floating (hover / visit panel) ── */
     .service-card {
-      background: var(--color-bg); border: 1px solid rgba(var(--color-dark-rgb), 0.07); border-radius: 16px; padding: 30px;
-      box-shadow: 0 1px 2px rgba(var(--color-dark-rgb), 0.05), 0 6px 18px rgba(var(--color-dark-rgb), 0.10), 0 16px 40px rgba(var(--color-dark-rgb), 0.09), 0 0 0 1px rgba(var(--color-dark-rgb), 0.05);
-      transition: transform 0.24s cubic-bezier(0.34,1.56,0.64,1),
+      position: relative;
+      background: var(--color-bg); border: 1px solid rgba(var(--color-dark-rgb), 0.08); border-radius: 18px; padding: 30px 28px 26px;
+      box-shadow: 0 1px 2px rgba(var(--color-dark-rgb), 0.06), 0 8px 20px -6px rgba(var(--color-dark-rgb), 0.12), 0 22px 44px -20px rgba(var(--color-dark-rgb), 0.18);
+      transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1),
                   box-shadow 0.24s cubic-bezier(0.4,0,0.2,1),
                   border-color 0.24s cubic-bezier(0.4,0,0.2,1);
     }
+    .service-card::before {
+      content: ""; position: absolute; left: 28px; right: 28px; top: 0; height: 3px; border-radius: 0 0 3px 3px;
+      background: var(--color-accent); transform: scaleX(0.18); transform-origin: left;
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    }
     .service-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 20px 48px rgba(var(--color-dark-rgb), 0.13), 0 0 0 1.5px rgba(var(--color-dark-rgb), 0.20);
+      box-shadow: 0 2px 4px rgba(var(--color-dark-rgb), 0.06), 0 18px 40px -10px rgba(var(--color-dark-rgb), 0.22), 0 0 0 1.5px rgba(var(--color-accent-rgb), 0.45);
       border-color: transparent;
     }
-    .service-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:active { transform: translateY(-2px); }
 
-    .feature-card {
-      background: var(--color-bg); border: 1px solid rgba(var(--color-dark-rgb), 0.07); border-radius: 16px; padding: 28px 24px;
-      box-shadow: 0 1px 2px rgba(var(--color-dark-rgb), 0.05), 0 6px 18px rgba(var(--color-dark-rgb), 0.09), 0 16px 38px rgba(var(--color-dark-rgb), 0.08);
-      transition: transform 0.24s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.24s cubic-bezier(0.4,0,0.2,1);
-    }
-    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 16px 36px rgba(var(--color-dark-rgb), 0.11); }
-
-    /* Dark-card treatment for feature-cards placed on a dark section (e.g. How It Works). */
-    #how-it-works .feature-card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.055) 0%, rgba(255,255,255,0.02) 100%), rgba(var(--color-dark-rgb), 0.45);
+    .step-card {
+      position: relative; border-radius: 18px; padding: 28px 24px 26px;
+      background: linear-gradient(160deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%), rgba(var(--color-dark-3-rgb), 0.35);
       border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 20px 50px rgba(0,0,0,0.38), inset 0 1px 0 rgba(255,255,255,0.06);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 20px 44px -18px rgba(var(--color-ink-rgb), 0.65);
+    }
+    .step-num {
+      width: 44px; height: 44px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--color-accent); color: var(--color-ink);
+      font-family: 'Archivo', sans-serif; font-stretch: 120%; font-weight: 900; font-size: 18px;
+      box-shadow: 0 0 0 6px rgba(var(--color-accent-rgb), 0.16);
+      margin-bottom: 18px;
     }
 
-    .insurer-pill {
-      background: rgba(var(--color-dark-rgb), 0.07); border: 1px solid rgba(var(--color-dark-rgb), 0.16);
-      border-radius: 100px; padding: 8px 20px; font-size: 14px; font-weight: 600;
-      color: var(--color-accent); display: inline-flex; align-items: center;
-      transition: background 0.18s, border-color 0.18s, transform 0.18s cubic-bezier(0.34,1.56,0.64,1);
-    }
-    .insurer-pill:hover { background: rgba(var(--color-dark-rgb), 0.14); border-color: rgba(var(--color-dark-rgb), 0.30); transform: translateY(-1px); }
-    .section-title-accent {
-      display: inline-block; width: 64px; height: 3px;
-      background: linear-gradient(90deg, transparent 0%, var(--color-accent) 25%, var(--color-accent) 75%, transparent 100%);
-      border-radius: 2px; margin-bottom: 12px;
-    }
-    .icon-wrap {
-      width: 48px; height: 48px;
-      background: linear-gradient(135deg, rgba(var(--color-dark-rgb), 0.10) 0%, rgba(var(--color-dark-rgb), 0.06) 100%);
-      border: 1px solid rgba(var(--color-dark-rgb), 0.14); border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 16px; flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(var(--color-dark-rgb), 0.09), inset 0 1px 0 rgba(255,255,255,0.60);
-    }
     .link-arrow {
       display: inline-flex; align-items: center; gap: 6px;
-      font-size: 14px; font-weight: 600; color: var(--color-accent);
-      transition: color 0.18s cubic-bezier(0.4,0,0.2,1), gap 0.18s cubic-bezier(0.4,0,0.2,1);
+      font-size: 14px; font-weight: 700; color: var(--color-accent-deep);
+      transition: color 0.18s cubic-bezier(0.4,0,0.2,1);
     }
-    .link-arrow:hover { color: var(--color-accent-deep); gap: 10px; }
-    .link-arrow:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 4px; }
+    .link-arrow svg { transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1); }
+    .link-arrow:hover { color: var(--color-ink); }
+    .link-arrow:hover svg, .service-card:hover .link-arrow svg { transform: translateX(4px); }
+    .link-arrow:active svg { transform: translateX(1px); }
 
     .area-card {
-      background: linear-gradient(135deg, rgba(var(--color-dark-rgb), 0.04) 0%, rgba(var(--color-dark-rgb), 0.015) 100%), var(--color-bg);
-      border: 1px solid rgba(var(--color-dark-rgb), 0.12); border-radius: 18px; padding: 36px 40px;
-      box-shadow: 0 1px 3px rgba(var(--color-dark-rgb), 0.05), 0 10px 28px rgba(var(--color-dark-rgb), 0.10), 0 22px 56px rgba(var(--color-dark-rgb), 0.09), 0 0 0 1px rgba(var(--color-dark-rgb), 0.06);
+      background: linear-gradient(135deg, rgba(var(--color-dark-rgb), 0.035) 0%, rgba(var(--color-dark-rgb), 0.01) 100%), var(--color-bg);
+      border: 1px solid rgba(var(--color-dark-rgb), 0.10); border-radius: 18px; padding: 34px 36px;
+      box-shadow: 0 1px 3px rgba(var(--color-dark-rgb), 0.06), 0 12px 30px -10px rgba(var(--color-dark-rgb), 0.16), 0 28px 60px -28px rgba(var(--color-dark-rgb), 0.20);
     }
     .area-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--color-accent), var(--color-accent-deep));
-      box-shadow: 0 0 6px rgba(var(--color-dark-rgb), 0.40); flex-shrink: 0;
+      width: 8px; height: 8px; border-radius: 50%; background: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(var(--color-accent-rgb), 0.20); flex-shrink: 0;
     }
+    .city-link { color: var(--color-ink); text-decoration-color: rgba(var(--color-accent-deep-rgb), 0.5); text-underline-offset: 3px; transition: color 0.15s cubic-bezier(0.4,0,0.2,1); }
+    .city-link:hover { color: var(--color-accent-deep); text-decoration: underline; }
+
+    .check { color: var(--color-accent-deep); }
+    .dark-section .check { color: var(--color-accent-bright); }
+
+    /* ── SIGNATURE: Visit panel — styled like a machine's control display ── */
+    .visit-panel {
+      position: relative; border-radius: 22px; overflow: hidden; color: var(--color-bg);
+      background:
+        radial-gradient(ellipse 80% 70% at 100% 0%, rgba(var(--color-accent-rgb), 0.20) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 60% at 0% 100%, rgba(var(--color-dark-3-rgb), 0.70) 0%, transparent 60%),
+        var(--color-dark);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 2px 4px rgba(var(--color-ink-rgb), 0.10), 0 30px 70px -24px rgba(var(--color-dark-rgb), 0.65);
+    }
+    .visit-panel::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.06; background-size: 160px 160px;
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='160'%20height='160'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.85'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .visit-panel > * { position: relative; }
+    .display-window {
+      container-type: inline-size;
+      border-radius: 14px; padding: 18px 22px 20px;
+      background: linear-gradient(180deg, rgba(var(--color-ink-rgb), 0.55) 0%, rgba(var(--color-ink-rgb), 0.35) 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 2px 10px rgba(var(--color-ink-rgb), 0.55), 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .status-pill {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-bright);
+    }
+    .status-led { width: 9px; height: 9px; border-radius: 50%; background: var(--color-accent-bright); box-shadow: 0 0 10px rgba(var(--color-accent-bright-rgb), 0.9); }
+    .status-pill[data-state="open"] .status-led { animation: led 2.4s cubic-bezier(0.4,0,0.6,1) infinite; }
+    .status-pill[data-state="closed"] { color: var(--color-silver); }
+    .status-pill[data-state="closed"] .status-led { background: var(--color-muted-light); box-shadow: none; }
+    @keyframes led { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+    .hours-readout {
+      font-family: 'Archivo', sans-serif; font-stretch: 125%; font-weight: 900;
+      font-size: clamp(2rem, 13.5cqi, 4.1rem); line-height: 0.95; letter-spacing: -0.03em; color: var(--color-bg);
+      white-space: nowrap;
+    }
+    .hours-readout .dash { color: var(--color-accent-bright); }
+    .map-frame {
+      border-radius: 22px; overflow: hidden; background: var(--color-bg-2);
+      border: 1px solid rgba(var(--color-dark-rgb), 0.10);
+      box-shadow: 0 2px 4px rgba(var(--color-dark-rgb), 0.06), 0 24px 56px -24px rgba(var(--color-dark-rgb), 0.40);
+    }
+    .map-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+    .faq-item { border: 1px solid rgba(var(--color-dark-rgb), 0.10); background: var(--color-bg); border-radius: 16px; overflow: hidden;
+      box-shadow: 0 1px 2px rgba(var(--color-dark-rgb), 0.04), 0 10px 24px -14px rgba(var(--color-dark-rgb), 0.18); }
+    .faq-item summary { transition: background 0.15s cubic-bezier(0.4,0,0.2,1); }
+    .faq-item summary:hover { background: rgba(var(--color-accent-rgb), 0.06); }
+    .faq-item summary:active { background: rgba(var(--color-accent-rgb), 0.10); }
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .social-btn {
+      width: 38px; height: 38px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center;
+      color: var(--color-silver); border: 1px solid rgba(255,255,255,0.16);
+      transition: color 0.15s cubic-bezier(0.4,0,0.2,1), border-color 0.15s cubic-bezier(0.4,0,0.2,1), transform 0.22s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .social-btn:hover { color: var(--color-bg); border-color: var(--color-accent-bright); transform: translateY(-2px); }
+    .social-btn:active { transform: translateY(0); }
+    .footer-link { color: var(--color-silver); transition: color 0.15s cubic-bezier(0.4,0,0.2,1); }
+    .footer-link:hover { color: var(--color-bg); }
+    .footer-link:active { color: var(--color-accent-bright); }
 
     #mobile-menu {
       display: none;
@@ -396,36 +435,20 @@
 
     .fade-up {
       opacity: 0; transform: translateY(24px);
-      transition: opacity 0.55s cubic-bezier(0.4,0,0.2,1), transform 0.55s cubic-bezier(0.4,0,0.2,1);
+      transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.34,1.36,0.64,1);
     }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-    .phone-pulse { position: relative; }
-    .phone-pulse::after {
-      content: ""; position: absolute; inset: -3px; border-radius: 11px;
-      border: 2px solid rgba(var(--color-accent-rgb), 0.45);
-      opacity: 0; pointer-events: none;
-      animation: pulse-ring 2.5s cubic-bezier(0.4,0,0.6,1) infinite;
-    }
-    @keyframes pulse-ring {
-      0%        { transform: scale(0.98); opacity: 0.55; }
-      70%, 100% { transform: scale(1.15); opacity: 0; }
-    }
-
     @media (min-width: 1024px) {
-      .hero-outer {
-        max-width: none !important; margin-left: 0 !important; margin-right: 0 !important;
-        padding-left: clamp(48px, 5vw, 96px) !important; padding-right: 0 !important;
-      }
-      .hero-text-block { max-width: 600px !important; }
+      .hero-text-block { max-width: 680px !important; }
     }
 
     /* ── Skip link, anchor offset, FAQ chevron, reduced motion ── */
     .skip-link {
       position: absolute; top: 0; left: -9999px; z-index: 100;
       background: var(--color-bg); color: var(--color-ink);
-      padding: 10px 18px; border-radius: 0 0 10px 0; font-weight: 600;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+      padding: 10px 18px; border-radius: 0 0 10px 0; font-weight: 700;
+      box-shadow: 0 4px 18px rgba(var(--color-ink-rgb),0.20);
     }
     .skip-link:focus { left: 0; }
     section[id] { scroll-margin-top: calc(var(--nav-height) + 8px); }
@@ -433,71 +456,76 @@
     details[open] .faq-chevron { transform: rotate(180deg); }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .phone-pulse::after { animation: none; opacity: 0; }
+      .status-pill .status-led { animation: none !important; }
       .fade-up { opacity: 1; transform: none; transition: none; }
+      .service-card, .btn-primary, .btn-outline, .logo-chip, .social-btn { transition: none; }
     }
 
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--color-bg-2); }
     ::-webkit-scrollbar-thumb { background: var(--color-line); border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--color-accent-deep); }
   </style>
 
-  <!-- Homepage business schema. Set [BUSINESS @TYPE] to the trade's schema.org type — e.g. AutoRepair, HVACBusiness, PlumbingBusiness, RoofingContractor; fall back to LocalBusiness only if no specific subtype fits. -->
-  <!-- REMOVE this PostalAddress block (the "address" property in the JSON-LD below) entirely for service-area clients with no public address. -->
+  <!-- Homepage business schema — DryCleaningOrLaundry (schema.org's LocalBusiness subtype for laundromats).
+       telephone = GHL tracking number [NEEDS INPUT] — placeholder until it's in hand.
+       NO aggregateRating until the GHL review widget is live AND displayed on this page. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "[BUSINESS @TYPE]",
+    "@type": "DryCleaningOrLaundry",
     "@id": "https://www.mrsudzrgv.com/#business",
-    "name": "Your Business Name",
-    "description": "Professional home services in [City], [ST] and across the [Region]. Serving homes and businesses with same-day appointments, free estimates, and mobile service.",
+    "name": "Mr. Sudz Laundromat",
+    "alternateName": "Mr. Sudz",
+    "slogan": "Laundry Day Made Easy",
+    "description": "Family-owned and operated laundromat in Pharr, TX offering self-service laundry, wash, dry & fold drop-off, laundry pickup & delivery, ironing & steaming, comforter & bedding cleaning, and dry cleaning drop-off.",
     "url": "https://www.mrsudzrgv.com/",
+    "logo": "https://www.mrsudzrgv.com/brand_assets/logo.png",
+    "image": "https://www.mrsudzrgv.com/brand_assets/logo.png",
     "telephone": "+15550000000",
     "email": "info@mrsudzrgv.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "[Street Address]",
-      "addressLocality": "[City]",
-      "addressRegion": "[ST]",
-      "postalCode": "[ZIP]",
+      "streetAddress": "1032 W. Sam Houston Blvd., Ste. 6",
+      "addressLocality": "Pharr",
+      "addressRegion": "TX",
+      "postalCode": "78577",
       "addressCountry": "US"
     },
-    "priceRange": "[priceRange]",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=1032+W+Sam+Houston+Blvd+Ste+6+Pharr+TX+78577",
+    "priceRange": "$",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "09:00",
-        "closes": "16:00"
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "07:00",
+        "closes": "22:00"
       }
     ],
     "areaServed": [
-      { "@type": "City", "name": "[City]",   "containedInPlace": { "@type": "State", "name": "[State]" } },
-      { "@type": "City", "name": "[City 2]",  "containedInPlace": { "@type": "State", "name": "[State]" } },
-      { "@type": "City", "name": "[City 3]",   "containedInPlace": { "@type": "State", "name": "[State]" } },
-      { "@type": "City", "name": "[City 4]",     "containedInPlace": { "@type": "State", "name": "[State]" } },
-      { "@type": "City", "name": "[City 5]",  "containedInPlace": { "@type": "State", "name": "[State]" } },
-      { "@type": "City", "name": "[City 6]", "containedInPlace": { "@type": "State", "name": "[State]" } }
+      { "@type": "City", "name": "Pharr",    "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "McAllen",  "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "San Juan", "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "Edinburg", "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "Alamo",    "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "Hidalgo",  "containedInPlace": { "@type": "State", "name": "Texas" } }
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Our Services",
+      "name": "Laundry Services",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wash, Dry & Fold" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Laundry Pickup & Delivery" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Self-Service Laundry" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ironing & Steaming" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Comforter & Bedding Cleaning" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dry Cleaning" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wash, Dry & Fold", "url": "https://www.mrsudzrgv.com/services/wash-and-fold.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Laundry Pickup & Delivery", "url": "https://www.mrsudzrgv.com/services/laundry-pickup-delivery.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Self-Service Laundry", "url": "https://www.mrsudzrgv.com/services/self-service-laundry.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ironing & Steaming", "url": "https://www.mrsudzrgv.com/services/ironing-steaming.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Comforter & Bedding Cleaning", "url": "https://www.mrsudzrgv.com/services/comforter-cleaning.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dry Cleaning", "url": "https://www.mrsudzrgv.com/services/dry-cleaning.html" } }
       ]
-    }
+    },
+    "sameAs": [
+      "https://www.facebook.com/MrSudzLaundromat",
+      "https://www.instagram.com/mrsudzlaundromat/"
+    ]
   }
   </script>
 </head>
@@ -508,20 +536,20 @@
   <!-- ============================================================
        STICKY NAVIGATION
   ============================================================ -->
-  <nav id="navbar">
+  <nav id="navbar" aria-label="Main">
     <div class="nav-row max-w-6xl mx-auto px-5 flex items-center justify-between">
 
-      <!-- LOGO PLACEHOLDER — swap the <span> for <img class="nav-logo" ...>; height comes from --nav-logo-height in brand.css -->
-      <a href="/" class="flex items-center group" aria-label="Your Business Name home">
-        <span class="nav-wordmark">Your Business Name</span>
+      <!-- LOGO — interim brand_assets/logo.png (RGB, white bg → sits in .logo-chip). Swap for the client's original when it arrives. -->
+      <a href="/" class="logo-chip" aria-label="Mr. Sudz Laundromat home">
+        <img class="nav-logo" src="/brand_assets/logo.png" alt="Mr. Sudz Laundromat logo" width="300" height="151" />
       </a>
 
       <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-7">
         <div class="nav-dropdown">
-          <a href="/#services" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted hover:text-white transition-colors duration-150">
+          <a href="/#services" class="nav-link nav-dropdown-trigger text-sm font-semibold text-muted hover:text-white transition-colors duration-150">
             Services
-            <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
           <div class="nav-dropdown-menu" aria-label="Services">
             <a href="/services/wash-and-fold.html">Wash, Dry &amp; Fold</a>
@@ -535,9 +563,9 @@
         <!-- SHARED ZONE: Areas We Serve dropdown — do NOT modify during
              city-page clone-and-localize pass. All city entries constant. -->
         <div class="nav-dropdown">
-          <a href="/#service-area" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted hover:text-white transition-colors duration-150">
+          <a href="/#service-area" class="nav-link nav-dropdown-trigger text-sm font-semibold text-muted hover:text-white transition-colors duration-150">
             Areas We Serve
-            <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
           <div class="nav-dropdown-menu" aria-label="Areas We Serve">
             <a href="/areas/pharr.html">Pharr</a>
@@ -549,19 +577,19 @@
           </div>
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
-        <!-- OPTIONAL MODULE LINK (desktop nav, #insurance): re-enable with the Insurance module: <a href="/#insurance"   class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Insurance</a> -->
-        <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">About</a>
-        <!-- OPTIONAL MODULE LINK (desktop nav, #reviews): re-enable with the Review widget module: <a href="/#reviews"     class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Reviews</a> -->
-        <a href="/#contact"     class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Contact</a>
-        <a href="tel:+15550000000" class="btn-primary text-sm py-2.5 px-5 phone-pulse ml-4">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          (555) 000-0000
+        <a href="/about.html" class="nav-link text-sm font-semibold text-muted hover:text-white transition-colors duration-150">About</a>
+        <!-- OPTIONAL MODULE LINK (desktop nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="nav-link text-sm font-semibold text-muted hover:text-white transition-colors duration-150">Reviews</a> -->
+        <a href="/#contact" class="nav-link text-sm font-semibold text-muted hover:text-white transition-colors duration-150">Contact</a>
+        <!-- CLEANCLOUD BOOKING EMBED: swap href="#book" for the CleanCloud booking link -->
+        <a href="#book" class="btn-primary text-sm py-2.5 px-5 ml-2">
+          Book a Pickup
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
         </a>
       </div>
 
       <!-- Mobile hamburger -->
-      <button id="hamburger" class="md:hidden p-2 rounded-lg border border-white/10 text-white hover:border-white/30 transition-colors duration-150" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg id="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <button id="hamburger" class="md:hidden p-2 rounded-lg border text-white transition-colors duration-150" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <line x1="3" y1="6" x2="21" y2="6"/>
           <line x1="3" y1="12" x2="21" y2="12"/>
           <line x1="3" y1="18" x2="21" y2="18"/>
@@ -570,11 +598,11 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden px-5 pb-4 mt-3 border-t border-white/10">
+    <div id="mobile-menu" class="md:hidden px-5 pb-4 border-t">
       <div class="flex flex-col gap-1 pt-4">
-        <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-medium" aria-expanded="false" aria-controls="mobile-services-submenu">
+        <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-semibold" aria-expanded="false" aria-controls="mobile-services-submenu">
           Services
-          <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div id="mobile-services-submenu" class="mobile-services-submenu">
           <a href="/services/wash-and-fold.html">Wash, Dry &amp; Fold</a>
@@ -586,9 +614,9 @@
         </div>
         <!-- SHARED ZONE: Areas We Serve dropdown — do NOT modify during
              city-page clone-and-localize pass. All city entries constant. -->
-        <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-medium" aria-expanded="false" aria-controls="mobile-areas-submenu">
+        <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-semibold" aria-expanded="false" aria-controls="mobile-areas-submenu">
           Areas We Serve
-          <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div id="mobile-areas-submenu" class="mobile-services-submenu">
           <a href="/areas/pharr.html">Pharr</a>
@@ -599,14 +627,13 @@
           <a href="/areas/hidalgo.html">Hidalgo</a>
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
-        <!-- OPTIONAL MODULE LINK (mobile nav, #insurance): re-enable with the Insurance module: <a href="/#insurance" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Insurance</a> -->
-        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">About</a>
-        <!-- OPTIONAL MODULE LINK (mobile nav, #reviews): re-enable with the Review widget module: <a href="/#reviews"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Reviews</a> -->
-        <a href="/#contact"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Contact</a>
-        <a href="tel:+15550000000" class="btn-primary mt-3 justify-center">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call (555) 000-0000
-        </a>
+        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-semibold">About</a>
+        <!-- OPTIONAL MODULE LINK (mobile nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="mobile-nav-link py-3 px-3 rounded-lg font-semibold">Reviews</a> -->
+        <a href="/#contact" class="mobile-nav-link py-3 px-3 rounded-lg font-semibold">Contact</a>
+        <!-- CLEANCLOUD BOOKING EMBED: swap href="#book" for the CleanCloud booking link -->
+        <a href="#book" class="btn-primary mt-3 justify-center">Book a Pickup</a>
+        <!-- PHONE: GHL tracking number [NEEDS INPUT] — (555) 000-0000 is a placeholder -->
+        <a href="tel:+15550000000" class="btn-outline mt-2 justify-center" style="color: var(--color-bg); border-color: rgba(255,255,255,0.30);">Call (555) 000-0000</a>
       </div>
     </div>
   </nav>
@@ -614,109 +641,137 @@
   <!-- ============================================================
        HERO
   ============================================================ -->
-  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="Your Business Name Professional Home Services in [City] [ST]">
+  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(112px, 16vw, 148px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="Mr. Sudz Laundromat in Pharr, TX">
 
-    <!-- OFF-LIMITS: hero-background — dedicated named file only, never a content photo -->
+    <!-- OFF-LIMITS: hero-background — dedicated named file only (brand_assets/hero-background.jpg, 1920×1080), never a content photo. PENDING. -->
     <img
       src="https://placehold.co/1920x1080"
-      alt="Professional home services in [City] and across the [Region] — Your Business Name"
+      alt="Bright, clean laundromat with rows of modern washers at Mr. Sudz Laundromat in Pharr, TX"
+      width="1920" height="1080"
       fetchpriority="high"
       style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; z-index: 0;"
     />
 
-    <!-- Dark overlay -->
+    <!-- Dark overlay (~0.7) + color-treatment layer -->
     <div style="position: absolute; inset: 0; z-index: 1; background:
-      linear-gradient(180deg, rgba(var(--color-dark-rgb), 0.72) 0%, rgba(var(--color-dark-rgb), 0.32) 25%, rgba(var(--color-dark-rgb), 0.28) 65%, rgba(var(--color-dark-rgb), 0.75) 100%),
-      radial-gradient(ellipse 65% 100% at 0% 50%, rgba(var(--color-dark-rgb), 0.78) 0%, transparent 65%);
+      linear-gradient(180deg, rgba(var(--color-dark-rgb), 0.80) 0%, rgba(var(--color-dark-rgb), 0.68) 30%, rgba(var(--color-dark-rgb), 0.68) 65%, rgba(var(--color-dark-rgb), 0.88) 100%),
+      radial-gradient(ellipse 70% 100% at 0% 50%, rgba(var(--color-dark-rgb), 0.80) 0%, transparent 70%);
     "></div>
+    <div style="position: absolute; inset: 0; z-index: 1; mix-blend-mode: soft-light; background: radial-gradient(ellipse 60% 70% at 85% 20%, rgba(var(--color-accent-rgb), 0.55) 0%, transparent 60%);"></div>
 
     <!-- Edge vignette -->
     <div class="hero-vignette absolute inset-0 z-[2]"></div>
 
-    <div class="hero-outer relative z-10 max-w-5xl mx-auto px-5 w-full">
+    <div class="hero-outer relative z-10 max-w-6xl mx-auto px-5 w-full">
       <div class="hero-text-block max-w-2xl fade-up">
 
+        <p class="eyebrow" style="margin-bottom: 22px; text-shadow: 0 1px 8px rgba(var(--color-ink-rgb),0.45);">Family-owned &amp; operated · Pharr,&nbsp;TX</p>
 
-        <!-- Eyebrow -->
-        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-line); margin-bottom: 20px; text-shadow: 0 1px 8px rgba(0,0,0,0.45);">Trusted Local Home Services</p>
-
-        <h1 class="font-display text-white mb-5" style="font-size: clamp(2.4rem, 6vw, 3.8rem); letter-spacing: -0.03em; line-height: 1.06; font-weight: 800; text-shadow: 0 2px 24px rgba(0,0,0,0.45);">
-          Professional<br />Home Services<br />
-          <span style="color: var(--color-accent-bright);">in [City], [ST].</span>
+        <h1 class="text-white mb-6 display-xl" style="font-size: clamp(2.8rem, 7vw, 5.2rem); text-shadow: 0 2px 24px rgba(var(--color-ink-rgb),0.45);">
+          Laundromat in Pharr,&nbsp;TX.<br />
+          <span style="color: var(--color-accent-bright);">Laundry Day Made&nbsp;Easy.</span>
         </h1>
 
-        <p class="mb-8 max-w-xl" style="color: rgba(255,255,255,0.88); font-size: clamp(1rem, 2.2vw, 1.125rem); line-height: 1.72; text-shadow: 0 1px 8px rgba(0,0,0,0.35);">
-          When you need a job done right in [City], the last thing you want is the runaround. Our team comes to you, explains every step, and stands behind clean, careful work. Every job we take on is <strong style="color: var(--color-bg);">handled start to finish by our own crew</strong>.
+        <p class="mb-9 max-w-xl" style="color: rgba(255,255,255,0.90); font-size: clamp(1.05rem, 2.2vw, 1.2rem); line-height: 1.7; text-shadow: 0 1px 8px rgba(var(--color-ink-rgb),0.35);">
+          Wash it yourself on modern, high-efficiency machines. Drop it off for wash, dry &amp; fold. Or book a pickup and let our driver bring it back clean. Mr. Sudz is <strong style="color: var(--color-bg);">open every day, 7am to 10pm</strong>, on W. Sam Houston Blvd.
         </p>
 
-        <!-- CTAs -->
-        <div class="flex flex-wrap gap-4 mb-10">
-          <a href="tel:+15550000000" class="btn-primary text-base px-7 py-4">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call Now — (555) 000-0000
+        <div class="flex flex-wrap gap-4">
+          <!-- CLEANCLOUD BOOKING EMBED: swap href="#book" for the CleanCloud booking link -->
+          <a href="#book" class="btn-primary text-base px-7 py-4">
+            Book a Pickup
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
-          <a href="/#contact" class="btn-outline text-base px-7 py-4">
-            Get a Free Quote
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1032+W+Sam+Houston+Blvd+Ste+6+Pharr+TX+78577" target="_blank" rel="noopener" class="btn-outline text-base px-7 py-4">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
           </a>
-        </div>
-
-        <!-- Stats row -->
-        <div class="flex flex-wrap gap-8">
-          <div>
-            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Upfront</div>
-            <div class="text-muted text-sm mt-0.5">Honest Pricing</div>
-          </div>
-          <div class="w-px" style="background: rgba(255,255,255,0.14);"></div>
-          <div>
-            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Mobile</div>
-            <div class="text-muted text-sm mt-0.5">Service Available</div>
-          </div>
-          <div class="w-px" style="background: rgba(255,255,255,0.14);"></div>
-          <div>
-            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Free</div>
-            <div class="text-muted text-sm mt-0.5">Free Estimates</div>
-          </div>
         </div>
 
       </div>
     </div>
 
-    <!-- Ember accent bridge -->
-    <div class="absolute bottom-0 left-0 right-0 z-20" style="height: 4px; background: linear-gradient(90deg, transparent 0%, var(--color-accent) 18%, var(--color-accent) 82%, transparent 100%); opacity: 0.90;"></div>
+    <!-- Sky accent bridge -->
+    <div class="absolute bottom-0 left-0 right-0 z-20" style="height: 4px; background: linear-gradient(90deg, transparent 0%, var(--color-accent) 18%, var(--color-accent) 82%, transparent 100%);"></div>
   </section>
 
   <main id="main-content">
 
     <!-- ============================================================
-         2. INTRO SPLIT — text left / photo right (who we are, what we do)
+         2. HOURS + VISIT — signature control-display panel + Google Map
     ============================================================ -->
-    <section class="section-dark atmo wash-navy-tr py-24" aria-label="About Your Business Name">
+    <section id="visit" class="section-dark atmo wash-sky-tr py-20 lg:py-24" aria-labelledby="visit-heading">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+
+          <div class="lg:col-span-6 visit-panel p-7 sm:p-9 fade-up">
+            <p class="eyebrow" style="color: var(--color-accent-bright);">Hours &amp; Location</p>
+            <h2 id="visit-heading" class="mb-6" style="color: var(--color-bg); font-size: clamp(1.6rem, 2.9vw, 2.15rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1;">Visit Our Laundromat on W. Sam Houston Blvd.</h2>
+
+            <div class="display-window mb-7">
+              <p id="open-status" class="status-pill mb-3" data-state="static" aria-live="polite">
+                <span class="status-led" aria-hidden="true"></span>
+                <span class="status-text">Open daily</span>
+              </p>
+              <p class="hours-readout" aria-label="Open 7 AM to 10 PM">7AM<span class="dash">–</span>10PM</p>
+              <p class="mono mt-3 text-xs" style="color: var(--color-silver); letter-spacing: 0.06em;">MON – SUN · EVERY DAY</p>
+            </div>
+
+            <address class="not-italic mb-7">
+              <p class="font-display font-bold text-lg" style="color: var(--color-bg);">1032 W. Sam Houston Blvd., Ste. 6</p>
+              <p style="color: var(--color-silver);">Pharr, TX 78577</p>
+            </address>
+
+            <div class="flex flex-wrap gap-3">
+              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1032+W+Sam+Houston+Blvd+Ste+6+Pharr+TX+78577" target="_blank" rel="noopener" class="btn-primary">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Get Directions
+              </a>
+              <!-- PHONE: GHL tracking number [NEEDS INPUT] — (555) 000-0000 is a placeholder -->
+              <a href="tel:+15550000000" class="btn-outline">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Call (555) 000-0000
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 map-frame min-h-[360px] lg:min-h-0 fade-up" style="transition-delay: 0.08s;">
+            <!-- GOOGLE MAPS EMBED -->
+            <iframe
+              src="https://www.google.com/maps?q=1032+W+Sam+Houston+Blvd+Ste+6,+Pharr,+TX+78577&amp;output=embed"
+              title="Map to Mr. Sudz Laundromat, 1032 W. Sam Houston Blvd., Ste. 6, Pharr, TX"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. INTRO SPLIT — text left / photo right (who we are)
+    ============================================================ -->
+    <section class="section-mid atmo wash-navy-tr py-24" aria-labelledby="intro-heading">
       <div class="max-w-6xl mx-auto px-5">
         <div class="grid lg:grid-cols-2 gap-14 items-center">
 
-          <!-- Text -->
           <div class="fade-up">
-            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 14px;">Local &amp; Trusted</p>
-            <h2 class="font-display text-4xl lg:text-[2.75rem] font-bold text-white mb-6" style="letter-spacing: -0.03em; line-height: 1.1;">
-              Your Local Home Services Team in [City]
-            </h2>
-            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              Your Business Name is a local home services company serving [City] and the surrounding [Region]. We handle everything from quick fixes to full installations — and our team comes to you, on your schedule.
+            <p class="eyebrow">Family-Owned in Pharr</p>
+            <h2 id="intro-heading" class="h2-split text-white mb-6">A Clean, Friendly Laundromat Close to Home</h2>
+            <p class="text-muted lede mb-5">
+              Laundry piles up fast. Work clothes, school uniforms, towels, and the sheets you keep meaning to wash. Mr. Sudz Laundromat is a family-owned and operated laundromat in Pharr, TX, set up to make that pile a lot easier to handle.
             </p>
-            <p class="text-muted text-lg mb-7" style="line-height: 1.7;">
-              Every job is handled start to finish by our own crew. We explain each step, quote up front, and stand behind clean, careful work — the kind that keeps [City] neighbors sending us their friends.
+            <p class="text-muted lede mb-7">
+              Wash it yourself, drop it off for wash, dry &amp; fold, or book a pickup and let our driver handle it. Ironing, comforter cleaning, and dry cleaning drop-off are here too, so one stop covers the whole basket.
             </p>
             <a href="/about.html" class="link-arrow">
-              Learn more about our team
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              More about Mr. Sudz
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </div>
 
-          <!-- Photo -->
           <div class="fade-up" style="transition-delay: 0.1s;">
             <div class="photo-frame">
-              <img src="https://placehold.co/1200x900" alt="Your Business Name home services team in [City]" loading="lazy" />
+              <img src="https://placehold.co/1200x900" alt="Rows of modern, high-efficiency washers inside Mr. Sudz Laundromat in Pharr, TX" width="1200" height="900" loading="lazy" />
             </div>
           </div>
 
@@ -725,121 +780,55 @@
     </section>
 
     <!-- ============================================================
-         3. HOW IT WORKS — 4 numbered cards (no icons, numbers kept)
+         4. SERVICES — 6 cards (one per service page)
     ============================================================ -->
-    <section id="how-it-works" class="dark-section py-24" aria-label="How working with Your Business Name works">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px;">How It Works</p>
-          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
-            Getting Started Is Simple
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            From your first call to a finished job, our team keeps it clear and easy — across [City] and the [Region].
-          </p>
-        </div>
-
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 fade-up" style="transition-delay: 0.06s;">
-
-          <div class="feature-card text-center">
-            <div class="font-display font-extrabold mb-3" style="font-size: 2.25rem; line-height: 1; color: var(--color-accent-bright);">01</div>
-            <h3 class="font-display font-bold text-white text-lg mb-2">Call or Message Us</h3>
-            <p class="text-muted text-sm" style="line-height: 1.7;">Tell us what you need anywhere in [City] or the [Region]. We answer your questions and get you a fast quote.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <div class="font-display font-extrabold mb-3" style="font-size: 2.25rem; line-height: 1; color: var(--color-accent-bright);">02</div>
-            <h3 class="font-display font-bold text-white text-lg mb-2">Get Your Free Quote</h3>
-            <p class="text-muted text-sm" style="line-height: 1.7;">You get a clear, upfront price before any work begins — no surprises and no pressure.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <div class="font-display font-extrabold mb-3" style="font-size: 2.25rem; line-height: 1; color: var(--color-accent-bright);">03</div>
-            <h3 class="font-display font-bold text-white text-lg mb-2">Book Your Time</h3>
-            <p class="text-muted text-sm" style="line-height: 1.7;">Pick a time that works for you. Same-day and mobile service are available across the [Region].</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <div class="font-display font-extrabold mb-3" style="font-size: 2.25rem; line-height: 1; color: var(--color-accent-bright);">04</div>
-            <h3 class="font-display font-bold text-white text-lg mb-2">We Handle It</h3>
-            <p class="text-muted text-sm" style="line-height: 1.7;">Our own crew shows up on time, does the job right, and cleans up before we leave.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         4. SERVICES — 6 cards, no icons, centered text, Learn more
-    ============================================================ -->
-    <section id="services" class="section-mid atmo wash-navy-tr py-24" aria-label="Home services in [City] and the [Region]">
+    <section id="services" class="section-dark atmo wash-sky-tl py-24" aria-labelledby="services-heading">
       <div class="max-w-6xl mx-auto px-5">
 
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
-            Our Services in [City] &amp; the [Region]
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Quality home services in [City] shouldn't mean waiting a week to get on the schedule. Your Business Name handles everything from quick fixes to full installations — and our team comes to you, across [City], [City 2], [City 3], [City 4], [City 5], and [City 6].
+        <div class="max-w-3xl mb-12 fade-up">
+          <p class="eyebrow">What We Do</p>
+          <h2 id="services-heading" class="h2 text-white mb-4">Laundry Service in Pharr &amp; the Rio Grande Valley</h2>
+          <p class="text-muted lede">
+            Some days you want to do it yourself. Some days you just want it done. Pick the laundry service that fits your week.
           </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-up" style="transition-delay: 0.06s;">
 
-          <a href="/services/wash-and-fold.html" class="service-card block text-center">
-            <h3 class="font-display font-bold text-white text-xl mb-2">Service One</h3>
-            <p class="text-muted text-sm mb-5" style="line-height: 1.7;">Our most-requested service in [City]. We handle every job from start to finish with quality materials matched to the work and a clean, precise result — and most jobs are completed the same day.</p>
-            <span class="link-arrow">
-              Learn more
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-            </span>
+          <a href="/services/wash-and-fold.html" class="service-card flex flex-col">
+            <h3 class="font-display font-extrabold text-white text-xl mb-3" style="letter-spacing: -0.015em;">Wash, Dry &amp; Fold</h3>
+            <p class="text-muted text-[15px] mb-6 flex-1" style="line-height: 1.7;">Drop off your laundry and tell our attendant how you like it: detergent, drying, any special notes. We wash, dry, and fold it, and it's ready for you to pick up.</p>
+            <span class="link-arrow">Wash &amp; fold details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
           </a>
 
-          <a href="/services/laundry-pickup-delivery.html" class="service-card block text-center">
-            <h3 class="font-display font-bold text-white text-xl mb-2">Service Two</h3>
-            <p class="text-muted text-sm mb-5" style="line-height: 1.7;">A faster, smaller-scale fix handled the right way. Your Business Name takes care of it efficiently — often in about an hour — and the work in [City] is done with the same care.</p>
-            <span class="link-arrow">
-              Learn more
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-            </span>
+          <a href="/services/laundry-pickup-delivery.html" class="service-card flex flex-col">
+            <h3 class="font-display font-extrabold text-white text-xl mb-3" style="letter-spacing: -0.015em;">Laundry Pickup &amp; Delivery</h3>
+            <p class="text-muted text-[15px] mb-6 flex-1" style="line-height: 1.7;">Book online and pick a time. Our driver picks up your laundry, and it comes back washed and folded. Pickup times show up when you book.</p>
+            <span class="link-arrow">How pickup works <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
           </a>
 
-          <a href="/services/self-service-laundry.html" class="service-card block text-center">
-            <h3 class="font-display font-bold text-white text-xl mb-2">Service Three</h3>
-            <p class="text-muted text-sm mb-5" style="line-height: 1.7;">Careful, thorough work you can count on. Our team gets it done right — often in about an hour — and you'll notice the difference right away.</p>
-            <span class="link-arrow">
-              Learn more
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-            </span>
+          <a href="/services/self-service-laundry.html" class="service-card flex flex-col">
+            <h3 class="font-display font-extrabold text-white text-xl mb-3" style="letter-spacing: -0.015em;">Self-Service Laundry</h3>
+            <p class="text-muted text-[15px] mb-6 flex-1" style="line-height: 1.7;">Use our modern, high-efficiency washers and dryers on your own time. Grab a snack, watch the big-screen TVs, and charge your phone while you wait.</p>
+            <span class="link-arrow">Self-service details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
           </a>
 
-          <a href="/services/ironing-steaming.html" class="service-card block text-center">
-            <h3 class="font-display font-bold text-white text-xl mb-2">Service Four</h3>
-            <p class="text-muted text-sm mb-5" style="line-height: 1.7;">You don't have to come to us. Our team loads up and comes to your home, office, or wherever works for you — across all of [City], [City 2], [City 3], [City 4], [City 5], and [City 6].</p>
-            <span class="link-arrow">
-              Learn more
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-            </span>
+          <a href="/services/ironing-steaming.html" class="service-card flex flex-col">
+            <h3 class="font-display font-extrabold text-white text-xl mb-3" style="letter-spacing: -0.015em;">Ironing &amp; Steaming</h3>
+            <p class="text-muted text-[15px] mb-6 flex-1" style="line-height: 1.7;">Crisp shirts, pants, skirts, and dresses for work, school, or a big night out. School band uniforms too. Ask for regular or heavy starch.</p>
+            <span class="link-arrow">Ironing details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
           </a>
 
-          <a href="/services/comforter-cleaning.html" class="service-card block text-center">
-            <h3 class="font-display font-bold text-white text-xl mb-2">Service Five</h3>
-            <p class="text-muted text-sm mb-5" style="line-height: 1.7;">When you need it done right, our team handles it the same day across [City] and the [Region] — clean work, careful attention to detail, and a precise finish.</p>
-            <span class="link-arrow">
-              Learn more
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-            </span>
+          <a href="/services/comforter-cleaning.html" class="service-card flex flex-col">
+            <h3 class="font-display font-extrabold text-white text-xl mb-3" style="letter-spacing: -0.015em;">Comforter &amp; Bedding Cleaning</h3>
+            <p class="text-muted text-[15px] mb-6 flex-1" style="line-height: 1.7;">Comforter too big for your washer at home? We clean comforters, down and feather comforters, coverlets, and blankets in every size, twin to king.</p>
+            <span class="link-arrow">Bedding details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
           </a>
 
-          <a href="/services/dry-cleaning.html" class="service-card block text-center">
-            <h3 class="font-display font-bold text-white text-xl mb-2">Service Six</h3>
-            <p class="text-muted text-sm mb-5" style="line-height: 1.7;">When you need it handled fast, our team responds quickly — using quality materials matched to the job and installed with the same care we bring to every job at Your Business Name.</p>
-            <span class="link-arrow">
-              Learn more
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-            </span>
+          <a href="/services/dry-cleaning.html" class="service-card flex flex-col">
+            <h3 class="font-display font-extrabold text-white text-xl mb-3" style="letter-spacing: -0.015em;">Dry Cleaning</h3>
+            <p class="text-muted text-[15px] mb-6 flex-1" style="line-height: 1.7;">Drop off your dry cleaning at Mr. Sudz: suits and dress shirts, dresses and skirts, jackets, blazers, coats, pants, and sweaters.</p>
+            <span class="link-arrow">Dry cleaning details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
           </a>
 
         </div>
@@ -847,52 +836,107 @@
     </section>
 
     <!-- ============================================================
-         5. DIFFERENTIATOR SPLIT — photo left / text right, DARK
+         5. HOW PICKUP & DELIVERY WORKS — 4 steps (a real sequence)
     ============================================================ -->
-    <section id="why-us" class="dark-section py-24" aria-label="Why choose Your Business Name">
+    <section id="how-it-works" class="dark-section py-24" aria-labelledby="steps-heading">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid lg:grid-cols-12 gap-10 items-end mb-12 fade-up">
+          <div class="lg:col-span-7">
+            <p class="eyebrow">How Pickup &amp; Delivery Works</p>
+            <h2 id="steps-heading" class="h2 text-white">Laundry Pickup &amp; Delivery in Four Easy Steps</h2>
+          </div>
+          <p class="lg:col-span-5 text-muted lede">
+            No time to sit with the dryer this week? Book a pickup and our driver takes it from there.
+          </p>
+        </div>
+
+        <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 fade-up" style="transition-delay: 0.06s;">
+          <li class="step-card">
+            <div class="step-num" aria-hidden="true">1</div>
+            <h3 class="font-display font-extrabold text-white text-lg mb-2">Book</h3>
+            <p class="text-muted text-[15px]" style="line-height: 1.7;">Book online and choose a pickup time that works for you.</p>
+          </li>
+          <li class="step-card">
+            <div class="step-num" aria-hidden="true">2</div>
+            <h3 class="font-display font-extrabold text-white text-lg mb-2">Pickup</h3>
+            <p class="text-muted text-[15px]" style="line-height: 1.7;">Our driver comes by and picks up your laundry.</p>
+          </li>
+          <li class="step-card">
+            <div class="step-num" aria-hidden="true">3</div>
+            <h3 class="font-display font-extrabold text-white text-lg mb-2">Wash</h3>
+            <p class="text-muted text-[15px]" style="line-height: 1.7;">We wash, dry, and fold it the way you asked.</p>
+          </li>
+          <li class="step-card">
+            <div class="step-num" aria-hidden="true">4</div>
+            <h3 class="font-display font-extrabold text-white text-lg mb-2">Delivery</h3>
+            <p class="text-muted text-[15px]" style="line-height: 1.7;">Our driver brings it back clean, folded, and ready to put away.</p>
+          </li>
+        </ol>
+
+        <div class="flex flex-wrap items-center gap-x-7 gap-y-4 mt-12 fade-up">
+          <!-- CLEANCLOUD BOOKING EMBED: swap href="#book" for the CleanCloud booking link -->
+          <a href="#book" class="btn-primary">
+            Book a Pickup
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <a href="/services/laundry-pickup-delivery.html" class="link-arrow">
+            More about pickup &amp; delivery
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. AMENITIES SPLIT — photo left / text right
+    ============================================================ -->
+    <section id="amenities" class="section-mid atmo wash-navy-bl py-24" aria-labelledby="amenities-heading">
       <div class="max-w-6xl mx-auto px-5">
         <div class="grid lg:grid-cols-2 gap-14 items-center">
 
-          <!-- Photo (left) -->
           <div class="fade-up order-2 lg:order-1">
             <div class="photo-frame">
-              <img src="https://placehold.co/1200x900" alt="Your Business Name crew at work in [City]" loading="lazy" />
+              <img src="https://placehold.co/1200x900" alt="Clean, modern laundromat interior with a big-screen TV at Mr. Sudz Laundromat in Pharr" width="1200" height="900" loading="lazy" />
             </div>
           </div>
 
-          <!-- Text (right) -->
           <div class="fade-up order-1 lg:order-2" style="transition-delay: 0.1s;">
-            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px;">Why [City] Chooses Us</p>
-            <h2 class="font-display text-4xl lg:text-[2.75rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
-              Honesty. Attention to Detail. Dedication.
-            </h2>
-            <p class="text-muted text-lg mb-7" style="line-height: 1.7;">
-              We built Your Business Name around a simple idea: do the job right, be honest about what it costs, show up when you say you will, and stand behind your work. No gimmicks, no upsell, no fine print.
+            <p class="eyebrow">While You Wait</p>
+            <h2 id="amenities-heading" class="h2-split text-white mb-5">Self-Service Laundry with Room to Relax</h2>
+            <p class="text-muted lede mb-7">
+              A full load takes a while, so we made the wait easy. Cold A/C on hot Valley afternoons, something to watch, and a place to charge your phone.
             </p>
 
-            <!-- 2x2 checklist -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mb-8">
-              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted-light); line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Straight answers, every time
-              </div>
-              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted-light); line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Clear, upfront pricing
-              </div>
-              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted-light); line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Mobile service to your door
-              </div>
-              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted-light); line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Workmanship that lasts
-              </div>
-            </div>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3.5 mb-8">
+              <li class="flex items-start gap-2.5 text-[15px] text-white font-semibold" style="line-height: 1.5;">
+                <svg class="check mt-0.5 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                75" big-screen TVs
+              </li>
+              <li class="flex items-start gap-2.5 text-[15px] text-white font-semibold" style="line-height: 1.5;">
+                <svg class="check mt-0.5 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Free Wi-Fi
+              </li>
+              <li class="flex items-start gap-2.5 text-[15px] text-white font-semibold" style="line-height: 1.5;">
+                <svg class="check mt-0.5 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Charging stations
+              </li>
+              <li class="flex items-start gap-2.5 text-[15px] text-white font-semibold" style="line-height: 1.5;">
+                <svg class="check mt-0.5 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Cold A/C
+              </li>
+              <li class="flex items-start gap-2.5 text-[15px] text-white font-semibold" style="line-height: 1.5;">
+                <svg class="check mt-0.5 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Snack bar with drinks &amp; treats
+              </li>
+              <li class="flex items-start gap-2.5 text-[15px] text-white font-semibold" style="line-height: 1.5;">
+                <svg class="check mt-0.5 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Friendly on-site attendants
+              </li>
+            </ul>
 
-            <a href="/about.html" class="link-arrow">
-              Learn more about us
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            <a href="/services/self-service-laundry.html" class="link-arrow">
+              More about self-service laundry
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </div>
 
@@ -901,87 +945,75 @@
     </section>
 
     <!-- ============================================================
-         6. SERVICE AREAS — city list block + one photo
+         7. SERVICE AREAS — city list block + one photo
     ============================================================ -->
-    <section id="service-area" class="section-dark atmo wash-navy-bl py-24" aria-label="Serving [City] and the [Region]">
+    <section id="service-area" class="section-dark atmo wash-sky-tr py-24" aria-labelledby="areas-heading">
       <div class="max-w-6xl mx-auto px-5">
 
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
-            Serving [City] &amp; the [Region]
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Your Business Name is based in [City] — right in the heart of the [Region]. From here, our team dispatches mobile service to six cities across the [Region].
+        <div class="max-w-3xl mb-12 fade-up">
+          <p class="eyebrow">Areas We Serve</p>
+          <h2 id="areas-heading" class="h2 text-white mb-4">One Pharr Storefront, Close to the Whole Valley</h2>
+          <p class="text-muted lede">
+            Mr. Sudz has one location, on W. Sam Houston Blvd. in Pharr. It's an easy drive from McAllen, San Juan, Edinburg, Alamo, and Hidalgo when you want to wash on your own or drop off a load.
           </p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-12 items-center fade-up" style="transition-delay: 0.06s;">
 
-          <!-- Photo (right on desktop) -->
           <div class="photo-frame lg:order-2">
-            <img src="https://placehold.co/1200x900" alt="Your Business Name serving [City] and the [Region]" loading="lazy" />
+            <img src="https://placehold.co/1200x900" alt="Mr. Sudz Laundromat storefront on W. Sam Houston Blvd. in Pharr, TX" width="1200" height="900" loading="lazy" />
           </div>
 
-          <!-- City list (left on desktop) -->
           <div class="area-card lg:order-1">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8">
-
-              <div class="flex items-start gap-3">
-                <div class="area-dot mt-1"></div>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8">
+              <li class="flex items-start gap-3">
+                <span class="area-dot mt-2"></span>
                 <div>
                   <div class="flex items-center gap-2 mb-1">
-                    <a href="/areas/pharr.html" class="text-sm font-semibold hover:underline" style="color: var(--color-ink);">Pharr</a>
-                    <span class="text-xs px-2 py-0.5 rounded-full font-semibold" style="background: rgba(var(--color-dark-rgb), 0.10); color: var(--color-accent);">Primary</span>
+                    <a href="/areas/pharr.html" class="city-link font-display font-bold">Pharr</a>
+                    <span class="text-[11px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider" style="background: rgba(var(--color-accent-rgb), 0.16); color: var(--color-accent-deep);">Storefront</span>
                   </div>
-                  <p class="text-xs" style="color: var(--color-muted); line-height: 1.6;">Based in [City]. Same-day service throughout [City] and its neighborhoods.</p>
+                  <p class="text-sm text-muted" style="line-height: 1.6;">Our laundromat is right here on W. Sam Houston Blvd.</p>
                 </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <div class="area-dot mt-1"></div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="area-dot mt-2"></span>
                 <div>
-                  <a href="/areas/mcallen.html" class="text-sm font-semibold hover:underline block mb-1" style="color: var(--color-ink);">McAllen</a>
-                  <p class="text-xs" style="color: var(--color-muted); line-height: 1.6;">Mobile service to [City 2] homes and businesses across the [Region].</p>
+                  <a href="/areas/mcallen.html" class="city-link font-display font-bold block mb-1">McAllen</a>
+                  <p class="text-sm text-muted" style="line-height: 1.6;">Laundry services for McAllen, next door to Pharr.</p>
                 </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <div class="area-dot mt-1"></div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="area-dot mt-2"></span>
                 <div>
-                  <a href="/areas/san-juan.html" class="text-sm font-semibold hover:underline block mb-1" style="color: var(--color-ink);">San Juan</a>
-                  <p class="text-xs" style="color: var(--color-muted); line-height: 1.6;">Serving [City 3] with quick dispatch from [City], usually same morning.</p>
+                  <a href="/areas/san-juan.html" class="city-link font-display font-bold block mb-1">San Juan</a>
+                  <p class="text-sm text-muted" style="line-height: 1.6;">Just east of Pharr, a quick trip to our door.</p>
                 </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <div class="area-dot mt-1"></div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="area-dot mt-2"></span>
                 <div>
-                  <a href="/areas/edinburg.html" class="text-sm font-semibold hover:underline block mb-1" style="color: var(--color-ink);">Edinburg</a>
-                  <p class="text-xs" style="color: var(--color-muted); line-height: 1.6;">[City 4] and [City 5] are covered in a single run when schedules align.</p>
+                  <a href="/areas/edinburg.html" class="city-link font-display font-bold block mb-1">Edinburg</a>
+                  <p class="text-sm text-muted" style="line-height: 1.6;">Wash &amp; fold and self-service, a short drive north.</p>
                 </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <div class="area-dot mt-1"></div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="area-dot mt-2"></span>
                 <div>
-                  <a href="/areas/alamo.html" class="text-sm font-semibold hover:underline block mb-1" style="color: var(--color-ink);">Alamo</a>
-                  <p class="text-xs" style="color: var(--color-muted); line-height: 1.6;">Mobile service in [City 5] — call ahead to confirm same-day availability.</p>
+                  <a href="/areas/alamo.html" class="city-link font-display font-bold block mb-1">Alamo</a>
+                  <p class="text-sm text-muted" style="line-height: 1.6;">Laundry services for Alamo, east of Pharr.</p>
                 </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <div class="area-dot mt-1"></div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="area-dot mt-2"></span>
                 <div>
-                  <a href="/areas/hidalgo.html" class="text-sm font-semibold hover:underline block mb-1" style="color: var(--color-ink);">Hidalgo</a>
-                  <p class="text-xs" style="color: var(--color-muted); line-height: 1.6;">Same mobile service available to [City 6] residents across the [Region].</p>
+                  <a href="/areas/hidalgo.html" class="city-link font-display font-bold block mb-1">Hidalgo</a>
+                  <p class="text-sm text-muted" style="line-height: 1.6;">Laundry services for Hidalgo, just south of Pharr.</p>
                 </div>
-              </div>
-
-            </div>
-            <p class="text-sm mt-6 pt-5 border-t" style="border-color: rgba(var(--color-dark-rgb), 0.12); color: var(--color-muted);">
-              Not sure if we cover your area?
-              <a href="tel:+15550000000" class="font-semibold hover:underline" style="color: var(--color-accent);">Call us — (555) 000-0000</a>.
+              </li>
+            </ul>
+            <p class="text-sm text-muted mt-7 pt-5 border-t" style="border-color: rgba(var(--color-dark-rgb), 0.12);">
+              Want pickup &amp; delivery? <!-- CLEANCLOUD BOOKING EMBED: swap href="#book" for the CleanCloud booking link --><a href="#book" class="font-bold hover:underline" style="color: var(--color-accent-deep);">Book online</a> to see pickup times for your address.
             </p>
           </div>
 
@@ -989,222 +1021,94 @@
       </div>
     </section>
 
-    <div class="divider"></div>
-
-    <!-- ============================================================
-         7. GALLERY — dedicated uniform grid (8 tiles: 2 & 4 cols fill)
-    ============================================================ -->
-    <section id="gallery" class="dark-section atmo wash-ember-tl py-24" aria-label="Recent home services jobs in [City] and the [Region]">
-      <div class="max-w-7xl mx-auto px-5">
-
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px;">Our Work</p>
-          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
-            Real Home Services Jobs From Around [City]
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Real jobs from real customers across the [Region] — handled with the same care every time.
-          </p>
-        </div>
-
-        <!-- Uniform gallery grid — every cell is the standard .photo-frame (4:3).
-             8 tiles fill complete rows at 1 and 2 columns (no ragged row). -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 fade-up" style="transition-delay: 0.06s;">
-          <figure class="photo-frame">
-            <img src="https://placehold.co/1200x900" alt="Home services project in [City] by Your Business Name" loading="lazy" />
-          </figure>
-          <figure class="photo-frame">
-            <img src="https://placehold.co/1200x900" alt="Home services team at work in [City] by Your Business Name" loading="lazy" />
-          </figure>
-          <figure class="photo-frame">
-            <img src="https://placehold.co/1200x900" alt="Recent home services project in [City] by Your Business Name" loading="lazy" />
-          </figure>
-          <figure class="photo-frame">
-            <img src="https://placehold.co/1200x900" alt="Completed home services project in [City] by Your Business Name" loading="lazy" />
-          </figure>
-          <figure class="photo-frame">
-            <img src="https://placehold.co/1200x900" alt="Finished home services job in [City] by Your Business Name" loading="lazy" />
-          </figure>
-          <figure class="photo-frame">
-            <img src="https://placehold.co/1200x900" alt="Home services job completed in [City] by Your Business Name" loading="lazy" />
-          </figure>
-          <figure class="photo-frame">
-            <img src="https://placehold.co/1200x900" alt="Home services work in the [Region] by Your Business Name" loading="lazy" />
-          </figure>
-          <figure class="photo-frame">
-            <img src="https://placehold.co/1200x900" alt="Local home services job by Your Business Name in [City]" loading="lazy" />
-          </figure>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- OPTIONAL MODULE: Insurance carrier row — delete this entire block if not used by this client -->
+    <!-- OPTIONAL MODULE: Review widget — KEEP THE SLOT, wire later (128 Google reviews confirmed; widget code is backfill).
+         Until the widget is live: no review count, stars, rating, or testimonials anywhere, and NO aggregateRating in the JSON-LD.
+         When wired: un-comment, paste the embed, re-enable the nav/footer #reviews links, and add aggregateRating in the same commit. -->
     <!--
-    <section id="insurance" class="dark-section py-20" aria-label="Insurance for home services in [City]">
+    <section id="reviews" class="dark-section py-20" aria-labelledby="reviews-heading">
       <div class="max-w-6xl mx-auto px-5">
-
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
-            Insurance,<br />Made Simple
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            If your project is covered by your insurance, Your Business Name works directly with your carrier so you're not left figuring out the paperwork on your own. Not filing a claim? You'll still get a free, no-pressure estimate and clear, upfront pricing before any work begins — in [City] and across the [Region].
-          </p>
+        <div class="max-w-3xl mb-10">
+          <p class="eyebrow">Reviews</p>
+          <h2 id="reviews-heading" class="h2 text-white">What Pharr Says About Mr. Sudz</h2>
         </div>
-
-        <div class="fade-up" style="transition-delay: 0.06s;">
-          <div class="area-card mb-10">
-            <div class="text-center mb-5">
-              <span class="text-xs font-bold uppercase tracking-widest" style="color: var(--color-accent); font-family: 'Barlow', sans-serif;">We Work Directly With These Carriers</span>
-            </div>
-            <div class="flex flex-wrap justify-center gap-3">
-              <span class="insurer-pill">Allstate</span>
-              <span class="insurer-pill">USAA</span>
-              <span class="insurer-pill">Geico</span>
-              <span class="insurer-pill">Nationwide</span>
-              <span class="insurer-pill">Progressive</span>
-              <span class="insurer-pill">Liberty Mutual</span>
-              <span class="insurer-pill">Farmers Insurance</span>
-              <span class="insurer-pill">Assurance</span>
-            </div>
-            <p class="text-center mt-5 text-sm" style="color: var(--color-muted);">Don't see your carrier? Call us — we work with most major providers.</p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div class="text-center">
-              <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-display font-extrabold text-xl mx-auto mb-4" style="background: var(--color-accent); font-family: 'Barlow', sans-serif;">1</div>
-              <h3 class="font-display font-bold text-white text-base mb-2">Call or Book Online</h3>
-              <p class="text-sm text-muted" style="line-height: 1.65;">Tell us about the job and, if you're filing a claim, who your insurance carrier is. We can usually walk you through your options in just a few minutes over the phone.</p>
-            </div>
-            <div class="text-center">
-              <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-display font-extrabold text-xl mx-auto mb-4" style="background: var(--color-accent); font-family: 'Barlow', sans-serif;">2</div>
-              <h3 class="font-display font-bold text-white text-base mb-2">We Work With Your Insurance</h3>
-              <p class="text-sm text-muted" style="line-height: 1.65;">Your Business Name reaches out to your carrier directly to verify your coverage and what's needed to move forward. We keep you in the loop the whole way through.</p>
-            </div>
-            <div class="text-center">
-              <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-display font-extrabold text-xl mx-auto mb-4" style="background: var(--color-accent); font-family: 'Barlow', sans-serif;">3</div>
-              <h3 class="font-display font-bold text-white text-base mb-2">Job Done, Stress-Free</h3>
-              <p class="text-sm text-muted" style="line-height: 1.65;">Once everything's confirmed, our team schedules the work at your location — your home, office, or wherever works for you. We handle the details so you don't have to.</p>
-            </div>
-          </div>
+        <div style="background: var(--color-bg); border-radius: 18px; padding: 20px;">
+          <!- - GHL REVIEW WIDGET EMBED - ->
         </div>
-
       </div>
     </section>
-
-    <div class="divider"></div>
     -->
-    <!-- END OPTIONAL MODULE: Insurance carrier row -->
-
-    <!-- OPTIONAL MODULE: Review widget (GHL review-widget embed goes inside this block) — delete this entire block if not used by this client -->
-    <!--
-    <section id="reviews" class="dark-section atmo wash-navy-br py-20" aria-label="Customer reviews">
-      <div class="max-w-6xl mx-auto px-5">
-
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
-            Reviews From Across<br />[City] &amp; the [Region]
-          </h2>
-          <p class="text-muted text-lg max-w-xl mx-auto" style="line-height: 1.7;">
-            Real customer reviews from across [City], [City 2], [City 3], [City 4], and the rest of the [Region]. Paste the GHL review widget below — never hardcode ratings or review counts.
-          </p>
-        </div>
-
-        <div class="fade-up" style="transition-delay: 0.06s;">
-          <div style="background: var(--color-bg); border-radius: 16px; padding: 20px 20px 12px; box-shadow: 0 24px 60px -20px rgba(0,0,0,0.55), 0 2px 0 rgba(255,255,255,0.04) inset; max-width: 1040px; margin: 0 auto;">
-            <div style="text-align: center; padding: 28px 20px;">
-              
-              <p class="font-display font-bold" style="color: var(--color-ink); font-size: 1rem; margin: 12px 0 6px;">Review widget goes here</p>
-              <p class="text-sm" style="color: var(--color-muted);">Paste the GHL review widget embed to show live customer reviews.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="divider"></div>
-    -->
+    <!-- GHL REVIEW WIDGET EMBED -->
     <!-- END OPTIONAL MODULE: Review widget -->
 
     <!-- ============================================================
-         8. FAQ — accordion (matches service-page accordion styling)
+         8. FAQ — accordion
     ============================================================ -->
-    <section id="faq" class="section-dark atmo wash-ember-tl py-24" aria-label="Home services FAQ for [City] and the [Region]">
+    <section id="faq" class="section-mid atmo wash-sky-tl py-24" aria-labelledby="faq-heading">
       <div class="max-w-4xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 14px;">Good to Know</p>
-          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
-            Common Questions
-          </h2>
+        <div class="mb-12 fade-up">
+          <p class="eyebrow">Good to Know</p>
+          <h2 id="faq-heading" class="h2 text-white">Questions About Our Pharr Laundromat</h2>
         </div>
 
         <div class="space-y-4 fade-up" style="transition-delay: 0.06s;">
 
-          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);" open>
-            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
-              What areas do you serve?
-              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          <details class="faq-item" open>
+            <summary class="flex items-center justify-between gap-4 px-6 sm:px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              What are your hours?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
-              <div class="pt-4">We serve [City] and the surrounding [Region], including [City 2], [City 3], [City 4], [City 5], and [City 6]. Mobile service comes to your home, office, or job site.</div>
+            <div class="px-6 sm:px-7 pb-6 text-[15px]" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Mr. Sudz Laundromat is open every day of the week, 7am to 10pm. Come in early before work or late after the kids are in bed.</div>
             </div>
           </details>
 
-          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
-            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
-              How fast can you get to my job?
-              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          <details class="faq-item">
+            <summary class="flex items-center justify-between gap-4 px-6 sm:px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Where is the laundromat?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
-              <div class="pt-4">Most jobs are same-day. Call in the morning and our team can usually take care of it that afternoon, depending on what the job needs.</div>
+            <div class="px-6 sm:px-7 pb-6 text-[15px]" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">We're at 1032 W. Sam Houston Blvd., Ste. 6, in Pharr, TX 78577. It's our only location, and it's an easy drive from McAllen, San Juan, Edinburg, Alamo, and Hidalgo.</div>
             </div>
           </details>
 
-          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
-            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
-              Do you offer free estimates?
-              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          <details class="faq-item">
+            <summary class="flex items-center justify-between gap-4 px-6 sm:px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              How does wash, dry &amp; fold drop-off work?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
-              <div class="pt-4">Yes. Every job gets a clear, upfront quote before any work begins — no hidden fees and no surprises at the end.</div>
+            <div class="px-6 sm:px-7 pb-6 text-[15px]" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Bring your laundry to our attendant and tell us how you like it, like your detergent, how to dry it, and any special notes. We wash, dry, and fold it, and then it's ready for you to pick up. See the <a href="/services/wash-and-fold.html" class="font-bold underline" style="color: var(--color-accent-deep);">wash &amp; fold page</a> for pricing.</div>
             </div>
           </details>
 
-          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
-            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
-              Do you come to me?
-              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          <details class="faq-item">
+            <summary class="flex items-center justify-between gap-4 px-6 sm:px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Do you offer laundry pickup and delivery?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
-              <div class="pt-4">We do. Mobile service is available across [City], [City 2], [City 3], [City 4], [City 5], and [City 6] — so most jobs happen wherever works for you.</div>
+            <div class="px-6 sm:px-7 pb-6 text-[15px]" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Yes. Book a pickup online and pick a time. Our driver picks up your laundry, we wash, dry, and fold it, and our driver brings it back. Pickup times for your address show up when you book.</div>
             </div>
           </details>
 
-          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
-            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
-              How much will my job cost?
-              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          <details class="faq-item">
+            <summary class="flex items-center justify-between gap-4 px-6 sm:px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              What is there to do while my laundry runs?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
-              <div class="pt-4">Every job is quoted up front. We look at what you need, explain your options, and give you a clear price before any work begins.</div>
+            <div class="px-6 sm:px-7 pb-6 text-[15px]" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Plenty. Watch the 75" big-screen TVs, hop on the free Wi-Fi, charge your phone, and grab a drink or a treat from the snack bar. The A/C stays cold, too.</div>
             </div>
           </details>
 
-          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
-            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
-              How do I get started?
-              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          <details class="faq-item">
+            <summary class="flex items-center justify-between gap-4 px-6 sm:px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Do you do ironing and dry cleaning?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
-              <div class="pt-4">Call or text us, or fill out the quote form below. Tell us what you need and we'll get you a price and a time that works.</div>
+            <div class="px-6 sm:px-7 pb-6 text-[15px]" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Yes. We press shirts, pants, skirts, dresses, and school band uniforms, with regular or heavy starch. You can also drop off suits, dresses, coats, and sweaters for dry cleaning. For prices, give us a call or book online.</div>
             </div>
           </details>
 
@@ -1212,151 +1116,95 @@
       </div>
     </section>
 
-    <div class="divider"></div>
-
     <!-- ============================================================
-         9. CONTACT — quote form (target of every "Get a Free Quote" CTA)
+         9. CONTACT — GHL contact form + contact info (map lives in #visit)
     ============================================================ -->
-    <section id="contact" class="section-mid atmo wash-ember-tr py-20" aria-label="Request service or get a free quote">
+    <section id="contact" class="section-dark atmo wash-navy-tr py-24" aria-labelledby="contact-heading">
       <div class="max-w-6xl mx-auto px-5">
 
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
-            Request Service or<br />Get a Free Quote
-          </h2>
-          <p class="text-muted text-lg max-w-xl mx-auto" style="line-height: 1.7;">
-            The fastest way to get started is to call. Our team picks up, answers your questions, and can usually get you on the schedule same day. Prefer to fill out the form? We'll get back to you fast.
+        <div class="max-w-3xl mb-12 fade-up">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-heading" class="h2 text-white mb-4">Questions? Send Us a Note</h2>
+          <p class="text-muted lede">
+            Ask about a service, an order, or anything else. Ready for laundry day? Book a pickup online or stop by any day from 7am to 10pm.
           </p>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-12 fade-up" style="transition-delay: 0.06s;">
+        <div class="grid lg:grid-cols-5 gap-8 fade-up" style="transition-delay: 0.06s;">
 
-          <!-- Contact info -->
-          <div>
-            <div class="area-card h-full">
-              <h3 class="font-display font-bold text-white text-xl mb-6">Get in Touch</h3>
-
-              <div class="space-y-5">
-                <a href="tel:+15550000000" class="flex items-start gap-4 group">
-                  <div class="icon-wrap flex-shrink-0" style="margin-bottom: 0;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  </div>
-                  <div>
-                    <div class="text-xs font-bold uppercase tracking-widest mb-1" style="color: var(--color-accent); font-family: 'Barlow', sans-serif;">Call or Text</div>
-                    <div class="font-display font-bold text-white text-lg group-hover:text-accent transition-colors duration-150">(555) 000-0000</div>
-                  </div>
-                </a>
-
-                <a href="mailto:info@mrsudzrgv.com" class="flex items-start gap-4 group">
-                  <div class="icon-wrap flex-shrink-0" style="margin-bottom: 0;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  </div>
-                  <div>
-                    <div class="text-xs font-bold uppercase tracking-widest mb-1" style="color: var(--color-accent); font-family: 'Barlow', sans-serif;">Email Us</div>
-                    <div class="font-display font-bold text-white text-base group-hover:underline">info@mrsudzrgv.com</div>
-                  </div>
-                </a>
-
-                <div class="flex items-start gap-4">
-                  <div class="icon-wrap flex-shrink-0" style="margin-bottom: 0;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  </div>
-                  <div>
-                    <div class="text-xs font-bold uppercase tracking-widest mb-1" style="color: var(--color-accent); font-family: 'Barlow', sans-serif;">Visit Us</div>
-                    <div class="font-display font-bold text-white text-base">[Street Address]</div>
-                    <div class="text-muted text-sm">[City], [ST] [ZIP]</div>
-                  </div>
-                </div>
+          <div class="lg:col-span-2 area-card">
+            <h3 class="font-display font-extrabold text-white text-xl mb-6">Mr. Sudz Laundromat</h3>
+            <dl class="space-y-5">
+              <div>
+                <dt class="eyebrow" style="margin-bottom: 4px;">Call</dt>
+                <!-- PHONE: GHL tracking number [NEEDS INPUT] — (555) 000-0000 is a placeholder -->
+                <dd><a href="tel:+15550000000" class="font-display font-bold text-lg text-white hover:underline">(555) 000-0000</a></dd>
               </div>
-
-              <div class="mt-8 pt-6 border-t" style="border-color: rgba(var(--color-dark-rgb), 0.14);">
-                <p class="text-muted text-sm" style="line-height: 1.7;">Serving [City], [City 2], [City 3], [City 4], [City 5], [City 6], and surrounding [Region] communities.</p>
+              <div>
+                <dt class="eyebrow" style="margin-bottom: 4px;">Email</dt>
+                <dd><a href="mailto:info@mrsudzrgv.com" class="font-display font-bold text-white hover:underline">info@mrsudzrgv.com</a></dd>
               </div>
+              <div>
+                <dt class="eyebrow" style="margin-bottom: 4px;">Visit</dt>
+                <dd class="text-white font-semibold">1032 W. Sam Houston Blvd., Ste. 6<br /><span class="text-muted font-normal">Pharr, TX 78577</span></dd>
+              </div>
+              <div>
+                <dt class="eyebrow" style="margin-bottom: 4px;">Hours</dt>
+                <dd class="text-white font-semibold">Open daily, 7am–10pm</dd>
+              </div>
+            </dl>
+            <div class="flex gap-3 mt-7 pt-6 border-t" style="border-color: rgba(var(--color-dark-rgb), 0.12);">
+              <!-- CLEANCLOUD BOOKING EMBED: swap href="#book" for the CleanCloud booking link -->
+              <a href="#book" class="btn-primary text-sm">Book a Pickup</a>
             </div>
           </div>
 
-          <!-- GHL Form -->
-          <div class="area-card" style="background: rgba(var(--color-dark-rgb), 0.04); min-height: 720px; padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-            <!-- GHL CONTACT FORM EMBED GOES HERE -->
-            <div style="text-align: center; padding: 48px 32px; color: var(--color-muted);">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 16px; opacity: 0.75;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
-              <p class="font-display font-bold" style="color: var(--color-ink); font-size: 1rem; margin-bottom: 6px;">Contact form goes here</p>
+          <div class="lg:col-span-3 area-card" style="background: var(--color-bg-2); min-height: 560px; padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <!-- GHL CONTACT FORM EMBED -->
+            <div style="text-align: center; padding: 48px 32px;">
+              <p class="font-display font-bold" style="color: var(--color-ink); margin-bottom: 6px;">Contact form goes here</p>
               <p class="text-sm" style="color: var(--color-muted);">Paste the GHL contact form embed to activate this form.</p>
             </div>
           </div>
 
         </div>
-
-        <!-- Map -->
-        <div class="fade-up mt-12" style="transition-delay: 0.12s;">
-          <div style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(var(--color-dark-rgb), 0.14); box-shadow: 0 24px 60px -24px rgba(var(--color-dark-rgb), 0.45); background: rgba(var(--color-dark-rgb), 0.04); height: 450px; display: flex; align-items: center; justify-content: center;">
-            <!-- GOOGLE MAPS EMBED GOES HERE -->
-            <div style="text-align: center; padding: 40px; color: var(--color-muted);">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 16px; opacity: 0.75;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <p class="font-display font-bold" style="color: var(--color-ink); font-size: 1rem; margin-bottom: 6px;">Google Map goes here</p>
-              <p class="text-sm" style="color: var(--color-muted);">Paste the client's Google Maps embed for their service area.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <div class="divider"></div>
-
     <!-- ============================================================
-         10. FINAL CTA — standard pattern: cta-background.jpg + dark overlay
+         10. FINAL CTA — cta-background slot + dark overlay
     ============================================================ -->
-    <section class="dark-section relative py-24 overflow-hidden" aria-label="Final call to action">
-      <!-- OFF-LIMITS: cta-background — dedicated named file only, never a content photo -->
+    <section class="dark-section relative py-28 overflow-hidden" aria-labelledby="final-cta-heading">
+      <!-- OFF-LIMITS: cta-background — dedicated named file only (brand_assets/cta-background.jpg, 1920×1080), never a content photo. PENDING. -->
       <div class="absolute inset-0" style="background: url('https://placehold.co/1920x1080') center center / cover no-repeat;"></div>
-      <div class="absolute inset-0" style="background: rgba(var(--color-dark-rgb), 0.62);"></div>
-      <div class="dark-cta-ramp"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 80% at 50% 40%, rgba(var(--color-dark-rgb), 0.44) 0%, transparent 65%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 45% at 0% 100%, rgba(var(--color-accent-deep-rgb), 0.16) 0%, transparent 55%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 45% at 100% 100%, rgba(var(--color-accent-deep-rgb), 0.12) 0%, transparent 55%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 45% 35% at 50% 78%, rgba(var(--color-accent-rgb), 0.12) 0%, transparent 55%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 120% 110% at 50% 50%, transparent 35%, rgba(0,0,0,0.36) 100%); pointer-events: none;"></div>
+      <div class="absolute inset-0" style="background: rgba(var(--color-dark-rgb), 0.78);"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 55% 60% at 50% 110%, rgba(var(--color-accent-rgb), 0.28) 0%, transparent 60%);"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 120% 110% at 50% 50%, transparent 35%, rgba(var(--color-ink-rgb),0.45) 100%); pointer-events: none;"></div>
 
       <div class="relative z-10 max-w-3xl mx-auto px-5 text-center fade-up">
-        <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-        <h2 class="font-display text-4xl lg:text-5xl font-extrabold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
-          Ready When<br />You Are.<br /><span style="color: var(--color-accent-bright);">Get It Done Today.</span>
+        <p class="eyebrow">Laundry Day Made Easy</p>
+        <h2 id="final-cta-heading" class="text-white mb-5 display-xl" style="font-size: clamp(2.3rem, 5.4vw, 3.9rem);">
+          Skip the Pile.<br /><span style="color: var(--color-accent-bright);">Book a Pickup or Stop By.</span>
         </h2>
-        <p class="text-muted text-lg mb-10 max-w-xl mx-auto" style="line-height: 1.7;">
-          Don't put it off any longer. Call Your Business Name — we offer same-day service across [City] and the [Region], we come to you, and every job is done with the same care.
+        <p class="text-muted lede mb-10 max-w-xl mx-auto">
+          Book a pickup online, or come see us on W. Sam Houston Blvd. in Pharr. We're open every day, 7am to 10pm.
         </p>
         <div class="flex flex-wrap gap-4 justify-center">
-          <a href="tel:+15550000000" class="btn-primary text-base px-8 py-4">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call Now — (555) 000-0000
+          <!-- CLEANCLOUD BOOKING EMBED: swap href="#book" for the CleanCloud booking link -->
+          <a href="#book" class="btn-primary text-base px-8 py-4">
+            Book a Pickup
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
-          <a href="/#contact" class="btn-outline text-base px-8 py-4">
-            Get a Free Quote
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1032+W+Sam+Houston+Blvd+Ste+6+Pharr+TX+78577" target="_blank" rel="noopener" class="btn-outline text-base px-8 py-4">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
           </a>
         </div>
-        <div class="flex flex-wrap items-center justify-center gap-5 mt-10">
-          <span class="flex items-center gap-1.5 text-muted text-sm">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Free estimates
-          </span>
-          <span style="color: rgba(255,255,255,0.20);">·</span>
-          <span class="flex items-center gap-1.5 text-muted text-sm">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Fair, honest pricing
-          </span>
-          <span style="color: rgba(255,255,255,0.20);">·</span>
-          <span class="flex items-center gap-1.5 text-muted text-sm">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Mobile service
-          </span>
-          <span style="color: rgba(255,255,255,0.20);">·</span>
-          <span class="flex items-center gap-1.5 text-muted text-sm">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Same-day availability
-          </span>
-        </div>
+        <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-10">
+          <li class="flex items-center gap-1.5 text-muted text-sm"><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Open daily 7am–10pm</li>
+          <li class="flex items-center gap-1.5 text-muted text-sm"><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Family-owned in Pharr</li>
+          <li class="flex items-center gap-1.5 text-muted text-sm"><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Pickup &amp; delivery</li>
+        </ul>
       </div>
     </section>
 
@@ -1371,60 +1219,62 @@
 
         <!-- Brand -->
         <div class="col-span-2 md:col-span-1">
-          <!-- LOGO PLACEHOLDER — swap the <span> for <img class="footer-logo" ...>; height comes from --footer-logo-height in brand.css -->
-          <a href="/" class="flex items-center mb-2" aria-label="Your Business Name home">
-            <span class="footer-wordmark">Your Business Name</span>
+          <!-- LOGO — interim brand_assets/logo.png in .logo-chip; swap for the client's original when it arrives -->
+          <a href="/" class="logo-chip mb-5" aria-label="Mr. Sudz Laundromat home">
+            <img class="footer-logo" src="/brand_assets/logo.png" alt="Mr. Sudz Laundromat logo" width="300" height="151" loading="lazy" />
           </a>
-          <p style="font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px; opacity: 0.85;">Trusted Local Home Services</p>
-          <p class="text-muted text-sm mb-5" style="line-height: 1.7;">Professional home services you can count on — serving [City] and the surrounding [Region].</p>
-          <div class="space-y-2">
-            <a href="tel:+15550000000" class="flex items-center gap-2 text-white text-sm font-medium hover:opacity-80 transition-opacity duration-150">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              (555) 000-0000
+          <p class="eyebrow" style="font-size: 11px; margin-bottom: 10px;">Laundry Day Made Easy</p>
+          <p class="text-muted text-sm mb-5" style="line-height: 1.7;">Family-owned and operated laundromat at 1032 W. Sam Houston Blvd., Ste. 6, Pharr, TX 78577. Open daily, 7am–10pm.</p>
+          <div class="space-y-2 mb-5">
+            <!-- PHONE: GHL tracking number [NEEDS INPUT] — (555) 000-0000 is a placeholder -->
+            <a href="tel:+15550000000" class="footer-link flex items-center gap-2 text-sm font-semibold" style="color: var(--color-bg);">(555) 000-0000</a>
+            <a href="mailto:info@mrsudzrgv.com" class="footer-link flex items-center gap-2 text-sm">info@mrsudzrgv.com</a>
+          </div>
+          <div class="flex gap-2">
+            <a href="https://www.facebook.com/MrSudzLaundromat" target="_blank" rel="noopener" class="social-btn" aria-label="Mr. Sudz on Facebook">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.6c0-.8.2-1.3 1.4-1.3H17V2.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.5v3.5h2.8V22h3.7v-10h2.8l.4-3.5H14z"/></svg>
             </a>
-            <a href="mailto:info@mrsudzrgv.com" class="flex items-center gap-2 text-muted text-sm hover:text-white transition-colors duration-150">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              info@mrsudzrgv.com
+            <a href="https://www.instagram.com/mrsudzlaundromat/" target="_blank" rel="noopener" class="social-btn" aria-label="Mr. Sudz on Instagram">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             </a>
           </div>
         </div>
 
         <!-- Services -->
         <div>
-          <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Services</h2>
+          <h2 class="font-display font-extrabold text-white text-xs uppercase tracking-widest mb-4">Services</h2>
           <ul class="space-y-2.5">
-            <li><a href="/services/wash-and-fold.html"        class="text-muted text-sm hover:text-white transition-colors duration-150">Wash, Dry &amp; Fold</a></li>
-            <li><a href="/services/laundry-pickup-delivery.html"  class="text-muted text-sm hover:text-white transition-colors duration-150">Laundry Pickup &amp; Delivery</a></li>
-            <li><a href="/services/self-service-laundry.html"         class="text-muted text-sm hover:text-white transition-colors duration-150">Self-Service Laundry</a></li>
-            <li><a href="/services/ironing-steaming.html"     class="text-muted text-sm hover:text-white transition-colors duration-150">Ironing &amp; Steaming</a></li>
-            <li><a href="/services/comforter-cleaning.html"            class="text-muted text-sm hover:text-white transition-colors duration-150">Comforter &amp; Bedding Cleaning</a></li>
-            <li><a href="/services/dry-cleaning.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">Dry Cleaning</a></li>
+            <li><a href="/services/wash-and-fold.html" class="footer-link text-sm">Wash, Dry &amp; Fold</a></li>
+            <li><a href="/services/laundry-pickup-delivery.html" class="footer-link text-sm">Laundry Pickup &amp; Delivery</a></li>
+            <li><a href="/services/self-service-laundry.html" class="footer-link text-sm">Self-Service Laundry</a></li>
+            <li><a href="/services/ironing-steaming.html" class="footer-link text-sm">Ironing &amp; Steaming</a></li>
+            <li><a href="/services/comforter-cleaning.html" class="footer-link text-sm">Comforter &amp; Bedding Cleaning</a></li>
+            <li><a href="/services/dry-cleaning.html" class="footer-link text-sm">Dry Cleaning</a></li>
           </ul>
         </div>
 
         <!-- Company -->
         <div>
-          <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h2>
+          <h2 class="font-display font-extrabold text-white text-xs uppercase tracking-widest mb-4">Company</h2>
           <ul class="space-y-2.5">
-            <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">About Us</a></li>
-            <!-- OPTIONAL MODULE LINK (footer, #reviews): re-enable with the Review widget module: <li><a href="/#reviews"      class="text-muted text-sm hover:text-white transition-colors duration-150">Reviews</a></li> -->
-            <!-- OPTIONAL MODULE LINK (footer, #insurance): re-enable with the Insurance module: <li><a href="/#insurance"    class="text-muted text-sm hover:text-white transition-colors duration-150">Insurance Partners</a></li> -->
-            <li><a href="/#service-area" class="text-muted text-sm hover:text-white transition-colors duration-150">Service Areas</a></li>
-            <li><a href="/#contact"      class="text-muted text-sm hover:text-white transition-colors duration-150">Contact</a></li>
-            <li><a href="#"             class="text-muted text-sm hover:text-white transition-colors duration-150">Privacy Policy</a></li>
+            <li><a href="/about.html" class="footer-link text-sm">About Us</a></li>
+            <!-- OPTIONAL MODULE LINK (footer, #reviews): re-enable with the Review widget module: <li><a href="/#reviews" class="footer-link text-sm">Reviews</a></li> -->
+            <li><a href="/#visit" class="footer-link text-sm">Hours &amp; Directions</a></li>
+            <li><a href="/#service-area" class="footer-link text-sm">Service Areas</a></li>
+            <li><a href="/#contact" class="footer-link text-sm">Contact</a></li>
           </ul>
         </div>
 
         <!-- Service Area -->
         <div>
-          <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Areas We Serve</h2>
+          <h2 class="font-display font-extrabold text-white text-xs uppercase tracking-widest mb-4">Areas We Serve</h2>
           <ul class="space-y-2.5">
-            <li><a href="/areas/pharr.html" class="text-muted text-sm hover:text-white transition-colors duration-150">Pharr</a></li>
-            <li><a href="/areas/mcallen.html" class="text-muted text-sm hover:text-white transition-colors duration-150">McAllen</a></li>
-            <li><a href="/areas/san-juan.html" class="text-muted text-sm hover:text-white transition-colors duration-150">San Juan</a></li>
-            <li><a href="/areas/edinburg.html" class="text-muted text-sm hover:text-white transition-colors duration-150">Edinburg</a></li>
-            <li><a href="/areas/alamo.html" class="text-muted text-sm hover:text-white transition-colors duration-150">Alamo</a></li>
-            <li><a href="/areas/hidalgo.html" class="text-muted text-sm hover:text-white transition-colors duration-150">Hidalgo</a></li>
+            <li><a href="/areas/pharr.html" class="footer-link text-sm">Pharr</a></li>
+            <li><a href="/areas/mcallen.html" class="footer-link text-sm">McAllen</a></li>
+            <li><a href="/areas/san-juan.html" class="footer-link text-sm">San Juan</a></li>
+            <li><a href="/areas/edinburg.html" class="footer-link text-sm">Edinburg</a></li>
+            <li><a href="/areas/alamo.html" class="footer-link text-sm">Alamo</a></li>
+            <li><a href="/areas/hidalgo.html" class="footer-link text-sm">Hidalgo</a></li>
           </ul>
         </div>
 
@@ -1434,12 +1284,12 @@
 
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
         <p class="text-muted text-xs text-center sm:text-left">
-          © 2026 Your Business Name. All rights reserved. Serving [City] &amp; the [Region], [ST].
+          © 2026 Mr. Sudz Laundromat. Pharr, TX · Rio Grande Valley.
         </p>
         <div class="flex items-center gap-4">
-          <a href="#" class="text-xs text-muted hover:text-white transition-colors duration-150">Privacy Policy</a>
-          <span style="color: rgba(255,255,255,0.20);">·</span>
-          <a href="#" class="text-xs text-muted hover:text-white transition-colors duration-150">Terms</a>
+          <a href="#" class="footer-link text-xs">Privacy Policy</a>
+          <span style="color: rgba(255,255,255,0.20);" aria-hidden="true">·</span>
+          <a href="#" class="footer-link text-xs">Terms</a>
         </div>
       </div>
     </div>
@@ -1447,9 +1297,9 @@
 
   <script>
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 10);
-    }, { passive: true });
+    const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 10);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
 
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -1472,6 +1322,19 @@
       }
     });
 
+    // Live open/closed status — store hours are 7am–10pm daily, Pharr time (America/Chicago).
+    // Falls back to the static "Open daily" label if Intl time zones aren't available.
+    (() => {
+      const pill = document.getElementById('open-status');
+      if (!pill) return;
+      try {
+        const hour = parseInt(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', hour: 'numeric', hourCycle: 'h23' }).format(new Date()), 10);
+        const open = hour >= 7 && hour < 22;
+        pill.dataset.state = open ? 'open' : 'closed';
+        pill.querySelector('.status-text').textContent = open ? 'Open now · until 10 PM' : 'Closed now · opens 7 AM';
+      } catch (e) { /* keep static label */ }
+    })();
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1483,9 +1346,7 @@
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   </script>
 
-  <!-- GHL CHAT WIDGET SCRIPT GOES HERE -->
-
-  <!-- GHL EXTERNAL TRACKING SCRIPT GOES HERE -->
+  <!-- GHL CHAT WIDGET SCRIPT -->
 
   <!-- GHL FORM EMBED SCRIPT GOES HERE -->
 
