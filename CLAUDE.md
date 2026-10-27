@@ -1,62 +1,57 @@
-# CLAUDE-SKELETON.md — Nexor AI blank CLAUDE.md
+# CLAUDE.md — Mr. Sudz Laundromat (LOCKED — one open input)
 
-This is the **starting point for every client's `CLAUDE.md`**. Copy it to the new client
-repo, rename it `CLAUDE.md`, and fill it in from the onboarding form.
-
-## How to use this skeleton
-
-Two layers, marked throughout:
-
-- **FROZEN** — identical on every build. The proven Nexor conventions. Do NOT rewrite
-  these per client. If you improve one, improve it *here* and roll it to all future
-  builds — never fork it silently in one client's file.
-- **`[NEEDS INPUT — …]`** — a client fact to fill from the onboarding form. If the form
-  didn't provide it, leave the flag; do NOT invent it. `[DECIDE — …]` marks a judgment
-  call to resolve at strategy lock. `[DERIVE — …]` marks something computed from an asset
-  (e.g. palette from logo).
-
-Fill every `[NEEDS INPUT]` you can, flag the rest, resolve every `[DECIDE]` at the
-strategy-lock gate. When every flag is either filled or consciously deferred to backfill,
-`CLAUDE.md` is locked and the build (BUILD-PROMPTS.md, Code-only) begins.
+> **Status:** LOCKED Oct 22, 2026 (strategy lock with Juan). All decisions resolved — see
+> **DECISIONS (resolved)** at the bottom. The ONLY open client input is the **delivery
+> zone**, which sets each city page's angle (it does not block Prompts 0–3).
+> Any remaining `[NEEDS INPUT]` is backfill: build without the claim, never invent it.
 
 ---
 
-## What This Is — FILL PER CLIENT (boilerplate frozen)
+## What This Is
 
-This is the **[NEEDS INPUT — Business Name]** website, built on the Nexor AI template.
+This is the **Mr. Sudz Laundromat** website, built on the Nexor AI template.
 The generic template placeholders are resolved to this client's real identity below;
 anything not yet confirmed is left `[NEEDS INPUT]` and must NOT be invented. Keep the
 template's structure, section rhythm, nav pattern, dark sections, footer layout, and
 design system intact — only content, brand, service area, colors, logo, photos, and copy
 are client-specific.
 
-Trade: **[NEEDS INPUT — industry/trade]**. Several template modules are home-services
-artifacts that may not apply to this trade — see "Template Sections to DELETE."
+Trade: **Laundromat + laundry services** (self-service laundromat, wash/dry/fold drop-off,
+ironing & steaming/pressing, and pickup & delivery). Several template modules are
+home-services artifacts that do not apply to this trade — see "Template Sections to DELETE."
 
 Treat any remaining `[NEEDS INPUT]` field as fill-in-the-blank. Do not invent client
 facts; confirm with the client / Juan before filling.
 
+**Source of current facts:** the client's existing CleanCloud-built site (mrsudzrgv.com:
+Home, Pricing, Promotions, Contact, Book). Anything below marked *(from current site)* is
+the client's own published copy — still confirm with the client before treating as locked.
+
 ---
 
-## Resolved token reference — FILL PER CLIENT
+## Resolved token reference
 
 | Token | Resolved value |
 |---|---|
-| Business name | [NEEDS INPUT] (short brand: [NEEDS INPUT]) |
-| Service One … Service Six | [NEEDS INPUT — the six locked service names] |
-| service slugs | [NEEDS INPUT — one slug per service] |
-| Primary city | [NEEDS INPUT — physical-location city; anchors NAP + homepage] |
-| City 2 … City 6 | [NEEDS INPUT — priority order below] |
-| city slugs | [NEEDS INPUT] |
-| Region | [NEEDS INPUT] |
-| State (full) | [NEEDS INPUT — e.g. Texas] |
-| State abbreviation | [NEEDS INPUT — e.g. TX] |
-| Phone (site) | [NEEDS INPUT — GHL tracking number ONLY; owner's personal line is never published] |
-| Email | [NEEDS INPUT] |
-| Domain | [NEEDS INPUT] — canonical host [NEEDS INPUT — www vs non-www, set as Vercel Primary day one] |
+| Business name | Mr. Sudz Laundromat (short brand: Mr. Sudz) |
+| Service One … Six | 1. Wash, Dry & Fold · 2. Laundry Pickup & Delivery · 3. Self-Service Laundry · 4. Ironing & Steaming · 5. Comforter & Bedding Cleaning · 6. Dry Cleaning |
+| service slugs | `wash-and-fold` · `laundry-pickup-delivery` · `self-service-laundry` · `ironing-steaming` · `comforter-cleaning` · `dry-cleaning` |
+| Primary city | Pharr, TX (physical location; anchors NAP + homepage) |
+| City 2 … City 6 | McAllen · San Juan · Edinburg · Alamo · Hidalgo (delivery coverage per city = [NEEDS INPUT]) |
+| city slugs | `pharr` · `mcallen` · `san-juan` · `edinburg` · `alamo` · `hidalgo` |
+| Region | Rio Grande Valley (RGV), Hidalgo County, TX |
+| Phone (site) | [NEEDS INPUT — GHL tracking number ONLY]. Current public number *(from current site)*: (956) 232-9274 — used in the client's own marketing posts, so very likely the business line (not a personal number). Stays on GBP as-is (DECISION #6). |
+| Email | info@mrsudzrgv.com *(from current site)* |
+| Domain | mrsudzrgv.com — canonical host **https://www.mrsudzrgv.com** (set as Vercel Primary day one; non-www 301 → www) |
 
 > ⚠️ **Email domain may differ from website domain.** If so, both can be correct — do NOT
 > "fix" one to match the other, and never build a URL off the email domain. Confirm.
+> (Currently both are mrsudzrgv.com.)
+
+> ⚠️ **Domain migration risk:** mrsudzrgv.com currently runs on CleanCloud's website
+> builder, which also hosts the live `/book` flow. Repointing DNS to Vercel removes that
+> page. Before cutover, get the CleanCloud booking widget/hosted booking link and wire it
+> into the new site. [NEEDS INPUT — CleanCloud booking URL or embed code]
 
 ---
 
@@ -67,13 +62,17 @@ Palette is **derived from the client logo every build** — extract the hexes fr
 properties + Tailwind `theme.extend.colors`; reuse everywhere; never hardcode hexes per
 page.
 
+Logo source *(from current site)*:
+`https://dafgr1y3h3vlw.cloudfront.net/images/logos/361751741098512.png` — download into
+`brand_assets/logo.png` (or get the original high-res file from the client). Current site copy
+leans blue (💙 used throughout) — confirm against the actual logo hexes.
+
 | Token | Hex | Role |
 |---|---|---|
 | `--color-primary` | [DERIVE from logo] | Primary brand — dark hero/sections, footer, nav, primary buttons |
 | `--color-primary-mid` | [DERIVE] | Mid-tone — hover, secondary buttons, borders/dividers on dark |
-| `--color-accent` | [DERIVE] | Accent — icons, link accents, eyebrows, highlights on light |
+| `--color-accent` | [DERIVE] | Accent — icons, link accents, eyebrow, highlights on dark |
 | `--color-accent-deep` | [DERIVE] | On-light fallback for the accent (see rule below) |
-| `--color-accent-bright` | [DERIVE] | On-dark counterpart of the accent (see rule below) |
 | `--color-silver` / neutral | [DERIVE] | Muted borders, secondary text on dark, chrome |
 | `--color-dark` (canonical) | [= primary] | THE single dark-section background token |
 | `--color-ink` | [DERIVE] | Near-black headings/body |
@@ -83,119 +82,180 @@ page.
 **FROZEN rules:**
 - **Accent-on-light fallback:** a bright accent is fine as fill / text-on-dark; as small
   text or dividers on white it goes low-contrast — fall back to `--color-accent-deep`.
-- **Accent-on-dark fallback:** the same failure runs in reverse on dark sections — a deep
-  or mid-tone accent goes low-contrast on `--color-dark`. Every accent use on a dark
-  background (colored heading spans, dark-section eyebrows, step numbers, the footer
-  tagline, check strokes) uses `--color-accent-bright`, holding ≥4.5:1 against
-  `--color-dark` (≥3:1 covers large text/graphics, but the same token also sets small
-  text, so hold 4.5). Documented cross-build lesson — never ship raw `--color-accent` on
-  a dark section.
-- **Recolor contrast check (every build):** after deriving the palette and before any page
-  work, verify: `--color-accent-deep` vs `--color-bg` ≥4.5:1 · `--color-accent-bright` vs
-  `--color-dark` ≥4.5:1 · `--color-muted` vs `--color-bg-2` ≥4.5:1. Fix the token, never
-  the page.
 - **One canonical dark token:** `--color-dark` is the only dark-section background. Never
   let a second near-identical dark hex drift in.
 - **Strip the template's red.** The template ships red as de-facto primary — remove it.
   Red is semantic (emergency/urgency) only, and only if the brand actually uses it.
-  `[DECIDE — does this brand's palette include red at all? Default: no.]`
+  **Decided: no red in this palette.**
 - **Never use default Tailwind blue/indigo/sky/cyan.** Drive every color from the brand
-  tokens and derive shades from them.
-
----
-
-## Nav & logo sizing — FROZEN methodology, FILL the values
-
-Nav height is **sized off the client logo** — a documented cross-build issue: past builds
-needed a 96–104px nav to fit 76px+ logos, and the template never inherited it. It is now
-driven by three tokens in `brand.css` (the defaults are a **starting point, not a fixed
-value** — resize per client from the logo):
-
-| Token | Default | Role |
-|---|---|---|
-| `--nav-height` | `96px` | Nav bar height. |
-| `--nav-logo-height` | `72px` | Client logo `<img>` height in the nav (swap the `<span>` wordmark for `<img class="nav-logo">`). |
-| `--footer-logo-height` | `116px` | Client logo `<img>` height in the footer (`<img class="footer-logo">`). |
-
-**FROZEN rules:**
-- These tokens are the ONLY place nav/logo heights are set. Every page consumes them —
-  the sticky + scrolled nav state, the mobile nav, and the desktop dropdowns all key off
-  `--nav-height` — so per-client resizing is **one edit in `brand.css`, never a 15-file sweep.**
-- Size `--nav-height` off the logo: it must clear `--nav-logo-height` with breathing room.
-- Changing the token keeps the scrolled/solid nav, the transparent-at-top state, hero
-  clearance, the mobile toggle, and the dropdown menus aligned — verify these after a resize.
+  tokens and derive shades from them. (Especially relevant here — if the brand is blue,
+  the blues come from the logo hexes, never Tailwind's `blue-*`/`sky-*`.)
 
 ---
 
 ## Integration placeholders — FROZEN insertion points, DECIDE per client
 
 - `<!-- GHL CONTACT FORM EMBED -->` — [NEEDS INPUT — form name]. Use the GHL embed; never a custom form.
+  (Current site uses a CleanCloud contact form: Name*, Email*, Phone, Message*.)
+- `<!-- CLEANCLOUD BOOKING EMBED -->` — **client-specific addition.** Pickup & delivery
+  orders run through CleanCloud (web booking + CleanCloud app). [NEEDS INPUT — booking
+  widget code or hosted link]. All "Book Now / Schedule a Pickup" CTAs point here.
 - `<!-- GHL CHAT WIDGET SCRIPT -->` — [NEEDS INPUT] (insert before `</body>`).
 - `<!-- GHL EXTERNAL TRACKING SCRIPT -->` — [NEEDS INPUT] (insert in `<head>`).
-- `<!-- GHL REVIEW WIDGET EMBED -->` — [DECIDE]. Wire ONLY if review count/rating is
-  confirmed AND displayed. Until then: no widget, no stars, no counts, no `aggregateRating`.
-- `<!-- GOOGLE MAPS EMBED -->` — [DECIDE — wire only if the client has a public address].
-- `<!-- INSURANCE CARRIER LOGO ROW -->` — [DECIDE]. DO NOT wire unless specific carrier
-  partnerships are confirmed. Shipping a logo row means fabricating logos (burned prior
-  builds). Cover insurance in copy, not a logo wall.
-- `<!-- FINANCING SECTION -->` — [DECIDE — delete unless financing is actually offered].
+- `<!-- GHL REVIEW WIDGET EMBED -->` — **KEEP THE SLOT, wire later.** 128 Google reviews
+  confirmed; widget code is backfill. Until it's live: no review count, stars, or rating
+  in copy or schema. When it's wired and displayed, add `aggregateRating` to the homepage
+  JSON-LD in the same commit — never before.
+- `<!-- GOOGLE MAPS EMBED -->` — **WIRE.** Public storefront address confirmed on current
+  site: 1032 W. Sam Houston Blvd., Ste. 6, Pharr, TX 78577.
+- `<!-- INSURANCE CARRIER LOGO ROW -->` — **DELETE.** Not applicable to a laundromat.
+- `<!-- FINANCING SECTION -->` — **DELETE.** Not applicable.
 - Social share image: `brand_assets/og-image.jpg` (1200×630) — [NEEDS INPUT — create before launch].
 
 ---
 
-## Template Sections to DELETE for this client — FROZEN candidates, FILL the list
+## Template Sections to DELETE for this client
 
-Standard removable modules (delete any this trade doesn't offer):
-- Financing block / CTA — [DECIDE]
-- Insurance carrier-logo row — [DECIDE]
-- Review widget / star rating / review-count blocks — [DECIDE, default delete until confirmed]
-- Inventory / gallery page — [DECIDE — see gallery rules below]
+- Financing block / CTA — **DELETE**
+- Insurance carrier-logo row + any insurance copy — **DELETE** (no insurance angle in this trade)
+- Review widget / star rating / review-count blocks — **DELETE until confirmed**
+- Inventory / gallery page — **NOT in v1** (revisit when Juan's photos arrive)
 - Trust-badge pill row in the hero — delete by default (redundant with the eyebrow)
-- [NEEDS INPUT — any other home-services artifact irrelevant to this trade]
+- Home-services artifacts to remove: "emergency service," "free estimate / free quote,"
+  "licensed & insured," "same-day technician dispatch," any repair/replacement framing.
+  Replace quote-CTA language with **Book a Pickup / Visit Us / Call** framing.
+
+## Trade Adaptation — contractor template → laundromat (client-specific)
+
+The Nexor template was built for contractors. This build CLONES it (keep structure,
+nav, footer, dark sections, design system, schema patterns, serve/screenshot tooling)
+but adapts these pieces. Prompt 0 must report which of these exist in the template.
+
+**Swap:**
+- Every "Get a Free Quote / Free Estimate" CTA → primary **Book a Pickup** (CleanCloud),
+  secondary **Get Directions** or **Call**. Final-CTA section uses the same pair.
+- Estimate/quote form sections → GHL contact form (questions, commercial inquiries) +
+  CleanCloud booking for orders. No quote-request framing anywhere.
+- "Our Process" / project-steps section → **How Pickup & Delivery Works**
+  (Book → Pickup → Wash → Delivery — the 4 steps on the current site).
+- Service-area / "we come to you" copy → storefront-first: hours + address + map, with
+  delivery as the add-on.
+
+**Add (sections a contractor template won't have):**
+- **Hours + Visit block** (open daily 7am–10pm, address, map, parking) — homepage, near top.
+- **Amenities block** (free Wi-Fi, charging stations, etc. — confirmed items only).
+- **Pricing block** — on the Wash & Fold and Comforter pages only (see Price list; DECISION #1).
+- ~~Promotions band~~ — **decided: no promotions anywhere on the site.**
+
+**Delete (contractor-only):** before/after galleries, project portfolio, emergency
+service banners, "licensed & insured" badges, financing, insurance carrier rows,
+warranty sections, crew/technician bios.
 
 ---
 
-## Business Identity — FILL PER CLIENT (guardrails frozen)
+## Business Identity
 
-Every field is confirmed from onboarding or flagged `[NEEDS INPUT]`. Nothing inferred.
-
-- Business name / short brand: [NEEDS INPUT]
-- Industry / trade: [NEEDS INPUT]
-- Owner: [NEEDS INPUT]. **FROZEN rule:** owner name is referenced only in a dedicated
-  "About the Owner" section or where genuinely required — never threaded through general
-  body copy, headings, meta/OG, or CTAs.
-- Staff / team: [NEEDS INPUT — names + roles]. **Never infer staff or roles from social
-  posts. Confirm directly with the client.**
+- Business name / short brand: Mr. Sudz Laundromat / Mr. Sudz
+- Industry / trade: Laundromat & laundry services (drop-off, pickup & delivery, pressing)
+- Owner: **LOCKED — the owner's name is NEVER published anywhere on this site** (no About
+  the Owner section, no body copy, headings, meta/OG, schema, alt text, or CTAs). The
+  About page is about the business and the laundromat, not a person. Zero grep hits for
+  the owner's first name before deploy.
+- Staff / team: never named. Use only "friendly on-site attendants" and "our driver." **Never infer staff or roles from social posts. Confirm
+  directly with the client.**
 - Relationship claims: **FROZEN** — no "family owned," "husband and wife," "couple," or
   any relationship structure without explicit written confirmation. "Family-run" is a
-  tone signal (safe); a relationship *claim* is a fact (needs confirmation). [NEEDS INPUT]
-- Differentiator / ownership signal (e.g. veteran-owned): [NEEDS INPUT — confirmed only]
-- Owner background (for About page): [NEEDS INPUT]
+  tone signal (safe); a relationship *claim* is a fact (needs confirmation).
+  → **Confirmed (Juan, Oct 22 2026):** publish "family-owned and operated" — the client's own
+  written description. Nothing beyond that phrase (no who, no relationships).
+- Differentiator / ownership signal: family-owned and operated + the amenities (TVs, A/C, snack bar, attendants)
+- Client's own positioning *(business description, pasted by Juan Oct 22 2026)*: family-owned
+  Pharr laundromat offering self-service and wash, dry & fold, with "an array of added
+  amenities," aiming to be the premier laundromat in the Rio Grande Valley.
+  → Use as the **positioning direction**, not as copy. "Premier laundromat in the RGV" is
+  an aspiration — never state it as a fact or ranking. Amenities are the proof point.
+  ("Top-notch" is on the SEO-CONTENT-PROMPT banned list — don't reuse his wording.)
+- About page content: the business — family-owned and operated, Pharr storefront, services,
+  amenities, "Laundry Day Made Easy." No owner name, no founding year, no history claims.
 - **FROZEN framing rule:** an experience figure is a PERSONAL claim, not a business-age
   claim. Write "[N] years in the [trade]" — never "[N] years serving [City]" (implies
   business age). Founding year is separate and [NEEDS INPUT] until confirmed.
-- Supplier / franchise / dealer relationship: [NEEDS INPUT]
-- Physical address: [NEEDS INPUT — or "service-area only, no public address"]
-  → this sets the schema variant (PostalAddress included vs omitted; see SEO section).
+- Supplier / franchise / dealer relationship: Independent (no franchise indicated)
+  Make no franchise or affiliation claim either way. Software: CleanCloud (booking/POS) — not a public claim.
+- Physical address: **1032 W. Sam Houston Blvd., Ste. 6, Pharr, TX 78577** *(from current site)*
+  → PostalAddress INCLUDED in schema.
 - Phone (site): [NEEDS INPUT — GHL tracking number]
-- Phone (owner personal — NOT FOR PUBLICATION): [NEEDS INPUT — recorded only so it's never
-  mistaken for the site number; must return zero grep hits before deploy]
-- Email: [NEEDS INPUT]
-- Domain + canonical host: [NEEDS INPUT]
-- Founded year: [NEEDS INPUT — do not state or compute until confirmed]
-- Licenses / certifications: [NEEDS INPUT — publish none until confirmed]
-- Official tagline: [NEEDS INPUT]
-- Review / reputation status: [NEEDS INPUT — until confirmed: no widget, no stars, no
-  counts, no `aggregateRating`, no testimonials. Unattributed testimonials are never published.]
-- Price range: [NEEDS INPUT — for JSON-LD `priceRange`]
+- Phone (owner personal — NOT FOR PUBLICATION): none provided. Only the GHL number (and
+  the business line above, if ever needed) may appear.
+- Email: info@mrsudzrgv.com
+- Domain + canonical host: **https://www.mrsudzrgv.com**
+- Founded year: unknown — never state or compute it.
+- Licenses / certifications: N/A for trade — publish none.
+- Official tagline: **"Laundry Day Made Easy"** (client's own phrase from current site).
+- Review / reputation status: **128 Google reviews (confirmed by Juan, Oct 2026).**
+  Star rating arrives with the widget. Review widget will be wired LATER (backfill). Until the
+  widget is live on the page: no stars, no `aggregateRating`, no testimonials. Leave the
+  `<!-- GHL REVIEW WIDGET EMBED -->` slot in place on the homepage so it drops in without
+  layout work. **Decided: no review count in copy until the widget is live.**
+  Do NOT carry over "100% Customer Satisfaction (based on reviews)." Unattributed
+  testimonials are never published.
+- Price range: **`$`** (JSON-LD `priceRange`)
+- Social: Facebook https://www.facebook.com/MrSudzLaundromat ·
+  Instagram https://www.instagram.com/mrsudzlaundromat/
 
-### Key operational facts — [NEEDS INPUT] (must be accurate everywhere once filled)
-- Service model (in-shop / mobile / both): [NEEDS INPUT]
-- Service-area / free-travel radius: [NEEDS INPUT]
-- Intake method / primary CTA framing: [NEEDS INPUT]
-- Any confirmed differentiators: [NEEDS INPUT]
+### Key operational facts (must be accurate everywhere once filled)
+- Service model: **both** — walk-in self-service + drop-off at the store, AND pickup &
+  delivery (described on current site as "now available" / "new").
+- Delivery area / radius / zip codes: [NEEDS INPUT — the ONE open client question; sets city-page angles]
+- Delivery minimums, fees, turnaround time: **not stated on the site** — route to "book online to see pickup times."
+- Intake method / primary CTA framing: **Book a pickup online (CleanCloud)** for
+  delivery; **"Visit us — open daily 7am–10pm"** for self-service; phone as secondary.
+  Booking also available via the **CleanCloud app**.
+- Payment at machines: **not stated on the site** (unconfirmed — do not say coin, card, or app).
+- Machines: describe only as modern, high-efficiency, fast (client's own words). No counts,
+  sizes, or brand names.
+- Amenities *(from current site FAQ)*: 75" big-screen TVs, free Wi-Fi, charging stations,
+  cold A/C, snack bar (drinks and treats for purchase), clean modern facility, friendly
+  on-site attendants. Do NOT claim attendants are on duty every open hour; no seating counts,
+  detergent sales, or parking claims.
+- Wash, Dry & Fold drop-off flow *(from current site FAQ)*: drop off with the attendant →
+  state preferences (detergent, drying, special instructions) → washed, dried, folded →
+  ready for pickup. No turnaround time on the site — never "same-day."
+- Retail *(from current site)*: hangers, Mr. Sudz laundry bag.
+- Language: **English only for v1.** No Spanish sections, no hreflang.
 
-### Hours — [NEEDS INPUT] (for `openingHoursSpecification`)
+### Price list *(from current site, confirmed matches Juan's paste Oct 22 2026)*
+> **DECISION #1 (locked):** publish ONLY the Wash, Dry & Fold group below — the $1.50/lb
+> rate plus comforter and coverlet/blanket prices — on the Wash & Fold and Comforter pages
+> (copy + FAQ OK). Everything else (ironing, starch, dry cleaning, retail) is reference
+> only: never published; route that pricing intent to "call or book online."
+> JSON-LD: `priceRange: "$"` only — no price values in Offer blocks.
+
+| Group | Item | Price |
+|---|---|---|
+| Wash, Dry & Fold | Wash & Fold, per lb | $1.50 |
+| | Comforter — Twin / Full / Queen / King | $15 / $18 / $22 / $22 |
+| | Down/Feather Comforter | $28 |
+| | Coverlet/Blanket — Twin / Full / Queen / King | $11 / $14 / $17 / $17 |
+| Ironing (listed under Delivery) | Pants, Shirts, Shorts, Skirts | $2.75 each |
+| | Starch — Regular / Heavy (per item) | $0.25 / $0.50 |
+| In-Store | Shirt/Blouse — Short / Long Sleeve | $5.50 / $6.00 |
+| | Slacks | $5.50 |
+| | Sweater — Short / Long Sleeve | $6.50 / $7.50 |
+| | Dress — Short / Long | $9.00 / $11.00 |
+| | Blazer/Coat | $10.00 |
+| | School Band Uniform | $15.00 |
+| Retail | Hangers (5-pack) | $1.00 |
+| | Mr. Sudz Laundry Bag | $10.00 |
+
+"In-Store" = **Dry Cleaning** (confirmed Oct 22 2026 via the client's dry cleaning post).
+
+### Promotions — **decided: none on the site.** Do not mention any discount, promo, or
+first-order offer anywhere (they change too often to keep accurate).
+
+### Hours (for `openingHoursSpecification`)
+- Open daily 7:00am–10:00pm *(from current site)* → `Mo-Su 07:00-22:00`
+- No last-wash or drop-off cutoff claims.
 
 ---
 
@@ -206,14 +266,34 @@ categories over narrow component terms). Minor/related services fold in as on-pa
 sections or FAQ, not their own pages. Default is six pages; flex only if the client
 genuinely needs more/fewer.
 
-- Flagship (highest volume + call volume): [NEEDS INPUT]
-- Secondary push (differentiator / highest ticket): [NEEDS INPUT]
-- Standard ×4: [NEEDS INPUT]
-- Folded-in sub-services (sections/FAQ, not pages): [NEEDS INPUT]
+- **Homepage target:** "laundromat Pharr" / "laundromat near me" (the broad category term
+  lives on the homepage, NOT a service page)
+- **Flagship (highest volume + lead value):** Wash, Dry & Fold — `/services/wash-and-fold.html`
+  ("wash and fold near me," "drop off laundry service"). Current listed rate $1.50/lb.
+- **Secondary push (differentiator / highest ticket):** Laundry Pickup & Delivery —
+  `/services/laundry-pickup-delivery.html` (new service, recurring revenue, CleanCloud booking)
+- **Standard:**
+  - Self-Service Laundry — `/services/self-service-laundry.html` (machines,
+    amenities; must lead with "self-service" phrasing, not "laundromat," to avoid
+    colliding with the homepage)
+  - Ironing & Steaming — `/services/ironing-steaming.html` (pressing; workwear, uniforms,
+    dresses, school band uniforms; starch options)
+  - Comforter & Bedding Cleaning — `/services/comforter-cleaning.html` (comforters, down/
+    feather, coverlets, blankets — all sizes)
+  - Dry Cleaning — `/services/dry-cleaning.html` (**confirmed** — client's own post, pasted
+    by Juan Oct 22 2026: suits & dress shirts, dresses & skirts, jackets/blazers/coats,
+    pants, sweaters; workwear + special-occasion angle). This is the "In-Store" price
+    group. Copy never says "on-site" / "in-house" or states a turnaround (unconfirmed) —
+    frame as "drop off your dry cleaning at Mr. Sudz."
+- **Folded-in sub-services (sections/FAQ, not pages):** starch options (regular/heavy),
+  school & band uniform pressing, retail laundry bags & hangers.
 
 > ⚠️ **FROZEN anti-cannibalization:** keep distinct search intents on distinct pages
 > (e.g. repair vs replacement). Never introduce a broad umbrella page that cannibalizes
 > two narrower ones.
+> Client-specific: **Wash & Fold** (the service — drop-off or delivered) vs **Pickup &
+> Delivery** (the convenience — "laundry delivery service near me") stay separate. Wash &
+> Fold page links to Pickup & Delivery for the delivery option; it does not re-explain it.
 
 ---
 
@@ -227,15 +307,38 @@ genuinely needs more/fewer.
 - Homepage `index.html`
 - About `about.html`
 - Contact / Thank-You `thank-you.html` (noindex, nofollow)
-- 6 service pages under `/services/`: [NEEDS INPUT — slugs]
-- 6 city pages under `/areas/`: [NEEDS INPUT — slugs]
-- Inventory/gallery page: [DECIDE — include only if applicable; see gallery rules]
+- Service pages under `/services/`: `wash-and-fold.html`, `laundry-pickup-delivery.html`,
+  `self-service-laundry.html`, `ironing-steaming.html`, `comforter-cleaning.html`, `dry-cleaning.html`
+- City pages under `/areas/`: `pharr.html`, `mcallen.html`, `san-juan.html`, `edinburg.html`, `alamo.html`, `hidalgo.html`
+- Inventory/gallery page: **none in v1**
+- No pricing page, no promotions page, no contact page (contact = homepage section + GHL form)
+
+> **Redirects (locked) — 301 in `vercel.json` at cutover:**
+> `/pricing` → `/services/wash-and-fold.html` · `/promotions` → `/` · `/contact` → `/` ·
+> `/book` → `/services/laundry-pickup-delivery.html`
 
 ### City priority — FROZEN methodology, FILL the order
 Home city anchors the homepage + NAP. Deepest city page = highest-volume target and
 becomes the CITY-PAGE TEMPLATE. Order drives GSC indexing sequence.
-- [NEEDS INPUT — primary → secondary → … with a one-line rationale each]
-- [DECIDE — any cities pending real search-volume data]
+
+**SEO goal (Juan, locked):** win Pharr (homepage + map pack) AND rank in the neighboring
+cities. City pages are built for every neighbor regardless of delivery coverage. Each
+city page's angle is set by what's TRUE for that city:
+- **In the delivery zone** → lead with pickup & delivery to that city, plus the walk-in option.
+- **Outside the zone** → lead with the drive-in angle (real route/drive from that city to
+  W. Sam Houston Blvd.) and wash & fold drop-off. Never imply delivery there.
+- Never claim a location in a neighbor city — one storefront, in Pharr.
+
+- Order (locked; zone status per city = [NEEDS INPUT]):
+  1. **Pharr** — home city; storefront on W. Sam Houston Blvd.
+  2. **McAllen** — largest adjacent market, highest volume → **DEEPEST city page / city
+     template** (Prompt 4). If McAllen turns out to be outside the zone, it still leads —
+     with the drive-in angle.
+  3. **San Juan** — immediately east of Pharr
+  4. **Edinburg** — large market north (UTRGV students/renters = wash & fold demand)
+  5. **Alamo** — east along the same corridor
+  6. **Hidalgo** — south of Pharr
+- Delivery zone answer only changes each page's angle, never the list.
 
 ---
 
@@ -248,6 +351,10 @@ For all page copy, read and follow `SEO-CONTENT-PROMPT.md` in full as the PRIMAR
 methodology before writing any content. If wording ever conflicts with the technical rules
 below, `SEO-CONTENT-PROMPT.md` wins on wording; the rules below govern technical
 implementation.
+
+GBP categories for the prompt (working set — Juan will correct if the profile differs):
+primary **Laundromat**; secondaries **Laundry Service**, **Dry Cleaner**. GBP services = the
+six service pages.
 
 ---
 
@@ -262,14 +369,15 @@ implementation.
 twitter summary_large_image + title/description/image; images → 1200×630 (flag if not created).
 
 **Structured Data (JSON-LD) — FROZEN patterns:**
-- Homepage: the correct `@type` for the trade `[NEEDS INPUT — e.g. AutoRepair / HVACBusiness / LocalBusiness]`
-  (never a mismatched type, never bare LocalBusiness if a specific subtype fits). Include
-  name, telephone (GHL), email, priceRange (pending), `openingHoursSpecification`,
-  `areaServed` (full city list), `hasOfferCatalog` (the six services).
-- **PostalAddress:** INCLUDE only if the client has a public address; OMIT entirely for
-  service-area businesses. `[DECIDE per address field above]`
+- Homepage: `@type` = **`DryCleaningOrLaundry`** (schema.org's specific LocalBusiness
+  subtype for laundromats/laundry services — never bare LocalBusiness).
+  Include name, telephone (GHL), email, priceRange (pending), `openingHoursSpecification`,
+  `areaServed` (full city list), `hasOfferCatalog` (the service pages), `sameAs`
+  (Facebook + Instagram).
+- **PostalAddress:** **INCLUDE** — public storefront: 1032 W. Sam Houston Blvd., Ste. 6,
+  Pharr, TX 78577, US.
 - **`aggregateRating`:** include ONLY when real reviews are confirmed AND displayed.
-- License numbers → `additionalProperty`.
+- License numbers → `additionalProperty`. (N/A here.)
 - **Service pages:** 3 blocks — `Service` + `FAQPage` (min 6 Q&As) + `BreadcrumbList`.
 - **City pages:** 3 blocks — `LocalBusiness` ref (same `@id` as homepage, not a
   re-declaration) + `FAQPage` (min 4 city-scoped Q&As) + `BreadcrumbList`.
@@ -294,10 +402,14 @@ intro + unique "why [City] chooses us" per page.
 **Technical SEO files — FROZEN:** `sitemap.xml` (all indexable pages; exclude thank-you);
 `robots.txt` (allow crawl, disallow thank-you, point to sitemap).
 
-**Title/description patterns — FILL:**
-- Homepage: [NEEDS INPUT]
-- Service page: [NEEDS INPUT]
-- City page: [NEEDS INPUT]
+**Title/description patterns:**
+- Homepage: `Laundromat in Pharr, TX | Mr. Sudz Laundromat` —
+  "Clean laundromat in Pharr, TX with self-service machines, wash & fold, ironing, and
+  pickup & delivery. Open daily 7am–10pm. Book a pickup today."
+- Service page: `[Service] in Pharr, TX | Mr. Sudz` — flagship leads with
+  "Wash & Fold Laundry Service" (not "Laundromat") per the collision rule.
+- City page: `Laundry Service & Delivery in [City], TX | Mr. Sudz` (adjust per final
+  zone; non-delivery cities lead with the walk-in angle instead).
 
 ---
 
@@ -332,30 +444,6 @@ final compressed clip.
 - This is independent of the photo *tier* (which sets how MANY photos a page gets, below).
   Tiers govern count; this rule governs that every container is the same dimensions.
 
-### Split-section layout — FROZEN
-Interior page content is built from **alternating split sections**: two ~50/50 columns —
-a text column and **one** uniform `.photo-frame` photo — stacking text-first on mobile.
-The photo side alternates down the page (right, left, right…) and section backgrounds
-alternate light/dark. **One photo per split; never a photo grid inside a split.** Text
-column = optional eyebrow → H2 → 1–2 short paragraphs → optional 2×2 checklist → optional
-inline `link-arrow`. The photo *tier* (below) sets how many splits a page gets — one split
-per photo slot (flagship service = 5 splits, standard = 2, city = 1 coverage split).
-
-### Cards — icon-free, centered — FROZEN
-Service / feature / value cards ship **without icons or emblems** (no icon squares, no
-emblem circles) and with **centered text**. Card containers (border/shadow/radius) are
-unchanged. **Numbered step cards keep their 01–04 numbers** — those aren't icons. Cards on
-a dark section take a translucent dark-card treatment so text stays legible. The contact
-block keeps its functional call/email/address icons (contact affordances, not card emblems).
-
-**OPTIONAL MODULE accent sweep:** the commented-out OPTIONAL MODULE blocks (insurance carrier row, review widget) sit on dark sections and use raw `--color-accent` internally on their dark-card labels — any build that enables one must sweep those labels to `--color-accent-bright` per the accent-on-dark rule.
-
-### Homepage FAQ + gallery — FROZEN
-The homepage ships an **active** FAQ accordion (5–6 token Q&As, same `<details>` styling as
-service/city pages) and an **active** uniform gallery grid (8 `.photo-frame` tiles at 1-
-and 2-column breakpoints so the last row always fills). These are page sections, distinct
-from the optional inventory/gallery *page* below.
-
 ### Gallery / inventory section — uniform grid, no dead space
 If the client has a dedicated gallery or inventory section:
 - **Uniform grid:** equal cells, consistent gutters, every image the same size.
@@ -372,7 +460,7 @@ If the client has a dedicated gallery or inventory section:
 | Secondary push service | 3 | ✓ |
 | Standard service | 2 | ✓ |
 | City page | 1 | ✓ |
-| About | 2 (2 splits) | ✓ |
+| About | 2 | ✓ |
 | Inventory / gallery | No limit (reuse accepted) | ✓ |
 
 **FROZEN rules:** one-photo-one-slot on all non-inventory pages (no photo twice on a
@@ -381,6 +469,20 @@ readable license plates, strong tilt/rotation, stained/damaged subjects, anythin
 privacy-sensitive; owner/people slots use `aspect-[3/4]` + `object-position: center top`
 (portrait is the norm for headshots); document EXACT asset filenames confirmed by
 `ls brand_assets/` — never assume naming.
+
+**Client-specific exclusions (laundromat):** no identifiable customers without consent,
+no customers' personal garments/undergarments recognizable, no visible customer faces in
+the background of facility shots, no delivery-vehicle plates.
+
+**Known existing photos *(from current site, CleanCloud CDN)* — get the client's OK + originals:**
+- Hero/washer image: `.../website-builder/websites/1105/98d88fb6-cafb-4b8f-9f6a-8b44f2b58888.webp`
+- Pricing image: `.../1105/13a35c8d-2fd6-4e76-8bc2-18babc048570.jpg`
+- Facility tour (contact page): `976b0a60…jpg`, `3e2ccb90…jpg`, `46e2d2eb…jpg`,
+  `cc643689…jpg`, `d968d977…jpg`, `f54fa5cc…png`
+- Promo graphics: `e58aa77d…webp`, `cb39484a…png` (promo art — not content photos)
+- Base: `https://dafgr1y3h3vlw.cloudfront.net/website-builder/websites/1105/`
+- **Juan will supply photos later.** Build every slot on placehold.co at final
+  dimensions with final alt text; default tiers stand. Swap in Prompt 8.
 
 ### City-page clone zones — FROZEN
 Four unique zones per city, everything else shared:
@@ -433,27 +535,28 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
 
 ---
 
-## Locked Language — FROZEN framework, FILL per client
-Freeze anything that must never drift:
-- Insurance framing: [NEEDS INPUT — e.g. "works with all carriers"; never name a carrier
-  or promise coverage outcomes / $0 deductible; route to "we'll help you file the claim"]
-- Warranty: [NEEDS INPUT — publish no warranty scope until confirmed in writing]
-- Certification/quality claims: [NEEDS INPUT — no cert claim until confirmed]
-- Ownership signal: [NEEDS INPUT — confirmed only]
-- Experience framing: [NEEDS INPUT — personal-experience wording, not business-age]
-- Testimonials/reviews: [NEEDS INPUT — none publishable until reputation confirmed]
-- **Guarantee / warranty scope, licensing & insurance status, and insurance-coverage
-  outcomes are `[NEEDS INPUT]` per client and must NEVER be asserted in base template
-  copy** — not in body, headings, cards, trust badges/pills, meta, or JSON-LD. Ship them
-  as claim-free or self-flagged placeholders (see the service-page guarantee-FAQ answer
-  for the pattern); the client confirms scope in writing before any such claim goes live.
-  Covers "satisfaction guarantee," "Licensed & Insured," and "we bill your carrier / most
-  claims cost little or nothing."
+## Locked Language — FILL per client
+- Insurance framing: **N/A — no insurance language anywhere.**
+- Warranty / guarantee: no satisfaction guarantee, "100% satisfaction," or damage/loss
+  policy anywhere.
+- Certification/quality claims: none. No "eco-friendly," "hypoallergenic," "professional
+  dry cleaning" as a quality claim, "on-site/in-house dry cleaning," or "same-day" unless
+  confirmed. (The dry cleaning SERVICE itself is confirmed — name it freely.)
+- Ownership signal: **"family-owned and operated," local Pharr business** (confirmed).
+- Experience framing: **none** — no years-in-business or experience figures (unconfirmed).
+- Testimonials/reviews: none, and no review count, until the widget is live. Do NOT carry over
+  "100% Customer Satisfaction (based on reviews)."
+- Delivery claims: no "free delivery," "same-day," or delivery-zone claims until the
+  zone, fee, and turnaround are confirmed.
+- Pricing: only the Wash, Dry & Fold group (per-lb + comforters/blankets). See Price list.
 
 ## Hard Rules — FROZEN
 - No invented facts; confirm before filling any `[NEEDS INPUT]`.
 - No price / range / "starting at" unless explicitly confirmed here — route pricing intent
   to the quote CTA (applies to copy, FAQ, AND JSON-LD Offer blocks).
+  *(Client-specific: the Wash, Dry & Fold prices in the Price list ARE confirmed for
+  copy/FAQ on the Wash & Fold and Comforter pages. All other prices: route to "call or
+  book online." No prices in JSON-LD beyond `priceRange: "$"`.)*
 - No insurance coverage-outcome claims.
 - No relationship claim without written confirmation.
 - No review widgets/stars/counts/`aggregateRating` until reputation is confirmed.
@@ -483,12 +586,42 @@ Freeze anything that must never drift:
 
 ---
 
-## Active Blockers — [NEEDS INPUT] summary (fill per client)
+## Active Blockers
 
-**Launch-blocking:** [NEEDS INPUT — e.g. GHL tracking number, GHL form embed, chat/tracking scripts, og-image]
+**Open client input (does NOT block Prompts 0–3):**
+- Delivery zone — which of Pharr, McAllen, San Juan, Edinburg, Alamo, Hidalgo get pickup &
+  delivery. Needed before Prompt 4 (city pages).
 
-**Backfillable (build against placeholders, swap in one pass):** [NEEDS INPUT — e.g.
-photos, review status, certifications, founding year, social links, priceRange, warranty terms]
+**Launch-blocking (needed before DNS cutover, not before build):**
+- CleanCloud booking widget/hosted link (the current `/book` dies when DNS moves)
+- GHL tracking number; GHL contact form embed; GHL chat + tracking scripts
+- Logo original → palette derivation (or derive from the current-site logo URL above)
+- og-image.jpg (1200×630)
 
-**Open decisions for Juan (resolve at strategy lock):** [DECIDE — e.g. cities pending
-volume data, any framing calls, gallery/inventory page yes/no]
+**Backfillable (build against placeholders, swap in one pass — Prompt 8):**
+- All photos (Juan supplying later), hero/cta backgrounds
+- Review widget code (128 reviews confirmed) → then `aggregateRating`
+
+---
+
+## DECISIONS (resolved at strategy lock, Oct 22 2026)
+
+1. Pricing → publish ONLY Wash, Dry & Fold prices ($1.50/lb + comforters/blankets) on the
+   Wash & Fold and Comforter pages; nothing else; `priceRange: "$"`.
+2. 6th service → Dry Cleaning.
+3. Cities → Pharr, McAllen (deepest/template), San Juan, Edinburg, Alamo, Hidalgo. Delivery
+   zone pending — sets angle per page only.
+4. Booking → CleanCloud for orders/pickups; GHL for contact form, chat, tracking.
+5. Domain → https://www.mrsudzrgv.com canonical; old URLs 301'd (see Site Architecture).
+6. Phone → GHL tracking number on the site per frozen rule; GBP number left as-is.
+7. Promotions → none on the site.
+8. Family-owned → publish "family-owned and operated."
+9. Language → English only.
+10. Gallery → none in v1.
+11. Photos → Juan supplies later; default tiers; placeholders until then.
+12. Blocker split → as listed above.
+13. Reviews → no count/stars/testimonials until the widget is live.
+14. FAQ → write fresh per SEO-CONTENT-PROMPT.md from confirmed facts.
+
+Anything not confirmed defaults to Claude's recommendation already written above; Juan will
+call out changes later as `CLAUDE.md` edits.
