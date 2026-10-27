@@ -67,17 +67,32 @@ Logo source *(from current site)*:
 `brand_assets/logo.png` (or get the original high-res file from the client). Current site copy
 leans blue (💙 used throughout) — confirm against the actual logo hexes.
 
+**Derived Oct 27 2026** from the current-site logo (300×151 PNG, now `brand_assets/logo.png`).
+The logo is two flat colors on white: navy `#153E66` (~34% of pixels — wordmark, washer,
+mustache) and sky blue `#43A9DF` (~5% — "LAUNDROMAT," suds). Every other token is derived
+from those two. Re-check the hexes when the client's original logo file replaces this one.
+
 | Token | Hex | Role |
 |---|---|---|
-| `--color-primary` | [DERIVE from logo] | Primary brand — dark hero/sections, footer, nav, primary buttons |
-| `--color-primary-mid` | [DERIVE] | Mid-tone — hover, secondary buttons, borders/dividers on dark |
-| `--color-accent` | [DERIVE] | Accent — icons, link accents, eyebrow, highlights on dark |
-| `--color-accent-deep` | [DERIVE] | On-light fallback for the accent (see rule below) |
-| `--color-silver` / neutral | [DERIVE] | Muted borders, secondary text on dark, chrome |
-| `--color-dark` (canonical) | [= primary] | THE single dark-section background token |
-| `--color-ink` | [DERIVE] | Near-black headings/body |
+| `--color-primary` | `#153E66` | Primary brand (logo navy) — dark hero/sections, footer, nav, primary buttons |
+| `--color-primary-mid` | `#1D4C7A` | Mid-tone — first dark-elevation step, primary hover, borders/dividers on dark |
+| `--color-accent` | `#43A9DF` | Accent (logo sky blue) — icons, fills, highlights. **Text ON an accent fill must be `--color-ink`/`--color-primary`, never white** (white 2.63:1 ✗ · ink 6.41:1 ✓) |
+| `--color-accent-deep` | `#1D6FA0` | On-light fallback for the accent — small text/links/dividers on white (5.48:1) and bg-2 (5.04:1) |
+| `--color-accent-bright` | `#6CC0EA` | On-dark accent — accent text/eyebrows on `--color-dark` (5.42:1). The raw logo sky is only 4.17:1 on navy, so it's not used for small text on dark |
+| `--color-silver` / neutral | `#C3CED9` | Muted borders, secondary text on dark (6.88:1 on dark), chrome |
+| `--color-dark` (canonical) | `#153E66` (= primary) | THE single dark-section background token |
+| `--color-dark-3` | `#255783` | Deepest dark-elevation surface (cards on dark) |
+| `--color-ink` | `#0F1E2E` | Near-black navy for headings/body (16.86:1 on white) |
 | `--color-bg` | `#FFFFFF` | Body/content backgrounds |
-| `--color-muted` | [DERIVE] | Muted/secondary text |
+| `--color-bg-2` | `#F2F6FA` | Light section tint (navy-tinted off-white) |
+| `--color-muted` | `#576B80` | Muted/secondary text — 5.50:1 on bg, 5.06:1 on bg-2 |
+| `--color-muted-light` | `#8496A9` | Lighter muted text — large/meta text only (3.04:1 on white) |
+| `--color-line` | `#D9E2EB` | Hairlines/borders on light |
+
+*Rows `accent-bright`, `dark-3`, `bg-2`, `muted-light`, and `line` are tokens `brand.css`
+already defines, added here so every token has a value. The values aren't in `brand.css`
+yet — they get applied there in Prompt 1. `--color-rating` stays unused (no stars until
+the review widget is live).*
 
 **FROZEN rules:**
 - **Accent-on-light fallback:** a bright accent is fine as fill / text-on-dark; as small
