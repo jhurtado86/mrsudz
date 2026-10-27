@@ -1,43 +1,44 @@
 /* ============================================================
    brand.css — single source of truth for the color system.
-   primary = derive from client logo.
-   Neutral graphite / slate placeholders — the template ships NO
-   brand color. Recolor a client by editing ONLY the tokens in the
-   first :root block below; everything else references these.
+   Mr. Sudz — derived from brand_assets/logo.png (navy #153E66 +
+   sky #43A9DF). See CLAUDE.md token table for contrast notes.
+   Recolor a client by editing ONLY the tokens in the first
+   :root block below; everything else references these.
    Recolor check (every build): accent-deep vs bg >=4.5:1 ·
    accent-bright vs dark >=4.5:1 · muted vs bg-2 >=4.5:1.
    ============================================================ */
 :root {
   /* — Core palette (hex) — */
-  --color-primary:      #232838;  /* brand primary slot (= dark) */
-  --color-primary-mid:  #313749;  /* first dark-elevation step + primary hover */
-  --color-accent:       #5E6675;  /* the "pop" / CTA accent — replace per client */
-  --color-accent-deep:  #4A515E;  /* accent hover / pressed — the on-LIGHT accent fallback */
-  --color-accent-bright:#A2AEC3;  /* on-DARK accent — every accent use on --color-dark; keep >=4.5:1 vs dark */
-  --color-dark:         #232838;  /* single canonical dark-section bg (== primary) */
-  --color-dark-3:       #363D4E;  /* deepest dark-elevation surface */
-  --color-ink:          #1A1D28;  /* body + heading text */
-  --color-muted:        #666D79;  /* muted / secondary text — clears 4.5:1 vs bg-2 (4.74) & bg (5.21) */
-  --color-muted-light:  #8A929E;  /* lighter muted text */
-  --color-line:         #D8DAE2;  /* hairlines / borders */
+  --color-primary:      #153E66;  /* logo navy (= dark) */
+  --color-primary-mid:  #1D4C7A;  /* first dark-elevation step + primary hover */
+  --color-accent:       #43A9DF;  /* logo sky blue — fills/icons; text ON it must be ink/navy */
+  --color-accent-deep:  #1D6FA0;  /* accent hover / pressed — the on-LIGHT accent fallback */
+  --color-accent-bright:#6CC0EA;  /* on-DARK accent — every accent use on --color-dark; keep >=4.5:1 vs dark */
+  --color-dark:         #153E66;  /* single canonical dark-section bg (== primary) */
+  --color-dark-3:       #255783;  /* deepest dark-elevation surface */
+  --color-ink:          #0F1E2E;  /* body + heading text */
+  --color-muted:        #576B80;  /* muted / secondary text — clears 4.5:1 vs bg-2 (5.06) & bg (5.50) */
+  --color-muted-light:  #8496A9;  /* lighter muted text — large/meta only (3.04:1 on white) */
+  --color-silver:       #C3CED9;  /* secondary text ON dark — 6.88:1 vs dark */
+  --color-line:         #D9E2EB;  /* hairlines / borders */
   --color-bg:           #FFFFFF;  /* page background */
-  --color-bg-2:         #F3F4F7;  /* light section tint */
+  --color-bg-2:         #F2F6FA;  /* light section tint */
   --color-rating:       #F59E0B;  /* star-rating gold — functional, not brand */
 
   /* — Channel triplets (R, G, B) for rgba() tinting — */
-  --color-primary-rgb:     35, 40, 56;
-  --color-primary-mid-rgb: 49, 55, 73;
-  --color-accent-rgb:      94, 102, 117;
-  --color-accent-deep-rgb: 74, 81, 94;
-  --color-accent-bright-rgb: 162, 174, 195;
-  --color-dark-rgb:        35, 40, 56;
-  --color-dark-3-rgb:      54, 61, 78;
-  --color-ink-rgb:         26, 29, 40;
+  --color-primary-rgb:     21, 62, 102;
+  --color-primary-mid-rgb: 29, 76, 122;
+  --color-accent-rgb:      67, 169, 223;
+  --color-accent-deep-rgb: 29, 111, 160;
+  --color-accent-bright-rgb: 108, 192, 234;
+  --color-dark-rgb:        21, 62, 102;
+  --color-dark-3-rgb:      37, 87, 131;
+  --color-ink-rgb:         15, 30, 46;
 
   /* size the nav off the client logo — see CLAUDE.md logo rules */
   --nav-height:         96px;   /* nav bar height — starting point, not fixed */
-  --nav-logo-height:    72px;   /* client logo <img> height in the nav */
-  --footer-logo-height: 116px;  /* client logo <img> height in the footer */
+  --nav-logo-height:    58px;   /* client logo <img> height in the nav */
+  --footer-logo-height: 88px;   /* client logo <img> height in the footer */
 }
 
 /* ============================================================
