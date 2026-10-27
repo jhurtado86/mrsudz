@@ -3,34 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Services in [City], [ST] | Your Business Name</title>
-  <meta name="description" content="Professional home services in [City], [ST] — same-day appointments, free estimates, and clear, upfront pricing. Call Your Business Name at (555) 000-0000." />
-  <meta name="keywords" content="home services [City] [ST], home services [City], local home services [City], mobile home services [City], professional home services [City], home services near me [City], Your Business Name [City]" />
+  <title>Pharr Laundry Services, Close to Home | Mr. Sudz</title>
+  <meta name="description" content="Laundry services in Pharr, TX at Mr. Sudz on W. Sam Houston Blvd. Self-service, wash &amp; fold, ironing, comforters and dry cleaning. Open daily 7am–10pm." />
+  <meta name="keywords" content="laundry service Pharr TX, Pharr laundromat, wash and fold Pharr, self-service laundry Pharr, dry cleaning Pharr, laundry W Sam Houston Blvd Pharr" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://www.mrsudzrgv.com/areas/pharr.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Home Services in [City], [ST] | Your Business Name" />
-  <meta property="og:description" content="Professional home services in [City], [ST]. Same-day appointments, free estimates, clear upfront pricing, and mobile service to your door. Call (555) 000-0000." />
+  <meta property="og:title" content="Pharr Laundry Services, Close to Home | Mr. Sudz" />
+  <meta property="og:description" content="Laundry services in Pharr, TX at Mr. Sudz on W. Sam Houston Blvd. Self-service, wash &amp; fold, ironing, comforters and dry cleaning. Open daily 7am–10pm." />
   <meta property="og:url" content="https://www.mrsudzrgv.com/areas/pharr.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: create 1200×630 social share image -->
+  <meta property="og:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: brand_assets/og-image.jpg does not exist yet — create 1200×630 social share image before launch -->
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:site_name" content="Your Business Name" />
+  <meta property="og:site_name" content="Mr. Sudz Laundromat" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Home Services in [City], [ST] | Your Business Name" />
-  <meta name="twitter:description" content="Professional home services in [City], [ST]. Same-day appointments, free estimates, and clear, upfront pricing. Call (555) 000-0000." />
+  <meta name="twitter:title" content="Pharr Laundry Services, Close to Home | Mr. Sudz" />
+  <meta name="twitter:description" content="Laundry services in Pharr, TX at Mr. Sudz on W. Sam Houston Blvd. Self-service, wash &amp; fold, ironing, comforters and dry cleaning. Open daily 7am–10pm." />
   <meta name="twitter:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: same 1200×630 image -->
+
+  <!-- GHL EXTERNAL TRACKING SCRIPT -->
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/brand.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..900&family=IBM+Plex+Mono:wght@500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <script>
     tailwind.config = {
@@ -39,23 +41,18 @@
           colors: {
             /* Semantic palette — values resolve from /brand.css tokens */
             primary: { DEFAULT: 'var(--color-primary)', mid: 'var(--color-primary-mid)' },
-            accent:  { DEFAULT: 'var(--color-accent)', deep: 'var(--color-accent-deep)' },
+            accent:  { DEFAULT: 'var(--color-accent)', deep: 'var(--color-accent-deep)', bright: 'var(--color-accent-bright)' },
             dark:    { DEFAULT: 'var(--color-dark)', 3: 'var(--color-dark-3)' },
             ink:     'var(--color-ink)',
             muted:   { DEFAULT: 'var(--color-muted)', light: 'var(--color-muted-light)' },
+            silver:  'var(--color-silver)',
             line:    'var(--color-line)',
             bg:      { DEFAULT: 'var(--color-bg)', 2: 'var(--color-bg-2)' },
-            rating:  'var(--color-rating)',
           },
           fontFamily: {
-            display: ['Barlow', 'sans-serif'],
+            display: ['Archivo', 'sans-serif'],
             body:    ['Nunito', 'sans-serif'],
-          },
-          boxShadow: {
-            'card':    '0 2px 8px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)',
-            'card-lg': '0 8px 32px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.05)',
-            'glow':    '0 0 28px rgba(var(--color-dark-rgb),0.16)',
-            'cta':     '0 4px 20px rgba(var(--color-accent-rgb),0.30)',
+            mono:    ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
           },
           letterSpacing: { tight: '-0.03em' },
           lineHeight:    { body: '1.7' },
@@ -70,69 +67,84 @@
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Nunito', sans-serif; background: var(--color-bg); color: var(--color-ink); }
-    h1,h2,h3,h4 { font-family: 'Barlow', sans-serif; }
 
-    /* ── Section backgrounds ── */
+    /* ── Type system ──
+       Display: Archivo set wide (font-stretch) + heavy — echoes the logo's wide, chunky wordmark.
+       Body: Nunito (rounded, friendly). Utility: IBM Plex Mono — hours/status data only. */
+    h1,h2,h3,h4, .font-display { font-family: 'Archivo', sans-serif; font-stretch: 112%; }
+    .display-xl { font-stretch: 100%; font-weight: 700; letter-spacing: -0.022em; line-height: 1.04; }
+    .h2 { font-size: clamp(2rem, 4.2vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.06; }
+    .h2-split { font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.08; }
+    .lede { font-size: 1.125rem; line-height: 1.72; }
+    .eyebrow {
+      font-family: 'Archivo', sans-serif; font-stretch: 118%;
+      font-size: 12px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--color-accent-deep); margin-bottom: 14px;
+    }
+    .dark-section .eyebrow, .hero-bg .eyebrow { color: var(--color-accent-bright); }
+    .mono { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+
     .section-dark { background: var(--color-bg); }
     .section-mid  {
       background:
         radial-gradient(ellipse 100% 60% at 50% 0%, rgba(var(--color-dark-rgb), 0.05) 0%, transparent 55%),
         var(--color-bg-2);
     }
-    .dark-section { background: var(--color-dark); }
+    .dark-section {
+      background:
+        radial-gradient(ellipse 70% 60% at 100% 0%, rgba(var(--color-accent-rgb), 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 55% at 0% 100%, rgba(var(--color-dark-3-rgb), 0.55) 0%, transparent 60%),
+        var(--color-dark);
+    }
 
-    /* ── Dark-section text overrides ── */
-    .dark-section .text-white        { color: var(--color-bg) !important; }
-    .dark-section .text-muted  { color: var(--color-muted-light) !important; }
-    .dark-section .btn-outline       { color: var(--color-bg); border-color: rgba(255,255,255,0.28); }
-    .dark-section .btn-outline:hover { border-color: rgba(255,255,255,0.60); background: rgba(255,255,255,0.06); }
-    .dark-section .divider           { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent); }
-    .dark-section .section-title-accent { background: linear-gradient(90deg, transparent 0%, var(--color-accent) 25%, var(--color-accent) 75%, transparent 100%); }
-    .dark-section .link-arrow        { color: var(--color-accent-bright); }
-    .dark-section .link-arrow:hover  { color: var(--color-line); }
+    /* ---- Atmospheric depth (grain + corner wash) ---- */
+    .atmo { position: relative; overflow: hidden; }
+    .atmo > * { position: relative; z-index: 1; }
+    .atmo::before {
+      content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      opacity: 0.05; background-size: 160px 160px;
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='160'%20height='160'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.85'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .atmo::after {
+      content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background: var(--wash, transparent);
+    }
+    .wash-navy-tr  { --wash: radial-gradient(ellipse 55% 48% at 100% 0%,   rgba(var(--color-dark-rgb), 0.06) 0%, transparent 60%); }
+    .wash-navy-bl  { --wash: radial-gradient(ellipse 55% 48% at 0% 100%,   rgba(var(--color-dark-rgb), 0.06) 0%, transparent 60%); }
+    .wash-sky-tl   { --wash: radial-gradient(ellipse 55% 48% at 0% 0%,     rgba(var(--color-accent-rgb), 0.08) 0%, transparent 60%); }
+    .wash-sky-tr   { --wash: radial-gradient(ellipse 55% 48% at 100% 0%,   rgba(var(--color-accent-rgb), 0.08) 0%, transparent 60%); }
 
-    /* ── Light-section text overrides ── */
+    .dark-section .text-white { color: var(--color-bg) !important; }
+    .dark-section .text-muted { color: var(--color-silver) !important; }
+    .dark-section .divider    { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.10), transparent); }
+    .dark-section .link-arrow       { color: var(--color-accent-bright); }
+    .dark-section .link-arrow:hover { color: var(--color-bg); }
+
     .section-dark .text-white,
-    .section-mid  .text-white       { color: var(--color-ink); }
+    .section-mid  .text-white { color: var(--color-ink); }
     .section-dark .text-muted,
     .section-mid  .text-muted { color: var(--color-muted); }
-    .hero-bg .text-muted      { color: var(--color-muted-light); }
+    .hero-bg .text-muted      { color: var(--color-silver); }
 
-    /* ── Divider ── */
     .divider {
       height: 1px;
       background: linear-gradient(90deg, transparent 0%, rgba(var(--color-dark-rgb), 0.12) 30%, rgba(var(--color-dark-rgb), 0.12) 70%, transparent 100%);
     }
 
-    /* ── Dark CTA ramp ── */
-    .dark-cta-ramp {
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 90px; pointer-events: none; z-index: 3;
-      background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, transparent 100%);
+    /* ── Logo chip — logo.png is RGB on solid white (no alpha), so it always sits on white ── */
+    .logo-chip {
+      display: inline-flex; align-items: center; background: var(--color-bg);
+      padding: 4px 10px; border-radius: 12px;
+      box-shadow: 0 1px 2px rgba(var(--color-ink-rgb), 0.10), 0 8px 22px -8px rgba(var(--color-ink-rgb), 0.45);
+      transition: transform 0.24s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.24s cubic-bezier(0.4,0,0.2,1);
     }
-
-    /* ── Nav wordmark ── */
-    .nav-wordmark {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 800; font-size: 24px;
-      letter-spacing: -0.02em; color: var(--color-bg); line-height: 1;
-      transition: color 0.25s cubic-bezier(0.4,0,0.2,1);
-    }
-    #navbar.scrolled .nav-wordmark { color: var(--color-ink); }
-
-    /* Nav bar + logo sizing — driven by --nav-height / --nav-logo-height /
-       --footer-logo-height in brand.css (size the nav off the client logo). */
-    #navbar .nav-row { height: var(--nav-height); }
+    a.logo-chip:hover  { transform: translateY(-1px) rotate(-1deg); }
+    a.logo-chip:active { transform: translateY(0); }
+    #navbar.scrolled .logo-chip { box-shadow: 0 0 0 1px rgba(var(--color-dark-rgb), 0.06); }
     .nav-logo    { height: var(--nav-logo-height); width: auto; display: block; }
     .footer-logo { height: var(--footer-logo-height); width: auto; display: block; }
+    #navbar .nav-row { height: var(--nav-height); }
 
-    .footer-wordmark {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 800; font-size: 28px;
-      letter-spacing: -0.02em; color: var(--color-bg); line-height: 1;
-    }
-
-    /* ── Nav ── */
     #navbar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 50;
       background: transparent;
@@ -141,21 +153,21 @@
                   border-color 0.40s cubic-bezier(0.4,0,0.2,1),
                   box-shadow 0.40s cubic-bezier(0.4,0,0.2,1);
     }
-    #navbar .text-muted          { color: rgba(255,255,255,0.68) !important; }
+    #navbar .text-muted                { color: rgba(255,255,255,0.78) !important; }
     #navbar .hover\:text-white:hover   { color: rgba(255,255,255,1) !important; }
-    #navbar #hamburger                 { color: rgba(255,255,255,0.80) !important; border-color: rgba(255,255,255,0.18) !important; }
-    #mobile-menu                       { background: rgba(var(--color-dark-rgb), 0.96); backdrop-filter: blur(18px); }
-    #mobile-menu a.mobile-nav-link     { color: rgba(255,255,255,0.68) !important; }
+    #navbar #hamburger                 { color: rgba(255,255,255,0.85) !important; border-color: rgba(255,255,255,0.22) !important; }
+    #mobile-menu                       { background: rgba(var(--color-dark-rgb), 0.97); backdrop-filter: blur(18px); }
+    #mobile-menu a.mobile-nav-link     { color: rgba(255,255,255,0.78) !important; }
     #mobile-menu a.mobile-nav-link:hover { color: rgba(255,255,255,1) !important; background: rgba(255,255,255,0.06) !important; }
     #mobile-menu                       { border-top-color: rgba(255,255,255,0.08) !important; }
 
     #navbar.scrolled {
-      background: rgba(255,255,255,0.72);
+      background: rgba(255,255,255,0.82);
       backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
-      border-bottom-color: rgba(var(--color-dark-rgb), 0.07);
-      box-shadow: 0 1px 24px rgba(0,0,0,0.06);
+      border-bottom-color: rgba(var(--color-dark-rgb), 0.08);
+      box-shadow: 0 1px 24px rgba(var(--color-dark-rgb), 0.08);
     }
-    #navbar.scrolled .text-muted         { color: var(--color-muted) !important; }
+    #navbar.scrolled .text-muted               { color: var(--color-muted) !important; }
     #navbar.scrolled .hover\:text-white:hover  { color: var(--color-ink) !important; }
     #navbar.scrolled #hamburger                { color: var(--color-ink) !important; border-color: rgba(var(--color-dark-rgb), 0.16) !important; }
     #navbar.scrolled #mobile-menu              { background: var(--color-bg); }
@@ -163,16 +175,16 @@
     #navbar.scrolled #mobile-menu a.mobile-nav-link:hover { color: var(--color-ink) !important; background: rgba(var(--color-dark-rgb), 0.04) !important; }
     #navbar.scrolled #mobile-menu { border-top-color: rgba(var(--color-dark-rgb), 0.08) !important; }
 
-    /* ── Nav animated underline ── */
     .nav-link { position: relative; }
     .nav-link::after {
-      content: ''; position: absolute; bottom: -2px; left: 0;
-      width: 0; height: 2px; background: var(--color-accent);
-      transition: width 0.25s cubic-bezier(0.4,0,0.2,1);
+      content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 2px; background: var(--color-accent); border-radius: 2px;
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
     }
-    .nav-link:hover::after { width: 100%; }
+    .nav-link:hover::after { transform: scaleX(1); }
 
-    /* ── Services dropdown (desktop) ── */
+    /* ── Dropdowns (desktop) ── */
     .nav-dropdown { position: relative; height: var(--nav-height); display: flex; align-items: center; }
     .nav-dropdown-trigger { display: inline-flex; align-items: center; gap: 5px; }
     .nav-dropdown-trigger .nav-chev { transition: transform 0.25s cubic-bezier(0.4,0,0.2,1); }
@@ -183,7 +195,7 @@
       margin-top: 14px; min-width: 252px; padding: 8px;
       background: rgba(var(--color-dark-rgb), 0.97); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
       border: 1px solid rgba(255,255,255,0.08); border-radius: 14px;
-      box-shadow: 0 18px 48px rgba(0,0,0,0.34), 0 2px 8px rgba(0,0,0,0.18);
+      box-shadow: 0 18px 48px rgba(var(--color-ink-rgb),0.40), 0 2px 8px rgba(var(--color-ink-rgb),0.20);
       opacity: 0; visibility: hidden; pointer-events: none;
       transform: translateX(-50%) translateY(8px);
       transition: opacity 0.22s cubic-bezier(0.4,0,0.2,1), transform 0.22s cubic-bezier(0.4,0,0.2,1);
@@ -197,25 +209,26 @@
     }
     .nav-dropdown-menu a {
       display: block; padding: 10px 14px; border-radius: 9px;
-      font-size: 14px; font-weight: 500; line-height: 1.3; white-space: nowrap;
-      color: rgba(255,255,255,0.70);
+      font-size: 14px; font-weight: 600; line-height: 1.3; white-space: nowrap;
+      color: rgba(255,255,255,0.78);
       transition: color 0.15s cubic-bezier(0.4,0,0.2,1), background 0.15s cubic-bezier(0.4,0,0.2,1);
     }
-    .nav-dropdown-menu a:hover { color: var(--color-bg); background: rgba(255,255,255,0.07); }
-    .nav-dropdown-menu a[aria-current="page"] { color: var(--color-bg); font-weight: 700; background: rgba(var(--color-accent-rgb), 0.16); }
+    .nav-dropdown-menu a:hover { color: var(--color-bg); background: rgba(255,255,255,0.08); }
+    .nav-dropdown-menu a:active { background: rgba(255,255,255,0.12); }
+    .nav-dropdown-menu a[aria-current="page"] { color: var(--color-bg); font-weight: 700; background: rgba(var(--color-accent-rgb), 0.18); }
     #navbar.scrolled .nav-dropdown-menu {
       background: rgba(255,255,255,0.98); border-color: rgba(var(--color-dark-rgb), 0.08);
-      box-shadow: 0 18px 48px rgba(var(--color-dark-rgb), 0.14), 0 2px 8px rgba(var(--color-dark-rgb), 0.06);
+      box-shadow: 0 18px 48px rgba(var(--color-dark-rgb), 0.16), 0 2px 8px rgba(var(--color-dark-rgb), 0.06);
     }
     #navbar.scrolled .nav-dropdown-menu a { color: var(--color-muted); }
-    #navbar.scrolled .nav-dropdown-menu a:hover { color: var(--color-ink); background: rgba(var(--color-dark-rgb), 0.04); }
-    #navbar.scrolled .nav-dropdown-menu a[aria-current="page"] { color: var(--color-ink); background: rgba(var(--color-accent-rgb), 0.12); }
+    #navbar.scrolled .nav-dropdown-menu a:hover { color: var(--color-ink); background: rgba(var(--color-dark-rgb), 0.05); }
+    #navbar.scrolled .nav-dropdown-menu a[aria-current="page"] { color: var(--color-ink); background: rgba(var(--color-accent-rgb), 0.14); }
 
-    /* ── Services dropdown (mobile) ── */
+    /* ── Dropdowns (mobile) ── */
     .mobile-services-toggle {
       display: flex; align-items: center; justify-content: space-between; width: 100%;
       background: none; border: none; cursor: pointer; font: inherit; text-align: left;
-      color: rgba(255,255,255,0.68);
+      color: rgba(255,255,255,0.78);
       transition: color 0.15s cubic-bezier(0.4,0,0.2,1), background 0.15s cubic-bezier(0.4,0,0.2,1);
     }
     .mobile-services-toggle:hover { color: var(--color-bg); background: rgba(255,255,255,0.06); }
@@ -228,8 +241,8 @@
     }
     .mobile-services-submenu.open { display: flex; }
     .mobile-services-submenu a {
-      padding: 9px 12px; border-radius: 8px; font-size: 14px; font-weight: 500;
-      color: rgba(255,255,255,0.58);
+      padding: 9px 12px; border-radius: 8px; font-size: 14px; font-weight: 600;
+      color: rgba(255,255,255,0.70);
       transition: color 0.15s cubic-bezier(0.4,0,0.2,1), background 0.15s cubic-bezier(0.4,0,0.2,1);
     }
     .mobile-services-submenu a:hover { color: var(--color-bg); background: rgba(255,255,255,0.06); }
@@ -240,117 +253,178 @@
     #navbar.scrolled .mobile-services-submenu a { color: var(--color-muted); }
     #navbar.scrolled .mobile-services-submenu a:hover { color: var(--color-ink); background: rgba(var(--color-dark-rgb), 0.04); }
 
-    /* ── Hero — real photo background ── */
+    /* ── Hero ── */
     .hero-bg { background: var(--color-dark); }
     .hero-vignette {
-      background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 35%, rgba(0,0,0,0.50) 100%);
+      background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 35%, rgba(var(--color-ink-rgb),0.55) 100%);
       pointer-events: none;
     }
-    .hero-bg .btn-outline { color: rgba(255,255,255,0.88); border-color: rgba(255,255,255,0.20); }
-    .hero-bg .btn-outline:hover { border-color: rgba(var(--color-accent-rgb), 0.50); background: rgba(var(--color-dark-rgb), 0.14); transform: translateY(-2px); }
-    @media (max-width: 767px) { .hero-text-block h1 { font-size: 2.15rem !important; } }
+    @media (max-width: 767px) { .hero-text-block h1 { font-size: 2.4rem !important; } }
 
-    /* ── Buttons ── */
+    /* ── Buttons ──
+       Primary = sky fill with INK text (white on sky is 2.63:1 — never). */
     .btn-primary {
-      background: var(--color-accent); color: var(--color-bg);
-      font-weight: 700; border-radius: 8px; padding: 14px 28px; font-size: 15px;
-      letter-spacing: 0.01em;
-      box-shadow: 0 4px 18px rgba(var(--color-accent-rgb), 0.30);
-      transition: transform 0.18s cubic-bezier(0.4,0,0.2,1),
-                  box-shadow 0.18s cubic-bezier(0.4,0,0.2,1),
+      background: var(--color-accent); color: var(--color-ink);
+      font-family: 'Archivo', sans-serif; font-stretch: 110%;
+      font-weight: 800; border-radius: 10px; padding: 14px 26px; font-size: 15px;
+      letter-spacing: 0.005em;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 4px 14px -2px rgba(var(--color-accent-rgb), 0.45), 0 14px 32px -12px rgba(var(--color-dark-rgb), 0.50);
+      transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1),
+                  box-shadow 0.22s cubic-bezier(0.4,0,0.2,1),
                   background 0.18s cubic-bezier(0.4,0,0.2,1);
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-flex; align-items: center; gap: 9px;
     }
-    .btn-primary:hover  { background: var(--color-accent-deep); transform: translateY(-2px); box-shadow: 0 8px 26px rgba(var(--color-accent-rgb), 0.38); }
-    .btn-primary:active { transform: translateY(0); box-shadow: 0 2px 10px rgba(var(--color-accent-rgb), 0.22); }
-    .btn-primary:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+    .btn-primary:hover  { background: var(--color-accent-bright); transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,0.40) inset, 0 8px 22px -4px rgba(var(--color-accent-rgb), 0.55), 0 20px 40px -14px rgba(var(--color-dark-rgb), 0.55); }
+    .btn-primary:active { transform: translateY(0) scale(0.98); box-shadow: 0 2px 8px rgba(var(--color-accent-rgb), 0.30); }
 
     .btn-outline {
       background: transparent; color: var(--color-ink);
-      font-weight: 600; border: 1.5px solid rgba(var(--color-dark-rgb), 0.22);
-      border-radius: 8px; padding: 13px 28px; font-size: 15px;
-      transition: transform 0.18s cubic-bezier(0.4,0,0.2,1),
+      font-family: 'Archivo', sans-serif; font-stretch: 110%;
+      font-weight: 700; border: 1.5px solid rgba(var(--color-dark-rgb), 0.24);
+      border-radius: 10px; padding: 13px 24px; font-size: 15px;
+      transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1),
                   border-color 0.18s cubic-bezier(0.4,0,0.2,1),
                   background 0.18s cubic-bezier(0.4,0,0.2,1);
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-flex; align-items: center; gap: 9px;
     }
-    .btn-outline:hover  { border-color: var(--color-accent); background: rgba(var(--color-dark-rgb), 0.05); transform: translateY(-2px); }
-    .btn-outline:active { transform: translateY(0); }
-    .btn-outline:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+    .btn-outline:hover  { border-color: var(--color-accent-deep); background: rgba(var(--color-accent-rgb), 0.08); transform: translateY(-2px); }
+    .btn-outline:active { transform: translateY(0) scale(0.98); }
+    .dark-section .btn-outline, .hero-bg .btn-outline, .visit-panel .btn-outline { color: var(--color-bg); border-color: rgba(255,255,255,0.32); }
+    .dark-section .btn-outline:hover, .hero-bg .btn-outline:hover, .visit-panel .btn-outline:hover { border-color: var(--color-accent-bright); background: rgba(255,255,255,0.07); }
 
-    /* ── Cards ── */
+    /* ── Focus (every clickable) ── */
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 2px solid var(--color-accent-deep); outline-offset: 3px; border-radius: 8px;
+    }
+    .dark-section a:focus-visible, .dark-section button:focus-visible,
+    .hero-bg a:focus-visible, #navbar a:focus-visible, #navbar button:focus-visible,
+    .visit-panel a:focus-visible { outline-color: var(--color-accent-bright); }
+    #navbar.scrolled a:focus-visible, #navbar.scrolled button:focus-visible { outline-color: var(--color-accent-deep); }
+
+    /* ── Depth system: base (flat) → elevated (cards) → floating (hover / visit panel) ── */
     .service-card {
-      background: var(--color-bg); border: 1px solid rgba(var(--color-dark-rgb), 0.07); border-radius: 16px; padding: 30px;
-      box-shadow: 0 1px 2px rgba(var(--color-dark-rgb), 0.05), 0 6px 18px rgba(var(--color-dark-rgb), 0.10), 0 16px 40px rgba(var(--color-dark-rgb), 0.09), 0 0 0 1px rgba(var(--color-dark-rgb), 0.05);
-      transition: transform 0.24s cubic-bezier(0.34,1.56,0.64,1),
+      position: relative;
+      background: var(--color-bg); border: 1px solid rgba(var(--color-dark-rgb), 0.08); border-radius: 18px; padding: 30px 28px 26px;
+      box-shadow: 0 1px 2px rgba(var(--color-dark-rgb), 0.06), 0 8px 20px -6px rgba(var(--color-dark-rgb), 0.12), 0 22px 44px -20px rgba(var(--color-dark-rgb), 0.18);
+      transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1),
                   box-shadow 0.24s cubic-bezier(0.4,0,0.2,1),
                   border-color 0.24s cubic-bezier(0.4,0,0.2,1);
     }
+    .service-card::before {
+      content: ""; position: absolute; left: 28px; right: 28px; top: 0; height: 3px; border-radius: 0 0 3px 3px;
+      background: var(--color-accent); transform: scaleX(0.18); transform-origin: left;
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    }
     .service-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 20px 48px rgba(var(--color-dark-rgb), 0.13), 0 0 0 1.5px rgba(var(--color-dark-rgb), 0.20);
+      box-shadow: 0 2px 4px rgba(var(--color-dark-rgb), 0.06), 0 18px 40px -10px rgba(var(--color-dark-rgb), 0.22), 0 0 0 1.5px rgba(var(--color-accent-rgb), 0.45);
       border-color: transparent;
     }
-    .service-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:active { transform: translateY(-2px); }
 
-    .feature-card {
-      background: var(--color-bg); border: 1px solid rgba(var(--color-dark-rgb), 0.07); border-radius: 16px; padding: 28px 24px;
-      box-shadow: 0 1px 2px rgba(var(--color-dark-rgb), 0.05), 0 6px 18px rgba(var(--color-dark-rgb), 0.09), 0 16px 38px rgba(var(--color-dark-rgb), 0.08);
-      transition: transform 0.24s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.24s cubic-bezier(0.4,0,0.2,1);
+    .step-card {
+      position: relative; border-radius: 18px; padding: 28px 24px 26px;
+      background: linear-gradient(160deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%), rgba(var(--color-dark-3-rgb), 0.35);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 20px 44px -18px rgba(var(--color-ink-rgb), 0.65);
     }
-    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 16px 36px rgba(var(--color-dark-rgb), 0.11); }
-
-    /* ── Insurance pill ── */
-    .insurer-pill {
-      background: rgba(var(--color-dark-rgb), 0.07); border: 1px solid rgba(var(--color-dark-rgb), 0.16);
-      border-radius: 100px; padding: 8px 20px; font-size: 14px; font-weight: 600;
-      color: var(--color-accent); display: inline-flex; align-items: center;
-      transition: background 0.18s, border-color 0.18s, transform 0.18s cubic-bezier(0.34,1.56,0.64,1);
-    }
-    .insurer-pill:hover { background: rgba(var(--color-dark-rgb), 0.14); border-color: rgba(var(--color-dark-rgb), 0.30); transform: translateY(-1px); }
-
-    /* ── Badges & accents ── */
-    .section-title-accent {
-      display: inline-block; width: 64px; height: 3px;
-      background: linear-gradient(90deg, transparent 0%, var(--color-accent) 25%, var(--color-accent) 75%, transparent 100%);
-      border-radius: 2px; margin-bottom: 12px;
-    }
-    .icon-wrap {
-      width: 48px; height: 48px;
-      background: linear-gradient(135deg, rgba(var(--color-dark-rgb), 0.10) 0%, rgba(var(--color-dark-rgb), 0.06) 100%);
-      border: 1px solid rgba(var(--color-dark-rgb), 0.14); border-radius: 12px;
+    .step-num {
+      width: 44px; height: 44px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      margin-bottom: 16px; flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(var(--color-dark-rgb), 0.09), inset 0 1px 0 rgba(255,255,255,0.60);
+      background: var(--color-accent); color: var(--color-ink);
+      font-family: 'Archivo', sans-serif; font-stretch: 120%; font-weight: 900; font-size: 18px;
+      box-shadow: 0 0 0 6px rgba(var(--color-accent-rgb), 0.16);
+      margin-bottom: 18px;
     }
-    .trust-icon {
-      width: 44px; height: 44px;
-      background: linear-gradient(135deg, rgba(var(--color-dark-rgb), 0.10) 0%, rgba(var(--color-dark-rgb), 0.06) 100%);
-      border: 1px solid rgba(var(--color-dark-rgb), 0.14); border-radius: 12px;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(var(--color-dark-rgb), 0.09), inset 0 1px 0 rgba(255,255,255,0.60);
-    }
+
     .link-arrow {
       display: inline-flex; align-items: center; gap: 6px;
-      font-size: 14px; font-weight: 600; color: var(--color-accent);
-      transition: color 0.18s cubic-bezier(0.4,0,0.2,1), gap 0.18s cubic-bezier(0.4,0,0.2,1);
+      font-size: 14px; font-weight: 700; color: var(--color-accent-deep);
+      transition: color 0.18s cubic-bezier(0.4,0,0.2,1);
     }
-    .link-arrow:hover { color: var(--color-accent-deep); gap: 10px; }
-    .link-arrow:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 4px; }
+    .link-arrow svg { transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1); }
+    .link-arrow:hover { color: var(--color-ink); }
+    .link-arrow:hover svg, .service-card:hover .link-arrow svg { transform: translateX(4px); }
+    .link-arrow:active svg { transform: translateX(1px); }
 
-    /* ── Area card ── */
     .area-card {
-      background: linear-gradient(135deg, rgba(var(--color-dark-rgb), 0.04) 0%, rgba(var(--color-dark-rgb), 0.015) 100%), var(--color-bg);
-      border: 1px solid rgba(var(--color-dark-rgb), 0.12); border-radius: 18px; padding: 36px 40px;
-      box-shadow: 0 1px 3px rgba(var(--color-dark-rgb), 0.05), 0 10px 28px rgba(var(--color-dark-rgb), 0.10), 0 22px 56px rgba(var(--color-dark-rgb), 0.09), 0 0 0 1px rgba(var(--color-dark-rgb), 0.06);
+      background: linear-gradient(135deg, rgba(var(--color-dark-rgb), 0.035) 0%, rgba(var(--color-dark-rgb), 0.01) 100%), var(--color-bg);
+      border: 1px solid rgba(var(--color-dark-rgb), 0.10); border-radius: 18px; padding: 34px 36px;
+      box-shadow: 0 1px 3px rgba(var(--color-dark-rgb), 0.06), 0 12px 30px -10px rgba(var(--color-dark-rgb), 0.16), 0 28px 60px -28px rgba(var(--color-dark-rgb), 0.20);
     }
     .area-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--color-accent), var(--color-accent-deep));
-      box-shadow: 0 0 6px rgba(var(--color-dark-rgb), 0.40); flex-shrink: 0;
+      width: 8px; height: 8px; border-radius: 50%; background: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(var(--color-accent-rgb), 0.20); flex-shrink: 0;
     }
+    .city-link { color: var(--color-ink); text-decoration-color: rgba(var(--color-accent-deep-rgb), 0.5); text-underline-offset: 3px; transition: color 0.15s cubic-bezier(0.4,0,0.2,1); }
+    .city-link:hover { color: var(--color-accent-deep); text-decoration: underline; }
 
-    /* ── Mobile menu ── */
+    .check { color: var(--color-accent-deep); }
+    .dark-section .check { color: var(--color-accent-bright); }
+
+    /* ── SIGNATURE: Visit panel — styled like a machine's control display ── */
+    .visit-panel {
+      position: relative; border-radius: 22px; overflow: hidden; color: var(--color-bg);
+      background:
+        radial-gradient(ellipse 80% 70% at 100% 0%, rgba(var(--color-accent-rgb), 0.20) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 60% at 0% 100%, rgba(var(--color-dark-3-rgb), 0.70) 0%, transparent 60%),
+        var(--color-dark);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 2px 4px rgba(var(--color-ink-rgb), 0.10), 0 30px 70px -24px rgba(var(--color-dark-rgb), 0.65);
+    }
+    .visit-panel::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.06; background-size: 160px 160px;
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='160'%20height='160'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.85'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .visit-panel > * { position: relative; }
+    .display-window {
+      container-type: inline-size;
+      border-radius: 14px; padding: 18px 22px 20px;
+      background: linear-gradient(180deg, rgba(var(--color-ink-rgb), 0.55) 0%, rgba(var(--color-ink-rgb), 0.35) 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 2px 10px rgba(var(--color-ink-rgb), 0.55), 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .status-pill {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-bright);
+    }
+    .status-led { width: 9px; height: 9px; border-radius: 50%; background: var(--color-accent-bright); box-shadow: 0 0 10px rgba(var(--color-accent-bright-rgb), 0.9); }
+    .status-pill[data-state="open"] .status-led { animation: led 2.4s cubic-bezier(0.4,0,0.6,1) infinite; }
+    .status-pill[data-state="closed"] { color: var(--color-silver); }
+    .status-pill[data-state="closed"] .status-led { background: var(--color-muted-light); box-shadow: none; }
+    @keyframes led { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+    .hours-readout {
+      font-family: 'Archivo', sans-serif; font-stretch: 125%; font-weight: 900;
+      font-size: clamp(2rem, 13.5cqi, 4.1rem); line-height: 0.95; letter-spacing: -0.03em; color: var(--color-bg);
+      white-space: nowrap;
+    }
+    .hours-readout .dash { color: var(--color-accent-bright); }
+    .map-frame {
+      border-radius: 22px; overflow: hidden; background: var(--color-bg-2);
+      border: 1px solid rgba(var(--color-dark-rgb), 0.10);
+      box-shadow: 0 2px 4px rgba(var(--color-dark-rgb), 0.06), 0 24px 56px -24px rgba(var(--color-dark-rgb), 0.40);
+    }
+    .map-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+    .faq-item { border: 1px solid rgba(var(--color-dark-rgb), 0.10); background: var(--color-bg); border-radius: 16px; overflow: hidden;
+      box-shadow: 0 1px 2px rgba(var(--color-dark-rgb), 0.04), 0 10px 24px -14px rgba(var(--color-dark-rgb), 0.18); }
+    .faq-item summary { transition: background 0.15s cubic-bezier(0.4,0,0.2,1); }
+    .faq-item summary:hover { background: rgba(var(--color-accent-rgb), 0.06); }
+    .faq-item summary:active { background: rgba(var(--color-accent-rgb), 0.10); }
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .social-btn {
+      width: 38px; height: 38px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center;
+      color: var(--color-silver); border: 1px solid rgba(255,255,255,0.16);
+      transition: color 0.15s cubic-bezier(0.4,0,0.2,1), border-color 0.15s cubic-bezier(0.4,0,0.2,1), transform 0.22s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .social-btn:hover { color: var(--color-bg); border-color: var(--color-accent-bright); transform: translateY(-2px); }
+    .social-btn:active { transform: translateY(0); }
+    .footer-link { color: var(--color-silver); transition: color 0.15s cubic-bezier(0.4,0,0.2,1); }
+    .footer-link:hover { color: var(--color-bg); }
+    .footer-link:active { color: var(--color-accent-bright); }
+
     #mobile-menu {
       display: none;
       max-height: calc(100vh - var(--nav-height) - 12px);
@@ -359,42 +433,22 @@
     }
     #mobile-menu.open { display: block; }
 
-    /* ── Scroll animations ── */
     .fade-up {
       opacity: 0; transform: translateY(24px);
-      transition: opacity 0.55s cubic-bezier(0.4,0,0.2,1), transform 0.55s cubic-bezier(0.4,0,0.2,1);
+      transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.34,1.36,0.64,1);
     }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── Phone pulse ── */
-    .phone-pulse { position: relative; }
-    .phone-pulse::after {
-      content: ""; position: absolute; inset: -3px; border-radius: 11px;
-      border: 2px solid rgba(var(--color-accent-rgb), 0.45);
-      opacity: 0; pointer-events: none;
-      animation: pulse-ring 2.5s cubic-bezier(0.4,0,0.6,1) infinite;
-    }
-    @keyframes pulse-ring {
-      0%        { transform: scale(0.98); opacity: 0.55; }
-      70%, 100% { transform: scale(1.15); opacity: 0; }
-    }
-
-    /* ── Hero layout left-aligned on desktop ── */
     @media (min-width: 1024px) {
-      .hero-outer {
-        max-width: none !important; margin-left: 0 !important; margin-right: 0 !important;
-        padding-left: clamp(48px, 5vw, 96px) !important; padding-right: 0 !important;
-      }
-      .hero-text-block { max-width: 600px !important; }
+      .hero-text-block { max-width: 680px !important; }
     }
 
-    /* ── Scrollbar ── */
     /* ── Skip link, anchor offset, FAQ chevron, reduced motion ── */
     .skip-link {
       position: absolute; top: 0; left: -9999px; z-index: 100;
       background: var(--color-bg); color: var(--color-ink);
-      padding: 10px 18px; border-radius: 0 0 10px 0; font-weight: 600;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+      padding: 10px 18px; border-radius: 0 0 10px 0; font-weight: 700;
+      box-shadow: 0 4px 18px rgba(var(--color-ink-rgb),0.20);
     }
     .skip-link:focus { left: 0; }
     section[id] { scroll-margin-top: calc(var(--nav-height) + 8px); }
@@ -402,92 +456,83 @@
     details[open] .faq-chevron { transform: rotate(180deg); }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .phone-pulse::after { animation: none; opacity: 0; }
+      .status-pill .status-led { animation: none !important; }
       .fade-up { opacity: 1; transform: none; transition: none; }
+      .service-card, .btn-primary, .btn-outline, .logo-chip, .social-btn { transition: none; }
     }
 
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--color-bg-2); }
     ::-webkit-scrollbar-thumb { background: var(--color-line); border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--color-accent-deep); }
 
-    /* ── Breadcrumb ── */
-    .breadcrumb { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; }
-    .breadcrumb a { color: rgba(255,255,255,0.55); transition: color 0.18s; }
-    .breadcrumb a:hover { color: rgba(255,255,255,0.90); }
-    .breadcrumb .sep { color: rgba(255,255,255,0.30); }
-    .breadcrumb .current { color: rgba(255,255,255,0.80); }
-  
-    /* ---- Atmospheric depth for light sections (grain + corner wash) ---- */
-    .atmo { position: relative; overflow: hidden; }
-    .atmo > * { position: relative; z-index: 1; }
-    .atmo::before {
-      content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-      opacity: 0.05; background-size: 160px 160px;
-      background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='160'%20height='160'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.85'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-    .atmo::after {
-      content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-      background: var(--wash, transparent);
-    }
-    .wash-navy-tr  { --wash: radial-gradient(ellipse 55% 48% at 100% 0%,   rgba(var(--color-dark-rgb), 0.06) 0%, transparent 60%); }
-    .wash-navy-br  { --wash: radial-gradient(ellipse 55% 48% at 100% 100%, rgba(var(--color-dark-rgb), 0.06) 0%, transparent 60%); }
-    .wash-navy-bl  { --wash: radial-gradient(ellipse 55% 48% at 0% 100%,   rgba(var(--color-dark-rgb), 0.06) 0%, transparent 60%); }
-    .wash-ember-tl { --wash: radial-gradient(ellipse 55% 48% at 0% 0%,     rgba(var(--color-accent-rgb), 0.05) 0%, transparent 60%); }
-    .wash-ember-tr { --wash: radial-gradient(ellipse 55% 48% at 100% 0%,   rgba(var(--color-accent-rgb), 0.05) 0%, transparent 60%); }
+    /* ── Inner pages: breadcrumb ── */
+    .crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.72); margin-bottom: 22px; }
+    .crumbs a { color: rgba(255,255,255,0.80); transition: color 0.15s cubic-bezier(0.4,0,0.2,1); }
+    .crumbs a:hover { color: var(--color-bg); text-decoration: underline; text-underline-offset: 3px; }
+    .crumbs a:active { color: var(--color-accent-bright); }
+    .crumbs .sep { color: rgba(255,255,255,0.35); }
+    .crumbs .current { color: var(--color-accent-bright); }
 
-    /* ---- Insurance section: deep-navy treatment (page rhythm) ---- */
-    #insurance.dark-section {
-      background:
-        radial-gradient(ellipse 90% 70% at 12% 0%,   rgba(var(--color-dark-rgb), 0.20) 0%, transparent 55%),
-        radial-gradient(ellipse 85% 65% at 100% 100%, rgba(var(--color-accent-rgb), 0.08) 0%, transparent 52%),
-        var(--color-dark);
+    /* ── Mini numbered steps on light sections (a real sequence) ── */
+    .mini-steps { counter-reset: s; display: grid; gap: 18px; }
+    .mini-steps li { counter-increment: s; position: relative; padding-left: 50px; }
+    .mini-steps li::before {
+      content: counter(s); position: absolute; left: 0; top: 0;
+      width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      background: var(--color-accent); color: var(--color-ink);
+      font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 15px;
+      box-shadow: 0 0 0 5px rgba(var(--color-accent-rgb), 0.16);
     }
-    #insurance .area-card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.055) 0%, rgba(255,255,255,0.02) 100%), rgba(var(--color-dark-rgb), 0.45);
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 20px 50px rgba(0,0,0,0.38), inset 0 1px 0 rgba(255,255,255,0.06);
-    }
-    #insurance .area-card > .text-center span { color: var(--color-muted-light) !important; }
-    #insurance .area-card p { color: var(--color-muted-light) !important; }
-    #insurance .insurer-pill {
-      background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.16); color: var(--color-line);
-    }
-    #insurance .insurer-pill:hover {
-      background: rgba(255,255,255,0.12); border-color: rgba(var(--color-accent-rgb), 0.45); transform: translateY(-1px);
-    }
+    .mini-steps h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 2px; }
 
-    /* ---- Why-Us section: deep-navy treatment (page rhythm, matches insurance) ---- */
-    #why-us.dark-section {
-      background:
-        radial-gradient(ellipse 90% 70% at 12% 0%,   rgba(var(--color-dark-rgb), 0.20) 0%, transparent 55%),
-        radial-gradient(ellipse 85% 65% at 100% 100%, rgba(var(--color-accent-rgb), 0.08) 0%, transparent 52%),
-        var(--color-dark);
+    /* ── Price card (reuses the visit-panel display-window language) ── */
+    .price-hero { font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 700; font-size: clamp(3rem, 7vw, 4.5rem); line-height: 1; letter-spacing: -0.03em; color: var(--color-bg); }
+    .price-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    .price-table caption { text-align: left; margin-bottom: 8px; }
+    .price-table th, .price-table td { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.10); text-align: left; }
+    .price-table th { font-weight: 600; color: var(--color-silver); }
+    .price-table td { text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 600; color: var(--color-bg); white-space: nowrap; }
+    .price-table tr:last-child th, .price-table tr:last-child td { border-bottom: 0; }
+
+    /* ── Related-services row ── */
+    .chip-link {
+      display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border-radius: 999px;
+      background: var(--color-bg); border: 1px solid rgba(var(--color-dark-rgb), 0.12); color: var(--color-ink);
+      font-size: 14px; font-weight: 700;
+      box-shadow: 0 1px 2px rgba(var(--color-dark-rgb), 0.05), 0 6px 14px -8px rgba(var(--color-dark-rgb), 0.25);
+      transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1), border-color 0.15s cubic-bezier(0.4,0,0.2,1), color 0.15s cubic-bezier(0.4,0,0.2,1);
     }
-    #insurance strong { color: var(--color-accent) !important; }
+    .chip-link:hover { transform: translateY(-2px); border-color: var(--color-accent-deep); color: var(--color-accent-deep); }
+    .chip-link:active { transform: translateY(0); }
+
+    /* ── Pickup band ── */
+    .pickup-band { border-radius: 20px; padding: 28px 30px;
+      background: linear-gradient(135deg, rgba(var(--color-accent-rgb), 0.14) 0%, rgba(var(--color-accent-rgb), 0.05) 100%), var(--color-bg);
+      border: 1px solid rgba(var(--color-accent-deep-rgb), 0.22);
+      box-shadow: 0 12px 30px -16px rgba(var(--color-dark-rgb), 0.30); }
   </style>
 
-  <!-- LocalBusiness ref — same @id as the homepage business entity (NOT a re-declaration). Single-city areaServed. -->
+  <!-- LocalBusiness ref — same @id as the homepage business entity (NOT a re-declaration). areaServed = Pharr only. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "[BUSINESS @TYPE]",
+    "@type": "DryCleaningOrLaundry",
     "@id": "https://www.mrsudzrgv.com/#business",
-    "name": "Your Business Name",
+    "name": "Mr. Sudz Laundromat",
     "url": "https://www.mrsudzrgv.com/",
-    "telephone": "+15550000000",
-    "email": "info@mrsudzrgv.com",
-    "description": "Professional home services in [City], [ST] — covering all six core services, with same-day appointments, free estimates, and mobile service across [City] and the [Region].",
     "areaServed": {
       "@type": "City",
-      "name": "[City]",
-      "containedInPlace": { "@type": "State", "name": "[State]" }
+      "name": "Pharr",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Texas"
+      }
     }
   }
   </script>
 
-  <!-- FAQPage Structured Data — REQUIRED on every city page (min 4 city-scoped
-       Q&As). Keep in sync with the visible #faq section (CITY-SWAP: faq zone). -->
+  <!-- FAQPage Structured Data (5 Pharr-scoped Q&As — mirrors the visible FAQ) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -495,34 +540,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Do you come to me in [City]?",
+        "name": "Where is Mr. Sudz in Pharr?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Our team runs mobile service across all of [City], so most jobs happen at your home, office, or wherever works for you. Prefer to reach us another way? Just call and we'll sort it out."
+          "text": "We're at 1032 W. Sam Houston Blvd., Ste. 6, Pharr, TX 78577. It's our only location."
         }
       },
       {
         "@type": "Question",
-        "name": "How fast can you get to my [City] job?",
+        "name": "Are you open on weekends?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most [City] jobs are same-day. Call in the morning and we can usually take care of it by that afternoon, depending on what the job needs."
+          "text": "Yes. Mr. Sudz is open every day of the week, 7am to 10pm, weekends included."
         }
       },
       {
         "@type": "Question",
-        "name": "How much will the job cost?",
+        "name": "Do you pick up laundry in Pharr?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Every job is quoted up front. We look at what you need, explain your options, and give you a clear price before any work begins — no surprises after the fact."
+          "text": "Book a pickup online to check pickup availability at your Pharr address."
         }
       },
       {
         "@type": "Question",
-        "name": "My problem seems small — should I wait?",
+        "name": "Can I wash my own laundry or drop it off?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Usually not. Small problems tend to get bigger — and more expensive — the longer they wait. Most jobs are quick and quoted upfront, so it's worth calling early."
+          "text": "Both. Use our self-service machines, or drop off for wash, dry & fold with our attendant."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Mr. Sudz locally owned?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Mr. Sudz is family-owned and operated, right here in Pharr."
         }
       }
     ]
@@ -535,9 +588,24 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mrsudzrgv.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://www.mrsudzrgv.com/#service-area" },
-      { "@type": "ListItem", "position": 3, "name": "Pharr", "item": "https://www.mrsudzrgv.com/areas/pharr.html" }
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.mrsudzrgv.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Areas We Serve",
+        "item": "https://www.mrsudzrgv.com/#service-area"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Pharr",
+        "item": "https://www.mrsudzrgv.com/areas/pharr.html"
+      }
     ]
   }
   </script>
@@ -549,20 +617,20 @@
   <!-- ============================================================
        STICKY NAVIGATION
   ============================================================ -->
-  <nav id="navbar">
+  <nav id="navbar" aria-label="Main">
     <div class="nav-row max-w-6xl mx-auto px-5 flex items-center justify-between">
 
-      <!-- LOGO PLACEHOLDER — swap the <span> for <img class="nav-logo" ...>; height comes from --nav-logo-height in brand.css -->
-      <a href="/" class="flex items-center group" aria-label="Your Business Name home">
-        <span class="nav-wordmark">Your Business Name</span>
+      <!-- LOGO — interim brand_assets/logo.png (RGB, white bg → sits in .logo-chip). Swap for the client's original when it arrives. -->
+      <a href="/" class="logo-chip" aria-label="Mr. Sudz Laundromat home">
+        <img class="nav-logo" src="/brand_assets/logo.png" alt="Mr. Sudz Laundromat logo" width="300" height="151" />
       </a>
 
       <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-7">
         <div class="nav-dropdown">
-          <a href="/#services" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted hover:text-white transition-colors duration-150">
+          <a href="/#services" class="nav-link nav-dropdown-trigger text-sm font-semibold text-muted hover:text-white transition-colors duration-150">
             Services
-            <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
           <div class="nav-dropdown-menu" aria-label="Services">
             <a href="/services/wash-and-fold.html">Wash, Dry &amp; Fold</a>
@@ -576,12 +644,12 @@
         <!-- SHARED ZONE: Areas We Serve dropdown — do NOT modify during
              city-page clone-and-localize pass. All city entries constant. -->
         <div class="nav-dropdown">
-          <a href="/#service-area" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted hover:text-white transition-colors duration-150">
+          <a href="/#service-area" class="nav-link nav-dropdown-trigger text-sm font-semibold text-muted hover:text-white transition-colors duration-150">
             Areas We Serve
-            <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
           <div class="nav-dropdown-menu" aria-label="Areas We Serve">
-            <a href="/areas/pharr.html" aria-current="page">Pharr</a>
+            <a href="/areas/pharr.html">Pharr</a>
             <a href="/areas/mcallen.html">McAllen</a>
             <a href="/areas/san-juan.html">San Juan</a>
             <a href="/areas/edinburg.html">Edinburg</a>
@@ -590,19 +658,19 @@
           </div>
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
-        <!-- OPTIONAL MODULE LINK (desktop nav, #insurance): re-enable with the Insurance module: <a href="/#insurance"   class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Insurance</a> -->
-        <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">About</a>
-        <!-- OPTIONAL MODULE LINK (desktop nav, #reviews): re-enable with the Review widget module: <a href="/#reviews"     class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Reviews</a> -->
-        <a href="/#contact"     class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Contact</a>
-        <a href="tel:+15550000000" class="btn-primary text-sm py-2.5 px-5 phone-pulse ml-4">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          (555) 000-0000
+        <a href="/about.html" class="nav-link text-sm font-semibold text-muted hover:text-white transition-colors duration-150">About</a>
+        <!-- OPTIONAL MODULE LINK (desktop nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="nav-link text-sm font-semibold text-muted hover:text-white transition-colors duration-150">Reviews</a> -->
+        <a href="/#contact" class="nav-link text-sm font-semibold text-muted hover:text-white transition-colors duration-150">Contact</a>
+        <!-- CLEANCLOUD BOOKING EMBED: swap href="#book" for the CleanCloud booking link -->
+        <a href="#book" class="btn-primary text-sm py-2.5 px-5 ml-2">
+          Book a Pickup
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
         </a>
       </div>
 
       <!-- Mobile hamburger -->
-      <button id="hamburger" class="md:hidden p-2 rounded-lg border border-white/10 text-white hover:border-white/30 transition-colors duration-150" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg id="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <button id="hamburger" class="md:hidden p-2 rounded-lg border text-white transition-colors duration-150" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <line x1="3" y1="6" x2="21" y2="6"/>
           <line x1="3" y1="12" x2="21" y2="12"/>
           <line x1="3" y1="18" x2="21" y2="18"/>
@@ -611,11 +679,11 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden px-5 pb-4 mt-3 border-t border-white/10">
+    <div id="mobile-menu" class="md:hidden px-5 pb-4 border-t">
       <div class="flex flex-col gap-1 pt-4">
-        <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-medium" aria-expanded="false" aria-controls="mobile-services-submenu">
+        <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-semibold" aria-expanded="false" aria-controls="mobile-services-submenu">
           Services
-          <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div id="mobile-services-submenu" class="mobile-services-submenu">
           <a href="/services/wash-and-fold.html">Wash, Dry &amp; Fold</a>
@@ -627,12 +695,12 @@
         </div>
         <!-- SHARED ZONE: Areas We Serve dropdown — do NOT modify during
              city-page clone-and-localize pass. All city entries constant. -->
-        <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-medium" aria-expanded="false" aria-controls="mobile-areas-submenu">
+        <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-semibold" aria-expanded="false" aria-controls="mobile-areas-submenu">
           Areas We Serve
-          <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div id="mobile-areas-submenu" class="mobile-services-submenu">
-          <a href="/areas/pharr.html" aria-current="page">Pharr</a>
+          <a href="/areas/pharr.html">Pharr</a>
           <a href="/areas/mcallen.html">McAllen</a>
           <a href="/areas/san-juan.html">San Juan</a>
           <a href="/areas/edinburg.html">Edinburg</a>
@@ -640,14 +708,13 @@
           <a href="/areas/hidalgo.html">Hidalgo</a>
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
-        <!-- OPTIONAL MODULE LINK (mobile nav, #insurance): re-enable with the Insurance module: <a href="/#insurance" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Insurance</a> -->
-        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">About</a>
-        <!-- OPTIONAL MODULE LINK (mobile nav, #reviews): re-enable with the Review widget module: <a href="/#reviews"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Reviews</a> -->
-        <a href="/#contact"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Contact</a>
-        <a href="tel:+15550000000" class="btn-primary mt-3 justify-center">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call (555) 000-0000
-        </a>
+        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-semibold">About</a>
+        <!-- OPTIONAL MODULE LINK (mobile nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="mobile-nav-link py-3 px-3 rounded-lg font-semibold">Reviews</a> -->
+        <a href="/#contact" class="mobile-nav-link py-3 px-3 rounded-lg font-semibold">Contact</a>
+        <!-- CLEANCLOUD BOOKING EMBED: swap href="#book" for the CleanCloud booking link -->
+        <a href="#book" class="btn-primary mt-3 justify-center">Book a Pickup</a>
+        <!-- PHONE: GHL tracking number [NEEDS INPUT] — (555) 000-0000 is a placeholder -->
+        <a href="tel:+15550000000" class="btn-outline mt-2 justify-center" style="color: var(--color-bg); border-color: rgba(255,255,255,0.30);">Call (555) 000-0000</a>
       </div>
     </div>
   </nav>
@@ -655,316 +722,319 @@
   <!-- ============================================================
        HERO
   ============================================================ -->
-  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="Home Services in [City], [ST]">
+  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(112px, 16vw, 148px); padding-bottom: clamp(56px, 8vw, 96px);" aria-labelledby="page-h1">
 
-    <!-- OFF-LIMITS: hero-background — dedicated named file only, never a content photo -->
+    <!-- OFF-LIMITS: hero-background — dedicated named file only (brand_assets/hero-background.jpg, 1920×1080), never a content photo. PENDING. -->
     <img
       src="https://placehold.co/1920x1080"
-      alt="Professional home services in [City], [ST] — Your Business Name serving the [Region]"
+      alt="Mr. Sudz Laundromat storefront on W. Sam Houston Blvd. in Pharr, TX"
+      width="1920" height="1080"
       fetchpriority="high"
       style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; z-index: 0;"
     />
 
-    <!-- Overlay -->
+    <!-- Dark overlay (~0.7) + color-treatment layer -->
     <div style="position: absolute; inset: 0; z-index: 1; background:
-      linear-gradient(180deg, rgba(var(--color-dark-rgb), 0.72) 0%, rgba(var(--color-dark-rgb), 0.32) 25%, rgba(var(--color-dark-rgb), 0.28) 65%, rgba(var(--color-dark-rgb), 0.75) 100%),
-      radial-gradient(ellipse 65% 100% at 0% 50%, rgba(var(--color-dark-rgb), 0.78) 0%, transparent 65%);
+      linear-gradient(180deg, rgba(var(--color-dark-rgb), 0.80) 0%, rgba(var(--color-dark-rgb), 0.68) 30%, rgba(var(--color-dark-rgb), 0.68) 65%, rgba(var(--color-dark-rgb), 0.88) 100%),
+      radial-gradient(ellipse 70% 100% at 0% 50%, rgba(var(--color-dark-rgb), 0.80) 0%, transparent 70%);
     "></div>
+    <div style="position: absolute; inset: 0; z-index: 1; mix-blend-mode: soft-light; background: radial-gradient(ellipse 60% 70% at 85% 20%, rgba(var(--color-accent-rgb), 0.55) 0%, transparent 60%);"></div>
 
     <!-- Edge vignette -->
     <div class="hero-vignette absolute inset-0 z-[2]"></div>
 
-    <div class="hero-outer relative z-10 max-w-5xl mx-auto px-5 w-full">
+    <div class="hero-outer relative z-10 max-w-6xl mx-auto px-5 w-full">
       <div class="hero-text-block max-w-2xl fade-up">
 
-        <!-- Breadcrumb -->
-        <nav class="breadcrumb mb-5" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep" aria-hidden="true">/</span>
-          <a href="/#service-area">Service Areas</a>
-          <span class="sep" aria-hidden="true">/</span>
-          <span class="current">Pharr</span>
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a><span class="sep" aria-hidden="true">/</span>
+          <a href="/#service-area">Areas We Serve</a><span class="sep" aria-hidden="true">/</span>
+          <span class="current" aria-current="page">Pharr</span>
         </nav>
 
+        <p class="eyebrow" style="margin-bottom: 18px; text-shadow: 0 1px 8px rgba(var(--color-ink-rgb),0.45);">Right Here in Pharr, TX</p>
 
-        <!-- Eyebrow -->
-        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-line); margin-bottom: 20px; text-shadow: 0 1px 8px rgba(0,0,0,0.45);">Trusted Local Home Services</p>
-
-        <h1 class="font-display text-white mb-5" style="font-size: clamp(2.4rem, 6vw, 3.8rem); letter-spacing: -0.03em; line-height: 1.06; font-weight: 800; text-shadow: 0 2px 24px rgba(0,0,0,0.45);">
-          Home Services<br />
-          <span style="color: var(--color-accent-bright);">in [City], [ST]</span>
+        <h1 id="page-h1" class="text-white mb-6 display-xl" style="font-size: clamp(2.35rem, 4.8vw, 3.6rem); text-shadow: 0 2px 24px rgba(var(--color-ink-rgb),0.45);">
+          Pharr Laundry Services, Close&nbsp;to&nbsp;Home
         </h1>
 
-        <p class="mb-8 max-w-xl" style="color: rgba(255,255,255,0.88); font-size: clamp(1rem, 2.2vw, 1.125rem); line-height: 1.72; text-shadow: 0 1px 8px rgba(0,0,0,0.35);">
-          When you need a job done right in [City], you want a team that shows up on time and stands behind its work. Your Business Name brings same-day home services across [City] — clean, careful work, with most jobs <strong style="color: var(--color-bg);">handled start to finish by our own crew</strong>.
+        <p class="mb-9 max-w-xl" style="color: rgba(255,255,255,0.90); font-size: clamp(1.05rem, 2.2vw, 1.2rem); line-height: 1.7; text-shadow: 0 1px 8px rgba(var(--color-ink-rgb),0.35);">
+          Our storefront is right here in Pharr on W. Sam Houston Blvd. Family-owned and operated, and open every day from 7am to 10pm.
         </p>
 
-        <!-- CTAs -->
-        <div class="flex flex-wrap gap-4 mb-10">
-          <a href="tel:+15550000000" class="btn-primary text-base px-7 py-4">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call Now — (555) 000-0000
-          </a>
-          <a href="/#contact" class="btn-outline text-base px-7 py-4">
-            Get a Free Quote
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
+        <div class="flex flex-wrap gap-4">
+          <!-- CLEANCLOUD BOOKING EMBED: swap href="#book" for the CleanCloud booking link -->
+<a href="#book" class="btn-primary text-base px-7 py-4">Book a Pickup <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1032+W+Sam+Houston+Blvd+Ste+6+Pharr+TX+78577" target="_blank" rel="noopener" class="btn-outline text-base px-7 py-4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Get Directions</a>
         </div>
 
-        <!-- Stats row -->
-        <div class="flex flex-wrap gap-8">
-          <div>
-            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Upfront</div>
-            <div class="text-muted text-sm mt-0.5">Honest Pricing</div>
-          </div>
-          <div class="w-px" style="background: rgba(255,255,255,0.14);"></div>
-          <div>
-            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Mobile</div>
-            <div class="text-muted text-sm mt-0.5">Service Available</div>
-          </div>
-          <div class="w-px" style="background: rgba(255,255,255,0.14);"></div>
-          <div>
-            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Free</div>
-            <div class="text-muted text-sm mt-0.5">Free Estimates</div>
-          </div>
-        </div>
       </div>
     </div>
 
-    <!-- Ember accent bridge -->
-    <div class="absolute bottom-0 left-0 right-0 z-20" style="height: 4px; background: linear-gradient(90deg, transparent 0%, var(--color-accent) 18%, var(--color-accent) 82%, transparent 100%); opacity: 0.90;"></div>
+    <!-- Sky accent bridge -->
+    <div class="absolute bottom-0 left-0 right-0 z-20" style="height: 4px; background: linear-gradient(90deg, transparent 0%, var(--color-accent) 18%, var(--color-accent) 82%, transparent 100%);"></div>
   </section>
 
-  <!-- ============================================================
-       MAIN CONTENT
-  ============================================================ -->
   <main id="main-content">
 
-    <!-- SECTION: intro -->
-    <div class="divider"></div>
-    <!-- CITY-SWAP: intro — replace city name, opening hook, distance reference -->
-    <section id="intro" class="section-dark atmo wash-navy-tr py-20" aria-label="Local home services in [City]">
-      <div class="max-w-3xl mx-auto px-5 text-center fade-up">
-        <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 14px;">[City], [ST] · The [Region]</p>
-        <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
-          Your Local Home Services Team in [City]
-        </h2>
-        <p class="text-muted text-lg mb-4" style="line-height: 1.7;">
-          Your Business Name is based right here in [City]. We are not a call center or an out-of-town franchise — we live and work in the [Region], and when you call, you talk to the same team that does the work.
-        </p>
-        <p class="text-muted text-lg mb-4" style="line-height: 1.7;">
-          Homes in the [Region] take a beating from the weather, and small problems do not stay small for long. Put off a repair and it usually costs more later — we know how fast you need it handled.
-        </p>
-        <p class="text-muted text-lg" style="line-height: 1.7;">
-          From [Neighborhood] to the [Highway] corridor and out toward [Landmark], our team keeps [City] homes in good shape. Most jobs are done the same day you call.
-        </p>
+    <!-- CITY-SWAP: intro -->
+    <section id="intro" class="section-mid atmo wash-navy-tr py-24" aria-labelledby="intro-heading">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+          <div class="fade-up " >
+            <p class="eyebrow">Our Home Base</p>
+            <h2 id="intro-heading" class="h2-split text-white mb-6">Your Neighborhood Laundry Stop in Pharr</h2>
+            <p class="text-muted lede mb-5">Pharr is home for Mr. Sudz. Our one and only storefront sits at 1032 W. Sam Houston Blvd., Ste. 6, and it's where every load we touch gets washed, dried, and folded.</p><p class="text-muted lede mb-0">Neighbors come in to use our modern, high-efficiency machines, drop off a basket for wash, dry &amp; fold, or leave a few shirts for pressing. Whatever brings you in, the goal is the same: laundry day made easy.</p>
+          </div>
+          <div class="fade-up " style="transition-delay: 0.1s;">
+            <div class="photo-frame">
+              <img src="https://placehold.co/1200x900" alt="Clean, modern laundry room at Mr. Sudz Laundromat in Pharr, TX" width="1200" height="900" loading="lazy" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- END CITY-SWAP: intro -->
 
-    <div class="divider"></div>
-
-    <!-- SECTION: coverage split (text left / photo right) -->
-    <section class="section-mid atmo wash-navy-br py-24" aria-label="[City] neighborhoods Your Business Name serves">
+    <!-- CITY-SWAP: local-anchors -->
+    <section id="getting-here" class="dark-section py-24" aria-labelledby="getting-here-heading">
       <div class="max-w-6xl mx-auto px-5">
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 fade-up">
+          <div class="lg:col-span-5">
+            <p class="eyebrow">Finding Us</p>
+            <h2 id="getting-here-heading" class="h2-split text-white">Where to Find Mr. Sudz in Pharr</h2>
+          </div>
+          <div class="lg:col-span-7">
+            <p class="text-muted lede mb-5">Pharr is easy to get around, and we're easy to find.</p><ul class="space-y-3.5 mb-8">
+              <li class="flex items-start gap-3 text-[15px] text-white" style="line-height: 1.6;"><span class="area-dot" style="margin-top: 8px;"></span><span>Our storefront is at 1032 W. Sam Houston Blvd., Ste. 6, Pharr, TX 78577.</span></li>
+              <li class="flex items-start gap-3 text-[15px] text-white" style="line-height: 1.6;"><span class="area-dot" style="margin-top: 8px;"></span><span>Pharr is where <span class="whitespace-nowrap">I-2</span> / US 83 meets <span class="whitespace-nowrap">I-69C</span> / US 281, so the store is a quick trip from across town.</span></li>
+              <li class="flex items-start gap-3 text-[15px] text-white" style="line-height: 1.6;"><span class="area-dot" style="margin-top: 8px;"></span><span>Open every day from 7am to 10pm, so you can come by before work or after dinner.</span></li>
+            </ul><p class="text-muted text-[15px] mb-6" style="line-height: 1.7;">Tap Get Directions for a route from where you are.</p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=1032+W+Sam+Houston+Blvd+Ste+6+Pharr+TX+78577" target="_blank" rel="noopener" class="btn-primary "><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END CITY-SWAP: local-anchors -->
 
-          <!-- Text left -->
-          <div class="fade-up lg:order-1">
-            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 14px;">Coverage Across [City]</p>
-            <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
-              Home Services in Every [City] Neighborhood
-            </h2>
-            <p class="text-muted text-lg mb-6" style="line-height: 1.7;">
-              From one side of town to the other, our team covers all of [City]. Here is where [City] homeowners find us most.
-            </p>
-            <!-- CITY-SWAP: local-anchors — replace highways/neighborhoods/landmarks -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-              <div class="flex items-start gap-3">
-                <svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <div class="font-display font-bold text-white text-sm mb-0.5">[City] &amp; central neighborhoods</div>
-                  <p class="text-sm" style="color: var(--color-muted); line-height: 1.6;">Our home turf — jobs in central [City] near [Landmark] are usually same-day.</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <div class="font-display font-bold text-white text-sm mb-0.5">Downtown [City]</div>
-                  <p class="text-sm" style="color: var(--color-muted); line-height: 1.6;">Homes and businesses across downtown [City], handled on-site.</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <div class="font-display font-bold text-white text-sm mb-0.5">The [Highway] corridor</div>
-                  <p class="text-sm" style="color: var(--color-muted); line-height: 1.6;">Quick to reach along the [Highway] — we cover the busy [City] corridors.</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <div class="font-display font-bold text-white text-sm mb-0.5">Out toward [Landmark]</div>
-                  <p class="text-sm" style="color: var(--color-muted); line-height: 1.6;">Out toward [Landmark] and the edge of town, same fast turnaround.</p>
-                </div>
-              </div>
+    <!-- SHARED: hours + visit (identical to homepage) -->
+    <!-- ============================================================
+         2. HOURS + VISIT — signature control-display panel + Google Map
+    ============================================================ -->
+    <section id="visit" class="section-dark atmo wash-sky-tr py-20 lg:py-24" aria-labelledby="visit-heading">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+
+          <div class="lg:col-span-6 visit-panel p-7 sm:p-9 fade-up">
+            <p class="eyebrow" style="color: var(--color-accent-bright);">Hours &amp; Location</p>
+            <h2 id="visit-heading" class="mb-6" style="color: var(--color-bg); font-size: clamp(1.6rem, 2.9vw, 2.15rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1;">Visit Our Laundromat on W. Sam Houston Blvd.</h2>
+
+            <div class="display-window mb-7">
+              <p id="open-status" class="status-pill mb-3" data-state="static" aria-live="polite">
+                <span class="status-led" aria-hidden="true"></span>
+                <span class="status-text">Open daily</span>
+              </p>
+              <p class="hours-readout" aria-label="Open 7 AM to 10 PM">7AM<span class="dash">–</span>10PM</p>
+              <p class="mono mt-3 text-xs" style="color: var(--color-silver); letter-spacing: 0.06em;">MON – SUN · EVERY DAY</p>
             </div>
-            <!-- END CITY-SWAP: local-anchors -->
+
+            <address class="not-italic mb-7">
+              <p class="font-display font-bold text-lg" style="color: var(--color-bg);">1032 W. Sam Houston Blvd., Ste. 6</p>
+              <p style="color: var(--color-silver);">Pharr, TX 78577</p>
+            </address>
+
+            <div class="flex flex-wrap gap-3">
+              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1032+W+Sam+Houston+Blvd+Ste+6+Pharr+TX+78577" target="_blank" rel="noopener" class="btn-primary">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Get Directions
+              </a>
+              <!-- PHONE: GHL tracking number [NEEDS INPUT] — (555) 000-0000 is a placeholder -->
+              <a href="tel:+15550000000" class="btn-outline">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Call (555) 000-0000
+              </a>
+            </div>
           </div>
 
-          <!-- Photo right -->
-          <div class="fade-up lg:order-2">
-            <div class="photo-frame">
-              <img src="https://placehold.co/1200x900" alt="Home services in [City] by Your Business Name" loading="lazy" />
-            </div>
+          <div class="lg:col-span-6 map-frame min-h-[360px] lg:min-h-0 fade-up" style="transition-delay: 0.08s;">
+            <!-- GOOGLE MAPS EMBED -->
+            <iframe
+              src="https://www.google.com/maps?q=1032+W+Sam+Houston+Blvd+Ste+6,+Pharr,+TX+78577&amp;output=embed"
+              title="Map to Mr. Sudz Laundromat, 1032 W. Sam Houston Blvd., Ste. 6, Pharr, TX"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- SECTION: why-us -->
-    <!-- CITY-SWAP: why-city — replace the "why [City] chooses us" angle -->
-    <section id="why-us" class="dark-section atmo py-24" aria-label="Why [City] chooses Your Business Name">
-      <div class="max-w-4xl mx-auto px-5">
-        <div class="text-center mb-10 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-bold text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            Why [City] Chooses Your Business Name
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Your Business Name was built on honesty, attention to detail, and dedication. Every job gets the same care — the kind that keeps [City] coming back.
+    <!-- SHARED: services -->
+    <section id="services" class="section-mid atmo wash-sky-tl py-24" aria-labelledby="services-heading">
+      <div class="max-w-6xl mx-auto px-5">
+
+        <div class="max-w-3xl mb-12 fade-up">
+          <p class="eyebrow">What We Do</p>
+          <h2 id="services-heading" class="h2 text-white mb-4">Laundry Services at Mr. Sudz</h2>
+          <p class="text-muted lede">
+            Wash it yourself, drop it off, or book a pickup. Every service runs out of our one storefront in Pharr.
           </p>
         </div>
-        <div class="grid sm:grid-cols-2 gap-x-10 gap-y-5 max-w-3xl mx-auto fade-up">
-              <div class="flex items-start gap-3">
-                <svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <div class="font-display font-bold text-white text-sm mb-0.5">Service You Can Trust</div>
-                  <p class="text-sm" style="color: var(--color-muted-light); line-height: 1.6;">You deal with the same team every time — the people [City] homeowners count on.</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <div class="font-display font-bold text-white text-sm mb-0.5">Straight Answers</div>
-                  <p class="text-sm" style="color: var(--color-muted-light); line-height: 1.6;">Our team explains what your home needs and why — no upsell, no runaround.</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <div class="font-display font-bold text-white text-sm mb-0.5">Fair, Honest Pricing</div>
-                  <p class="text-sm" style="color: var(--color-muted-light); line-height: 1.6;">You get your price before any work starts — no hidden fees, no surprises.</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <div class="font-display font-bold text-white text-sm mb-0.5">Quick Response</div>
-                  <p class="text-sm" style="color: var(--color-muted-light); line-height: 1.6;">Same-day service across [City], with a clear step-by-step from our team.</p>
-                </div>
-              </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-up" style="transition-delay: 0.06s;">
+
+          <a href="/services/wash-and-fold.html" class="service-card flex flex-col">
+            <h3 class="font-display font-extrabold text-white text-xl mb-3" style="letter-spacing: -0.015em;">Wash, Dry &amp; Fold</h3>
+            <p class="text-muted text-[15px] mb-6 flex-1" style="line-height: 1.7;">Drop off your laundry and tell our attendant how you like it: detergent, drying, any special notes. We wash, dry, and fold it, and it's ready for you to pick up.</p>
+            <span class="link-arrow">Wash &amp; fold details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+          </a>
+
+          <a href="/services/laundry-pickup-delivery.html" class="service-card flex flex-col">
+            <h3 class="font-display font-extrabold text-white text-xl mb-3" style="letter-spacing: -0.015em;">Laundry Pickup &amp; Delivery</h3>
+            <p class="text-muted text-[15px] mb-6 flex-1" style="line-height: 1.7;">Book online and pick a time. Our driver picks up your laundry, and it comes back washed and folded. Pickup times show up when you book.</p>
+            <span class="link-arrow">How pickup works <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+          </a>
+
+          <a href="/services/self-service-laundry.html" class="service-card flex flex-col">
+            <h3 class="font-display font-extrabold text-white text-xl mb-3" style="letter-spacing: -0.015em;">Self-Service Laundry</h3>
+            <p class="text-muted text-[15px] mb-6 flex-1" style="line-height: 1.7;">Use our modern, high-efficiency washers and dryers on your own time. Grab a snack, watch the big-screen TVs, and charge your phone while you wait.</p>
+            <span class="link-arrow">Self-service details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+          </a>
+
+          <a href="/services/ironing-steaming.html" class="service-card flex flex-col">
+            <h3 class="font-display font-extrabold text-white text-xl mb-3" style="letter-spacing: -0.015em;">Ironing &amp; Steaming</h3>
+            <p class="text-muted text-[15px] mb-6 flex-1" style="line-height: 1.7;">Crisp shirts, pants, skirts, and dresses for work, school, or a big night out. School band uniforms too. Ask for regular or heavy starch.</p>
+            <span class="link-arrow">Ironing details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+          </a>
+
+          <a href="/services/comforter-cleaning.html" class="service-card flex flex-col">
+            <h3 class="font-display font-extrabold text-white text-xl mb-3" style="letter-spacing: -0.015em;">Comforter &amp; Bedding Cleaning</h3>
+            <p class="text-muted text-[15px] mb-6 flex-1" style="line-height: 1.7;">Comforter too big for your washer at home? We clean comforters, down and feather comforters, coverlets, and blankets in every size, twin to king.</p>
+            <span class="link-arrow">Bedding details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+          </a>
+
+          <a href="/services/dry-cleaning.html" class="service-card flex flex-col">
+            <h3 class="font-display font-extrabold text-white text-xl mb-3" style="letter-spacing: -0.015em;">Dry Cleaning</h3>
+            <p class="text-muted text-[15px] mb-6 flex-1" style="line-height: 1.7;">Drop off your dry cleaning at Mr. Sudz: suits and dress shirts, dresses and skirts, jackets, blazers, coats, pants, and sweaters.</p>
+            <span class="link-arrow">Dry cleaning details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CITY-SWAP: why-city -->
+    <section id="why-pharr" class="dark-section py-24" aria-labelledby="why-pharr-heading">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 fade-up">
+          <div class="lg:col-span-5">
+            <p class="eyebrow">Close to Home</p>
+            <h2 id="why-pharr-heading" class="h2-split text-white">What Your Pharr Laundromat Offers</h2>
+          </div>
+          <div class="lg:col-span-7">
+            <p class="text-muted lede mb-5">Everything for laundry day, a few minutes from home.</p><ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3.5 mb-8">
+              <li class="flex items-start gap-2.5 text-[15px] text-white font-semibold" style="line-height: 1.5;">
+                <svg class="check mt-0.5 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Modern, high-efficiency machines</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[15px] text-white font-semibold" style="line-height: 1.5;">
+                <svg class="check mt-0.5 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Wash, dry &amp; fold drop-off</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[15px] text-white font-semibold" style="line-height: 1.5;">
+                <svg class="check mt-0.5 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Ironing with regular or heavy starch</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[15px] text-white font-semibold" style="line-height: 1.5;">
+                <svg class="check mt-0.5 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Comforters, coverlets &amp; blankets</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[15px] text-white font-semibold" style="line-height: 1.5;">
+                <svg class="check mt-0.5 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Snack bar, free Wi-Fi &amp; charging</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[15px] text-white font-semibold" style="line-height: 1.5;">
+                <svg class="check mt-0.5 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Friendly on-site attendants</span>
+              </li>
+            </ul><p class="text-muted text-[15px]" style="line-height: 1.7;">Mr. Sudz is family-owned and operated, and proud to call Pharr home.</p>
+          </div>
         </div>
       </div>
     </section>
     <!-- END CITY-SWAP: why-city -->
-
-    <div class="divider"></div>
-
-    <!-- OPTIONAL MODULE: Insurance carrier row — delete this entire block if not used by this client -->
-    <!--
-    <section id="insurance" class="dark-section py-20" aria-label="Insurance for home services in [City]">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
-          <div class="fade-up">
-            <div class="section-title-accent mb-3"></div>
-            <h2 class="font-display text-4xl font-bold text-white mb-6" style="letter-spacing: -0.03em; line-height: 1.1;">
-              Insurance in [City]
-            </h2>
-            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              If your project is covered by your insurance, there is a good chance much of the cost is already taken care of. Your Business Name helps [City] homeowners make sense of what their policy covers — and what it doesn't — before any work begins.
-            </p>
-            <p class="text-muted text-lg mb-8" style="line-height: 1.7;">
-              We work directly with your insurance carrier, so you are not stuck sorting out the paperwork alone. We tell you your out-of-pocket cost upfront, before any work starts. Not sure if you are covered? Call and we will check it together.
-            </p>
-            <a href="tel:+15550000000" class="btn-primary text-base px-7 py-4">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Check Your Coverage — (555) 000-0000
-            </a>
+    <!-- SHARED: pickup band (neutral — no delivery-zone claim) -->
+    <section id="pickup" class="section-dark atmo wash-sky-tr py-16" aria-labelledby="pickup-heading">
+      <div class="max-w-6xl mx-auto px-5 fade-up">
+        <div class="pickup-band flex flex-col lg:flex-row lg:items-center gap-6 justify-between">
+          <div class="max-w-2xl">
+            <h2 id="pickup-heading" class="font-display font-extrabold text-white text-2xl mb-2" style="letter-spacing: -0.02em;">Rather Have Your Laundry Picked Up?</h2>
+            <p class="text-muted" style="line-height: 1.7;">Book a pickup online to check pickup availability at your address. Our driver picks up your laundry, and it comes back washed, dried, and folded.</p>
           </div>
-          <div class="fade-up">
-            <p class="text-muted text-sm font-semibold uppercase tracking-widest mb-5">We Work Directly With These Carriers</p>
-            <div class="flex flex-wrap gap-3">
-              <span class="insurer-pill">Allstate</span>
-              <span class="insurer-pill">USAA</span>
-              <span class="insurer-pill">Geico</span>
-              <span class="insurer-pill">Nationwide</span>
-              <span class="insurer-pill">Progressive</span>
-              <span class="insurer-pill">Liberty Mutual</span>
-              <span class="insurer-pill">Farmers Insurance</span>
-              <span class="insurer-pill">Assurance</span>
-            </div>
-            <p class="text-muted text-sm mt-5" style="line-height: 1.7;">Don't see your carrier? Call <a href="tel:+15550000000" class="text-white font-semibold hover:opacity-80 transition-opacity">(555) 000-0000</a> and we'll check your coverage together.</p>
+          <div class="flex flex-wrap gap-3 flex-shrink-0">
+            <!-- CLEANCLOUD BOOKING EMBED: swap href="#book" for the CleanCloud booking link -->
+<a href="#book" class="btn-primary ">Book a Pickup <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+            <a href="/services/laundry-pickup-delivery.html" class="link-arrow">How pickup works <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
           </div>
-
         </div>
       </div>
     </section>
-    -->
-    <!-- END OPTIONAL MODULE: Insurance carrier row -->
 
-    <!-- SECTION: faq -->
-    <!-- CITY-SWAP: faq — replace city-scoped FAQ Q&As and areaServed field -->
-    <section id="faq" class="section-mid atmo wash-navy-bl py-24" aria-label="[City] home services FAQ">
+    <!-- CITY-SWAP: faq -->
+    <section id="faq" class="section-mid atmo wash-sky-tl py-24" aria-labelledby="faq-heading">
       <div class="max-w-4xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-bold text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            Common Questions About Home Services in [City]
-          </h2>
+        <div class="mb-12 fade-up">
+          <p class="eyebrow">Good to Know</p>
+          <h2 id="faq-heading" class="h2 text-white">Pharr Laundry Questions</h2>
         </div>
 
-        <div class="space-y-4 fade-up">
+        <div class="space-y-4 fade-up" style="transition-delay: 0.06s;">
 
-          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);" open>
-            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
-              Do you come to me in [City]?
-              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          <details class="faq-item" open>
+            <summary class="flex items-center justify-between gap-4 px-6 sm:px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Where is Mr. Sudz in Pharr?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
-              <div class="pt-4">Yes. Our team runs mobile service across all of [City], so most jobs happen at your home, office, or wherever works for you. Prefer to reach us another way? Just call and we'll sort it out.</div>
+            <div class="px-6 sm:px-7 pb-6 text-[15px]" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">We're at 1032 W. Sam Houston Blvd., Ste. 6, Pharr, TX 78577. It's our only location.</div>
             </div>
           </details>
 
-          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
-            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
-              How fast can you get to my [City] job?
-              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          <details class="faq-item">
+            <summary class="flex items-center justify-between gap-4 px-6 sm:px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Are you open on weekends?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
-              <div class="pt-4">Most [City] jobs are same-day. Call in the morning and we can usually take care of it by that afternoon, depending on what the job needs.</div>
+            <div class="px-6 sm:px-7 pb-6 text-[15px]" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Yes. Mr. Sudz is open every day of the week, 7am to 10pm, weekends included.</div>
             </div>
           </details>
 
-          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
-            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
-              How much will the job cost?
-              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          <details class="faq-item">
+            <summary class="flex items-center justify-between gap-4 px-6 sm:px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Do you pick up laundry in Pharr?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
-              <div class="pt-4">Every job is quoted up front. We look at what you need, explain your options, and give you a clear price before any work begins — no surprises after the fact.</div>
+            <div class="px-6 sm:px-7 pb-6 text-[15px]" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Book a pickup online to check pickup availability at your Pharr address.</div>
             </div>
           </details>
 
-          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
-            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
-              My problem seems small — should I wait?
-              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          <details class="faq-item">
+            <summary class="flex items-center justify-between gap-4 px-6 sm:px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Can I wash my own laundry or drop it off?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
-              <div class="pt-4">Usually not. Small problems tend to get bigger — and more expensive — the longer they wait. Most jobs are quick and quoted upfront, so it's worth calling early.</div>
+            <div class="px-6 sm:px-7 pb-6 text-[15px]" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Both. Use our self-service machines, or drop off for wash, dry &amp; fold with our attendant.</div>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="flex items-center justify-between gap-4 px-6 sm:px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Is Mr. Sudz locally owned?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-6 sm:px-7 pb-6 text-[15px]" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Yes. Mr. Sudz is family-owned and operated, right here in Pharr.</div>
             </div>
           </details>
 
@@ -973,60 +1043,40 @@
     </section>
     <!-- END CITY-SWAP: faq -->
 
-    <div class="divider"></div>
-
-    <!-- SECTION: final-cta -->
-    <!-- Standard pattern: cta-background.jpg + dark overlay + gradient layers -->
-    <section class="dark-section relative py-24 overflow-hidden" aria-label="Get home services in [City] today">
-      <!-- OFF-LIMITS: cta-background — dedicated named file only, never a content photo -->
+    <!-- ============================================================
+         10. FINAL CTA — cta-background slot + dark overlay
+    ============================================================ -->
+    <section class="dark-section relative py-28 overflow-hidden" aria-labelledby="final-cta-heading">
+      <!-- OFF-LIMITS: cta-background — dedicated named file only (brand_assets/cta-background.jpg, 1920×1080), never a content photo. PENDING. -->
       <div class="absolute inset-0" style="background: url('https://placehold.co/1920x1080') center center / cover no-repeat;"></div>
-      <div class="absolute inset-0" style="background: rgba(var(--color-dark-rgb), 0.62);"></div>
-      <div class="dark-cta-ramp"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 80% at 50% 40%, rgba(var(--color-dark-rgb), 0.44) 0%, transparent 65%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 45% at 0% 100%, rgba(var(--color-accent-deep-rgb), 0.16) 0%, transparent 55%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 45% at 100% 100%, rgba(var(--color-accent-deep-rgb), 0.12) 0%, transparent 55%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 45% 35% at 50% 78%, rgba(var(--color-accent-rgb), 0.12) 0%, transparent 55%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 120% 110% at 50% 50%, transparent 35%, rgba(0,0,0,0.36) 100%); pointer-events: none;"></div>
+      <div class="absolute inset-0" style="background: rgba(var(--color-dark-rgb), 0.78);"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 55% 60% at 50% 110%, rgba(var(--color-accent-rgb), 0.28) 0%, transparent 60%);"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 120% 110% at 50% 50%, transparent 35%, rgba(var(--color-ink-rgb),0.45) 100%); pointer-events: none;"></div>
 
       <div class="relative z-10 max-w-3xl mx-auto px-5 text-center fade-up">
-        <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-        <h2 class="font-display text-4xl lg:text-5xl font-extrabold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
-          Need Home Services in [City]?<br /><span style="color: var(--color-accent-bright);">Call Your Business Name Today.</span>
+        <p class="eyebrow">Laundry Day Made Easy</p>
+        <h2 id="final-cta-heading" class="text-white mb-5 display-xl" style="font-size: clamp(2.3rem, 5.4vw, 3.9rem);">
+          Skip the Pile.<br /><span style="color: var(--color-accent-bright);">Book a Pickup or Stop By.</span>
         </h2>
-        <p class="text-muted text-lg mb-10 max-w-xl mx-auto" style="line-height: 1.7;">
-          Same-day service, mobile to your door, and every job handled by our own crew. Our team covers all of [City] and the [Region]. Call now or fill out the quote form and we'll reach out fast.
+        <p class="text-muted lede mb-10 max-w-xl mx-auto">
+          Book a pickup online, or come see us on W. Sam Houston Blvd. in Pharr. We're open every day, 7am to 10pm.
         </p>
-        <div class="flex flex-wrap gap-4 justify-center mb-10">
-          <a href="tel:+15550000000" class="btn-primary text-base px-8 py-4">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call Now — (555) 000-0000
+        <div class="flex flex-wrap gap-4 justify-center">
+          <!-- CLEANCLOUD BOOKING EMBED: swap href="#book" for the CleanCloud booking link -->
+          <a href="#book" class="btn-primary text-base px-8 py-4">
+            Book a Pickup
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
-          <a href="/#contact" class="btn-outline text-base px-8 py-4">
-            Get a Free Quote
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1032+W+Sam+Houston+Blvd+Ste+6+Pharr+TX+78577" target="_blank" rel="noopener" class="btn-outline text-base px-8 py-4">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
           </a>
         </div>
-        <div class="flex flex-wrap items-center justify-center gap-5">
-          <span class="flex items-center gap-1.5 text-muted text-sm">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Free estimates
-          </span>
-          <span style="color: rgba(255,255,255,0.20);">·</span>
-          <span class="flex items-center gap-1.5 text-muted text-sm">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Fair, honest pricing
-          </span>
-          <span style="color: rgba(255,255,255,0.20);">·</span>
-          <span class="flex items-center gap-1.5 text-muted text-sm">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Mobile service
-          </span>
-          <span style="color: rgba(255,255,255,0.20);">·</span>
-          <span class="flex items-center gap-1.5 text-muted text-sm">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Same-day availability
-          </span>
-        </div>
+        <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-10">
+          <li class="flex items-center gap-1.5 text-muted text-sm"><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Open daily 7am–10pm</li>
+          <li class="flex items-center gap-1.5 text-muted text-sm"><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Family-owned in Pharr</li>
+          <li class="flex items-center gap-1.5 text-muted text-sm"><svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Pickup &amp; delivery</li>
+        </ul>
       </div>
     </section>
 
@@ -1041,60 +1091,62 @@
 
         <!-- Brand -->
         <div class="col-span-2 md:col-span-1">
-          <!-- LOGO PLACEHOLDER — swap the <span> for <img class="footer-logo" ...>; height comes from --footer-logo-height in brand.css -->
-          <a href="/" class="flex items-center mb-2" aria-label="Your Business Name home">
-            <span class="footer-wordmark">Your Business Name</span>
+          <!-- LOGO — interim brand_assets/logo.png in .logo-chip; swap for the client's original when it arrives -->
+          <a href="/" class="logo-chip mb-5" aria-label="Mr. Sudz Laundromat home">
+            <img class="footer-logo" src="/brand_assets/logo.png" alt="Mr. Sudz Laundromat logo" width="300" height="151" loading="lazy" />
           </a>
-          <p style="font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px; opacity: 0.85;">Trusted Local Home Services</p>
-          <p class="text-muted text-sm mb-5" style="line-height: 1.7;">Professional home services you can count on — serving [City] and the surrounding [Region].</p>
-          <div class="space-y-2">
-            <a href="tel:+15550000000" class="flex items-center gap-2 text-white text-sm font-medium hover:opacity-80 transition-opacity duration-150">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              (555) 000-0000
+          <p class="eyebrow" style="font-size: 11px; margin-bottom: 10px;">Laundry Day Made Easy</p>
+          <p class="text-muted text-sm mb-5" style="line-height: 1.7;">Family-owned and operated laundromat at 1032 W. Sam Houston Blvd., Ste. 6, Pharr, TX 78577. Open daily, 7am–10pm.</p>
+          <div class="space-y-2 mb-5">
+            <!-- PHONE: GHL tracking number [NEEDS INPUT] — (555) 000-0000 is a placeholder -->
+            <a href="tel:+15550000000" class="footer-link flex items-center gap-2 text-sm font-semibold" style="color: var(--color-bg);">(555) 000-0000</a>
+            <a href="mailto:info@mrsudzrgv.com" class="footer-link flex items-center gap-2 text-sm">info@mrsudzrgv.com</a>
+          </div>
+          <div class="flex gap-2">
+            <a href="https://www.facebook.com/MrSudzLaundromat" target="_blank" rel="noopener" class="social-btn" aria-label="Mr. Sudz on Facebook">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.6c0-.8.2-1.3 1.4-1.3H17V2.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.5v3.5h2.8V22h3.7v-10h2.8l.4-3.5H14z"/></svg>
             </a>
-            <a href="mailto:info@mrsudzrgv.com" class="flex items-center gap-2 text-muted text-sm hover:text-white transition-colors duration-150">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              info@mrsudzrgv.com
+            <a href="https://www.instagram.com/mrsudzlaundromat/" target="_blank" rel="noopener" class="social-btn" aria-label="Mr. Sudz on Instagram">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             </a>
           </div>
         </div>
 
         <!-- Services -->
         <div>
-          <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Services</h2>
+          <h2 class="font-display font-extrabold text-white text-xs uppercase tracking-widest mb-4">Services</h2>
           <ul class="space-y-2.5">
-            <li><a href="/services/wash-and-fold.html"       class="text-muted text-sm hover:text-white transition-colors duration-150">Wash, Dry &amp; Fold</a></li>
-            <li><a href="/services/laundry-pickup-delivery.html" class="text-muted text-sm hover:text-white transition-colors duration-150">Laundry Pickup &amp; Delivery</a></li>
-            <li><a href="/services/self-service-laundry.html"        class="text-muted text-sm hover:text-white transition-colors duration-150">Self-Service Laundry</a></li>
-            <li><a href="/services/ironing-steaming.html"    class="text-muted text-sm hover:text-white transition-colors duration-150">Ironing &amp; Steaming</a></li>
-            <li><a href="/services/comforter-cleaning.html"           class="text-muted text-sm hover:text-white transition-colors duration-150">Comforter &amp; Bedding Cleaning</a></li>
-            <li><a href="/services/dry-cleaning.html"  class="text-muted text-sm hover:text-white transition-colors duration-150">Dry Cleaning</a></li>
+            <li><a href="/services/wash-and-fold.html" class="footer-link text-sm">Wash, Dry &amp; Fold</a></li>
+            <li><a href="/services/laundry-pickup-delivery.html" class="footer-link text-sm">Laundry Pickup &amp; Delivery</a></li>
+            <li><a href="/services/self-service-laundry.html" class="footer-link text-sm">Self-Service Laundry</a></li>
+            <li><a href="/services/ironing-steaming.html" class="footer-link text-sm">Ironing &amp; Steaming</a></li>
+            <li><a href="/services/comforter-cleaning.html" class="footer-link text-sm">Comforter &amp; Bedding Cleaning</a></li>
+            <li><a href="/services/dry-cleaning.html" class="footer-link text-sm">Dry Cleaning</a></li>
           </ul>
         </div>
 
         <!-- Company -->
         <div>
-          <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h2>
+          <h2 class="font-display font-extrabold text-white text-xs uppercase tracking-widest mb-4">Company</h2>
           <ul class="space-y-2.5">
-            <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">About Us</a></li>
-            <!-- OPTIONAL MODULE LINK (footer, #reviews): re-enable with the Review widget module: <li><a href="/#reviews"      class="text-muted text-sm hover:text-white transition-colors duration-150">Reviews</a></li> -->
-            <!-- OPTIONAL MODULE LINK (footer, #insurance): re-enable with the Insurance module: <li><a href="/#insurance"    class="text-muted text-sm hover:text-white transition-colors duration-150">Insurance Partners</a></li> -->
-            <li><a href="/#service-area" class="text-muted text-sm hover:text-white transition-colors duration-150">Service Areas</a></li>
-            <li><a href="/#contact"      class="text-muted text-sm hover:text-white transition-colors duration-150">Contact</a></li>
-            <li><a href="#"              class="text-muted text-sm hover:text-white transition-colors duration-150">Privacy Policy</a></li>
+            <li><a href="/about.html" class="footer-link text-sm">About Us</a></li>
+            <!-- OPTIONAL MODULE LINK (footer, #reviews): re-enable with the Review widget module: <li><a href="/#reviews" class="footer-link text-sm">Reviews</a></li> -->
+            <li><a href="/#visit" class="footer-link text-sm">Hours &amp; Directions</a></li>
+            <li><a href="/#service-area" class="footer-link text-sm">Service Areas</a></li>
+            <li><a href="/#contact" class="footer-link text-sm">Contact</a></li>
           </ul>
         </div>
 
         <!-- Service Area -->
         <div>
-          <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Areas We Serve</h2>
+          <h2 class="font-display font-extrabold text-white text-xs uppercase tracking-widest mb-4">Areas We Serve</h2>
           <ul class="space-y-2.5">
-            <li><a href="/areas/pharr.html" class="text-muted text-sm hover:text-white transition-colors duration-150">Pharr</a></li>
-            <li><a href="/areas/mcallen.html" class="text-muted text-sm hover:text-white transition-colors duration-150">McAllen</a></li>
-            <li><a href="/areas/san-juan.html" class="text-muted text-sm hover:text-white transition-colors duration-150">San Juan</a></li>
-            <li><a href="/areas/edinburg.html" class="text-muted text-sm hover:text-white transition-colors duration-150">Edinburg</a></li>
-            <li><a href="/areas/alamo.html" class="text-muted text-sm hover:text-white transition-colors duration-150">Alamo</a></li>
-            <li><a href="/areas/hidalgo.html" class="text-muted text-sm hover:text-white transition-colors duration-150">Hidalgo</a></li>
+            <li><a href="/areas/pharr.html" class="footer-link text-sm">Pharr</a></li>
+            <li><a href="/areas/mcallen.html" class="footer-link text-sm">McAllen</a></li>
+            <li><a href="/areas/san-juan.html" class="footer-link text-sm">San Juan</a></li>
+            <li><a href="/areas/edinburg.html" class="footer-link text-sm">Edinburg</a></li>
+            <li><a href="/areas/alamo.html" class="footer-link text-sm">Alamo</a></li>
+            <li><a href="/areas/hidalgo.html" class="footer-link text-sm">Hidalgo</a></li>
           </ul>
         </div>
 
@@ -1104,25 +1156,23 @@
 
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
         <p class="text-muted text-xs text-center sm:text-left">
-          © 2026 Your Business Name. All rights reserved. Serving [City] &amp; the [Region], [ST].
+          © 2026 Mr. Sudz Laundromat. Pharr, TX · Rio Grande Valley.
         </p>
         <div class="flex items-center gap-4">
-          <a href="#" class="text-xs text-muted hover:text-white transition-colors duration-150">Privacy Policy</a>
-          <span style="color: rgba(255,255,255,0.20);">·</span>
-          <a href="#" class="text-xs text-muted hover:text-white transition-colors duration-150">Terms</a>
+          <a href="#" class="footer-link text-xs">Privacy Policy</a>
+          <span style="color: rgba(255,255,255,0.20);" aria-hidden="true">·</span>
+          <a href="#" class="footer-link text-xs">Terms</a>
         </div>
       </div>
     </div>
   </footer>
 
   <script>
-    /* ── Sticky nav scrolled state ── */
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 10);
-    }, { passive: true });
+    const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 10);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
 
-    /* ── Mobile hamburger toggle ── */
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     hamburger.addEventListener('click', () => {
@@ -1144,7 +1194,19 @@
       }
     });
 
-    /* ── Scroll-triggered fade-up ── */
+    // Live open/closed status — store hours are 7am–10pm daily, Pharr time (America/Chicago).
+    // Falls back to the static "Open daily" label if Intl time zones aren't available.
+    (() => {
+      const pill = document.getElementById('open-status');
+      if (!pill) return;
+      try {
+        const hour = parseInt(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', hour: 'numeric', hourCycle: 'h23' }).format(new Date()), 10);
+        const open = hour >= 7 && hour < 22;
+        pill.dataset.state = open ? 'open' : 'closed';
+        pill.querySelector('.status-text').textContent = open ? 'Open now · until 10 PM' : 'Closed now · opens 7 AM';
+      } catch (e) { /* keep static label */ }
+    })();
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1156,9 +1218,9 @@
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   </script>
 
-  <!-- GHL CHAT WIDGET SCRIPT GOES HERE -->
+  <!-- GHL CHAT WIDGET SCRIPT -->
 
-  <!-- GHL EXTERNAL TRACKING SCRIPT GOES HERE -->
+  <!-- GHL FORM EMBED SCRIPT GOES HERE -->
 
 </body>
 </html>
