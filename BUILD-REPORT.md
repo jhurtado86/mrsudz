@@ -68,7 +68,7 @@ The Phase 7 footer tweak (dead links replaced with "Open daily, 7am–10pm") lan
 
 ### Fixed during the build/audit
 - **Sitemap dates:** `<lastmod>` was still the template's `2026-06-10`; now `2026-10-27`.
-- **Dead footer links:** Privacy Policy and Terms were dead `#` links on all 15 pages. Removed and flagged (Q5).
+- **Footer Privacy Policy / Terms:** briefly removed as dead links, then restored (Oct 28) on all 15 pages as `href="#"` with `<!-- GHL PRIVACY POLICY URL -->` / `<!-- GHL TERMS URL -->` TODO comments. The policies are hosted in GHL, and these swap in one pass with the other GHL codes (§6).
 - **Low-contrast body text on dark:** the template used `muted-light` for body text on navy (3.62:1). It now uses the new `--color-silver` token (6.88:1).
 - **Prices in FAQPage schema:** the FAQPage blocks were mirroring price answers. Priced Q&As now stay in the visible FAQ only.
 - **Hours wrapping:** the hours readout wrapped; the hero was misaligned with the nav; the hero overlay was too light. All fixed in homepage round 1.
@@ -85,13 +85,25 @@ The Phase 7 footer tweak (dead links replaced with "Open daily, 7am–10pm") lan
 ### Still open (not fixable without inventing facts)
 - **`[NEEDS INPUT]` comment markers on 15 files:**
   - Every phone placeholder: `(555) 000-0000` / `+15550000000`, including the homepage schema `telephone`.
-  - The removed Privacy/Terms links.
 
-  These are deliberate open-item flags, not template residue.
+  These are deliberate open-item flags, not template residue. The phone placeholder is a hard launch gate (below).
 - **Placeholder images:** `og:image` / `twitter:image` and every photo, hero and CTA background use placehold.co at final dimensions (see §6).
 - **Rich Results Test:** not run. It needs the site at a public URL. Validate at `search.google.com/test/rich-results` after deploy.
-- **Owner's-first-name gate:** can't be checked. The name was never given to me (see Q4).
+- **Owner's-first-name gate:** ✓ passed Oct 28: 0 case-insensitive hits across all 15 pages and every other source file. The name was supplied for the check only and isn't recorded in this report or any page.
 - **Redirects:** no `vercel.json` yet. The 4 locked 301s (`/pricing`, `/promotions`, `/contact`, `/book`) go in at cutover, as planned.
+
+### LAUNCH GATE — must all be zero before DNS cutover
+Run from the repo root. Each command must print `0`:
+
+```sh
+grep -rEo '\(555\) ?000-0000' --include='*.html' . | wc -l        # placeholder phone (display)    — currently 79
+grep -rEo '\+?1?5550000000' --include='*.html' . | wc -l           # placeholder phone (tel:/schema) — currently 41
+grep -rio '<owner first name>' --include='*.html' . | wc -l         # owner's first name, case-insensitive — currently 0
+grep -rc 'href="#book"' --include='*.html' . | grep -v ':0' | wc -l # pages with unswapped CleanCloud links
+grep -rc 'href="#"' --include='*.html' . | grep -v ':0' | wc -l     # pages with unswapped GHL Privacy/Terms links
+```
+
+The phone gate is expected to fail until the GHL tracking number arrives; it's listed so launch can't happen with the placeholder.
 
 ---
 
@@ -162,8 +174,8 @@ No drive times or mileages are stated anywhere.
 1. **Delivery zone.** Which of Pharr, McAllen, San Juan, Edinburg, Alamo and Hidalgo get pickup & delivery? This is the one open strategy input. Once it's answered, the in-zone city pages switch to delivery-led titles, heroes and FAQs.
 2. **CleanCloud booking link or embed code.** Every "Book a Pickup" button (`href="#book"`, 4–7 per page) swaps in one pass. The current `/book` stops working at DNS cutover.
 3. **GHL tracking number.** It replaces `(555) 000-0000` / `+15550000000` on every page and in the homepage schema.
-4. **The owner's first name, for the pre-deploy grep only.** I was never told it, so I couldn't run the "zero hits for the owner's first name" gate. Nothing about the owner was written anywhere.
-5. **Privacy Policy and Terms.** Does the client have them, or should we create them? The dead footer links were removed. A privacy policy is usually needed once the GHL form collects contact info.
+4. ~~Owner's first name for the pre-deploy grep~~ — **answered Oct 28.** The check passed with 0 hits; the name isn't recorded here.
+5. ~~Privacy Policy and Terms~~ — **answered Oct 28.** They're hosted in GHL. The footer links are restored with TODO comments, and the URLs are listed in §6.
 6. **GHL contact form, chat widget and tracking script.** The slots are in place.
 7. **Pickup & delivery details.** Is any of this confirmed for publishing: fees, minimums, turnaround, pickup windows? Right now every page says only "book online to check pickup availability / pickup times."
 8. **What pickup accepts.** Can ironing, comforters and dry cleaning go through pickup, or only wash & fold?
@@ -185,11 +197,12 @@ No drive times or mileages are stated anywhere.
 | `brand_assets/cta-background.jpg` | Final CTA on every page except thank-you (OFF-LIMITS slot) | 1920×1080, purpose-made |
 | `brand_assets/og-image.jpg` | `og:image` / `twitter:image` on every page | 1200×630 |
 | Original logo, ideally transparent PNG or SVG | Nav and footer chip; re-derive palette hexes | Current file is the 300×151 site logo on white |
-| Content photos, 4:3 at 1200×900 (27 slots total) | Homepage 3 · Wash & Fold 5 · Pickup & Delivery 3 · Self-Service, Ironing, Comforter, Dry Cleaning 2 each · About 2 · each city page 1 | Alt text is already final. Exclusions: no customer faces, no recognizable garments, no plates |
+| Content photos, 4:3 at 1200×900 (27 slots total) | **12 placed** (Oct 28 batch 1, see `brand_assets/README.md`). **8 more** are ready once the approved batch-2 files (storefront, carts by the window, front counter) are saved into the repo. **7 still have no matching photo:** a laundry bag (Wash & Fold, Pickup & Delivery), ironing ×2, comforters/blankets ×2, dry cleaning on hangers ×1 | Also needed: full-size originals of the three 680×510 photos. Exclusions: no customer faces, no recognizable garments, no plates |
 | CleanCloud booking URL or embed | Every `href="#book"` | Launch-blocking |
 | GHL tracking number | Every phone link + homepage schema | Launch-blocking |
 | GHL contact form embed | `index.html` `#contact` | Launch-blocking |
 | GHL chat widget + external tracking scripts | Before `</body>` / in `<head>` on every page | Launch-blocking |
 | GHL review widget (128 reviews confirmed) | Commented slot on `index.html`. When live: un-comment it, re-enable the nav/footer Reviews links, and add `aggregateRating` in the same commit | Backfill |
-| Privacy Policy + Terms pages | Footer | See Q5 |
+| GHL Privacy Policy URL | Footer `<!-- GHL PRIVACY POLICY URL -->` on every page (`href="#"`) | Swap with the other GHL codes |
+| GHL Terms URL | Footer `<!-- GHL TERMS URL -->` on every page (`href="#"`) | Swap with the other GHL codes |
 | `vercel.json` with the 4 locked 301s + www as Primary domain | Repo root | At cutover |
