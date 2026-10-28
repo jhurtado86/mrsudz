@@ -45,3 +45,15 @@ these sizes:
 
 ## Optional (per client, not shipped by default)
 - `logo.png` — present (interim, from the current site; the client's original replaces it). Favicon, and any gallery-module photos (gallery stays blocked until real photos exist).
+
+## Placed client photos (confirmed by `ls brand_assets/`, Oct 28 2026)
+
+| File | Source | Size | Used on |
+|---|---|---|---|
+| `photo-washers-row.webp` | client batch 1 | 680×510 (low-res — request original) | index (intro), areas/san-juan |
+| `photo-dryers-carts.webp` | client batch 1 | 680×510 (low-res — request original) | services/wash-and-fold (your-way), services/self-service-laundry (intro), areas/alamo |
+| `photo-aisle-folding-tables.webp` | client batch 1 | 680×510 (low-res — request original) | services/wash-and-fold (intro), services/self-service-laundry (tips), areas/mcallen |
+| `photo-seating-tvs.jpg` | client batch 1, resized from 1600×1200 | 1200×900 | index (amenities), about (amenities), areas/edinburg |
+| `photo-logo-payment-wall.jpg` | client batch 1, cropped 4:3 from 960×1280 portrait | 960×720 | about (who we are) |
+
+Never used for `hero-background` / `cta-background` (dedicated slots only).
