@@ -176,7 +176,7 @@ No drive times or mileages are stated anywhere.
 3. **GHL tracking number.** It replaces `(555) 000-0000` / `+15550000000` on every page and in the homepage schema.
 4. ~~Owner's first name for the pre-deploy grep~~ — **answered Oct 28.** The check passed with 0 hits; the name isn't recorded here.
 5. ~~Privacy Policy and Terms~~ — **answered Oct 28.** They're hosted in GHL. The footer links are restored with TODO comments, and the URLs are listed in §6.
-6. **GHL contact form, chat widget and tracking script.** The slots are in place.
+6. ~~GHL contact form, chat widget and tracking script~~ — **installed.** Three fixes remain in GHL settings, listed under "GHL settings to fix" in §6.
 7. **Pickup & delivery details.** Is any of this confirmed for publishing: fees, minimums, turnaround, pickup windows? Right now every page says only "book online to check pickup availability / pickup times."
 8. **What pickup accepts.** Can ironing, comforters and dry cleaning go through pickup, or only wash & fold?
 9. **Turnaround for wash & fold and dry cleaning.** Current copy says "ask our attendant when you drop off."
@@ -200,9 +200,16 @@ No drive times or mileages are stated anywhere.
 | Content photos, 4:3 at 1200×900 (27 slots total) | **12 placed** (Oct 28 batch 1, see `brand_assets/README.md`). **8 more** are ready once the approved batch-2 files (storefront, carts by the window, front counter) are saved into the repo. **7 still have no matching photo:** a laundry bag (Wash & Fold, Pickup & Delivery), ironing ×2, comforters/blankets ×2, dry cleaning on hangers ×1 | Also needed: full-size originals of the three 680×510 photos. Exclusions: no customer faces, no recognizable garments, no plates |
 | CleanCloud booking URL or embed | Every `href="#book"` | Launch-blocking |
 | GHL tracking number | Every phone link + homepage schema | Launch-blocking |
-| GHL contact form embed | `index.html` `#contact` | Launch-blocking |
-| GHL chat widget + external tracking scripts | Before `</body>` / in `<head>` on every page | Launch-blocking |
+| ~~GHL contact form embed~~ | Installed on `index.html` `#contact` | Done |
+| ~~GHL chat widget + external tracking scripts~~ | Installed once on every page | Done |
 | GHL review widget (128 reviews confirmed) | Commented slot on `index.html`. When live: un-comment it, re-enable the nav/footer Reviews links, and add `aggregateRating` in the same commit | Backfill |
 | GHL Privacy Policy URL | Footer `<!-- GHL PRIVACY POLICY URL -->` on every page (`href="#"`) | Swap with the other GHL codes |
 | GHL Terms URL | Footer `<!-- GHL TERMS URL -->` on every page (`href="#"`) | Swap with the other GHL codes |
 | `vercel.json` with the 4 locked 301s + www as Primary domain | Repo root | At cutover |
+
+### GHL settings to fix (can't be changed from the site code)
+1. **Chat greeting popup blocks buttons on phones (fix before launch).** Its tap area is 301×150px, so until a visitor closes it, it blocks taps on first-screen buttons: Get Directions on 10 of 15 pages at 390×844, and Book a Pickup as well on smaller phones (homepage at 360×740; all 3 pages sampled at 375×667). Closing it clears the area, and that survives a reload in the same browser. Turn off the auto-greeting or delay it in the widget settings.
+2. **Form consent text is missing the business name.** It reads "I consent to receive marketing text messages from . Frequency may vary." Fill in the business name, since this is SMS consent wording.
+3. **Form and chat details.** The message placeholder shows literal asterisks ("**How can we help?…**"), the phone placeholder uses an (808) area code, the chat bubble is GHL's default blue (`#155EEF`) instead of the brand palette, and the chat greeting uses a photo of a person who may not be Mr. Sudz staff.
+
+**Not tested:** no test form or chat message was sent, so lead delivery and the redirect to `/thank-you.html` are unconfirmed.
