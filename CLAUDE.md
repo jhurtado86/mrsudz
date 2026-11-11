@@ -40,7 +40,7 @@ the client's own published copy — still confirm with the client before treatin
 | City 2 … City 6 | McAllen · San Juan · Edinburg · Alamo · Hidalgo (delivery coverage per city = [NEEDS INPUT]) |
 | city slugs | `pharr` · `mcallen` · `san-juan` · `edinburg` · `alamo` · `hidalgo` |
 | Region | Rio Grande Valley (RGV), Hidalgo County, TX |
-| Phone (site) | [NEEDS INPUT — GHL tracking number ONLY]. Current public number *(from current site)*: (956) 232-9274 — used in the client's own marketing posts, so very likely the business line (not a personal number). Stays on GBP as-is (DECISION #6). |
+| Phone (site) | **(956) 232-9274** — the business line (Juan, Nov 11 2026; supersedes the GHL-tracking-number rule). `tel:+19562329274`, schema `"+19562329274"`. Same number as GBP (DECISION #6). |
 | Email | info@mrsudzrgv.com *(from current site)* |
 | Domain | mrsudzrgv.com — canonical host **https://www.mrsudzrgv.com** (set as Vercel Primary day one; non-www 301 → www) |
 
@@ -199,7 +199,7 @@ warranty sections, crew/technician bios.
   Make no franchise or affiliation claim either way. Software: CleanCloud (booking/POS) — not a public claim.
 - Physical address: **1032 W. Sam Houston Blvd., Ste. 6, Pharr, TX 78577** *(from current site)*
   → PostalAddress INCLUDED in schema.
-- Phone (site): [NEEDS INPUT — GHL tracking number]
+- Phone (site): **(956) 232-9274** (business line — Juan, Nov 11 2026)
 - Phone (owner personal — NOT FOR PUBLICATION): none provided. Only the GHL number (and
   the business line above, if ever needed) may appear.
 - Email: info@mrsudzrgv.com
@@ -576,8 +576,8 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
 - No relationship claim without written confirmation.
 - No review widgets/stars/counts/`aggregateRating` until reputation is confirmed.
 - Never infer ownership/roles/relationships from social posts.
-- Never publish the owner's personal number — GHL tracking number only; grep returns zero
-  hits for the personal number before deploy.
+- Never publish the owner's personal number — the site uses the business line (956) 232-9274
+  only; grep returns zero hits for any personal number before deploy.
 - Never promote a client photo into the `hero-background` / `cta-background` slots.
 - No readable license plates or privacy-sensitive photos.
 - Strip the template's red; no default Tailwind blue/indigo as primary.
@@ -609,7 +609,7 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
 
 **Launch-blocking (needed before DNS cutover, not before build):**
 - CleanCloud booking widget/hosted link (the current `/book` dies when DNS moves)
-- GHL tracking number; GHL contact form embed; GHL chat + tracking scripts
+- ~~GHL tracking number~~ — resolved: site uses the business line (956) 232-9274 (Nov 11 2026)
 - Logo original → palette derivation (or derive from the current-site logo URL above)
 - og-image.jpg (1200×630)
 
@@ -628,7 +628,8 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
    zone pending — sets angle per page only.
 4. Booking → CleanCloud for orders/pickups; GHL for contact form, chat, tracking.
 5. Domain → https://www.mrsudzrgv.com canonical; old URLs 301'd (see Site Architecture).
-6. Phone → GHL tracking number on the site per frozen rule; GBP number left as-is.
+6. Phone → **(956) 232-9274** (business line) on the site and GBP — changed by Juan Nov 11
+   2026; no GHL tracking number.
 7. Promotions → none on the site.
 8. Family-owned → publish "family-owned and operated."
 9. Language → English only.
