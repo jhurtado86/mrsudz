@@ -260,9 +260,19 @@
     /* ── Hero ── */
     .hero-bg { background: var(--color-dark); }
     .hero-vignette {
-      background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 35%, rgba(var(--color-ink-rgb),0.55) 100%);
+      background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 35%, rgba(var(--color-ink-rgb),0.35) 100%);
       pointer-events: none;
     }
+    /* Text scrims — darken only behind the hero / final-CTA text so the photo stays open.
+       Tuned by a pixel contrast check against the real images (Nov 11 2026):
+       body text ≥ 4.5:1, headings ≥ 3:1, at 1440px and 390px. */
+    .hero-scrim, .cta-scrim { position: relative; }
+    .hero-scrim::before, .cta-scrim::before { content: ""; position: absolute; z-index: -1; pointer-events: none; }
+    .hero-scrim::before { inset: -64px -112px; background: radial-gradient(closest-side, rgba(var(--color-dark-rgb),0.55) 0%, rgba(var(--color-dark-rgb),0.55) 70%, transparent 100%); }
+    .cta-scrim::before  { inset: -48px -128px; background: radial-gradient(closest-side, rgba(var(--color-dark-rgb),0.60) 0%, rgba(var(--color-dark-rgb),0.60) 70%, transparent 100%); }
+    .hero-scrim h1, .cta-scrim h2 { text-shadow: 0 0 2px rgba(var(--color-ink-rgb),0.6), 0 2px 24px rgba(var(--color-ink-rgb),0.45); }
+    .hero-scrim h1 span, .cta-scrim h2 span { text-shadow: 0 0 1px rgba(var(--color-ink-rgb),0.95), 0 0 3px rgba(var(--color-ink-rgb),0.9), 0 0 8px rgba(var(--color-ink-rgb),0.7), 0 2px 24px rgba(var(--color-ink-rgb),0.5); }
+    .hero-scrim h1 ~ p, .cta-scrim h2 + p { text-shadow: 0 0 1px rgba(var(--color-ink-rgb),0.9), 0 0 3px rgba(var(--color-ink-rgb),0.75), 0 0 8px rgba(var(--color-ink-rgb),0.5); }
     @media (max-width: 767px) { .hero-text-block h1 { font-size: 2.4rem !important; } }
 
     /* ── Buttons ──
@@ -635,11 +645,11 @@
     <!-- OFF-LIMITS: hero-background — dedicated named file only (brand_assets/hero-background.webp, 1920×1080), never a content photo. AI-generated placeholder — replace with a real purpose-made photo later. -->
     <img src="/brand_assets/hero-background.webp" alt="Bright, clean laundromat with a row of front-load washers in soft daylight" width="1920" height="1080" fetchpriority="high"
       style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; z-index: 0;" />
-    <div style="position: absolute; inset: 0; z-index: 1; background: rgba(var(--color-dark-rgb), 0.82);"></div>
-    <div style="position: absolute; inset: 0; z-index: 1; mix-blend-mode: soft-light; background: radial-gradient(ellipse 60% 60% at 50% 30%, rgba(var(--color-accent-rgb), 0.55) 0%, transparent 60%);"></div>
+    <div style="position: absolute; inset: 0; z-index: 1; background: rgba(var(--color-dark-rgb), 0.50);"></div>
+    <div style="position: absolute; inset: 0; z-index: 1; mix-blend-mode: soft-light; background: radial-gradient(ellipse 60% 60% at 50% 30%, rgba(var(--color-accent-rgb), 0.20) 0%, transparent 60%);"></div>
     <div class="hero-vignette absolute inset-0 z-[2]"></div>
 
-    <div class="relative z-10 max-w-2xl mx-auto px-5 fade-up">
+    <div class="hero-scrim relative z-10 max-w-2xl mx-auto px-5 fade-up">
       <div class="mx-auto mb-7 flex items-center justify-center" style="width: 72px; height: 72px; border-radius: 50%; background: var(--color-accent); color: var(--color-ink); box-shadow: 0 0 0 10px rgba(var(--color-accent-rgb), 0.18), 0 20px 40px -12px rgba(var(--color-ink-rgb), 0.6);">
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
       </div>

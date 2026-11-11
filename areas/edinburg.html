@@ -260,9 +260,19 @@
     /* ── Hero ── */
     .hero-bg { background: var(--color-dark); }
     .hero-vignette {
-      background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 35%, rgba(var(--color-ink-rgb),0.55) 100%);
+      background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 35%, rgba(var(--color-ink-rgb),0.35) 100%);
       pointer-events: none;
     }
+    /* Text scrims — darken only behind the hero / final-CTA text so the photo stays open.
+       Tuned by a pixel contrast check against the real images (Nov 11 2026):
+       body text ≥ 4.5:1, headings ≥ 3:1, at 1440px and 390px. */
+    .hero-scrim, .cta-scrim { position: relative; }
+    .hero-scrim::before, .cta-scrim::before { content: ""; position: absolute; z-index: -1; pointer-events: none; }
+    .hero-scrim::before { inset: -64px -112px; background: radial-gradient(closest-side, rgba(var(--color-dark-rgb),0.55) 0%, rgba(var(--color-dark-rgb),0.55) 70%, transparent 100%); }
+    .cta-scrim::before  { inset: -48px -128px; background: radial-gradient(closest-side, rgba(var(--color-dark-rgb),0.60) 0%, rgba(var(--color-dark-rgb),0.60) 70%, transparent 100%); }
+    .hero-scrim h1, .cta-scrim h2 { text-shadow: 0 0 2px rgba(var(--color-ink-rgb),0.6), 0 2px 24px rgba(var(--color-ink-rgb),0.45); }
+    .hero-scrim h1 span, .cta-scrim h2 span { text-shadow: 0 0 1px rgba(var(--color-ink-rgb),0.95), 0 0 3px rgba(var(--color-ink-rgb),0.9), 0 0 8px rgba(var(--color-ink-rgb),0.7), 0 2px 24px rgba(var(--color-ink-rgb),0.5); }
+    .hero-scrim h1 ~ p, .cta-scrim h2 + p { text-shadow: 0 0 1px rgba(var(--color-ink-rgb),0.9), 0 0 3px rgba(var(--color-ink-rgb),0.75), 0 0 8px rgba(var(--color-ink-rgb),0.5); }
     @media (max-width: 767px) { .hero-text-block h1 { font-size: 2.4rem !important; } }
 
     /* ── Buttons ──
@@ -736,18 +746,18 @@
       style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; z-index: 0;"
     />
 
-    <!-- Dark overlay (~0.7) + color-treatment layer -->
+    <!-- Dark overlay (lightened: 0.50/0.35/0.35/0.60, left radial 0.62) + color-treatment layer -->
     <div style="position: absolute; inset: 0; z-index: 1; background:
-      linear-gradient(180deg, rgba(var(--color-dark-rgb), 0.80) 0%, rgba(var(--color-dark-rgb), 0.68) 30%, rgba(var(--color-dark-rgb), 0.68) 65%, rgba(var(--color-dark-rgb), 0.88) 100%),
-      radial-gradient(ellipse 70% 100% at 0% 50%, rgba(var(--color-dark-rgb), 0.80) 0%, transparent 70%);
+      linear-gradient(180deg, rgba(var(--color-dark-rgb), 0.50) 0%, rgba(var(--color-dark-rgb), 0.35) 30%, rgba(var(--color-dark-rgb), 0.35) 65%, rgba(var(--color-dark-rgb), 0.60) 100%),
+      radial-gradient(ellipse 70% 100% at 0% 50%, rgba(var(--color-dark-rgb), 0.62) 0%, transparent 70%);
     "></div>
-    <div style="position: absolute; inset: 0; z-index: 1; mix-blend-mode: soft-light; background: radial-gradient(ellipse 60% 70% at 85% 20%, rgba(var(--color-accent-rgb), 0.55) 0%, transparent 60%);"></div>
+    <div style="position: absolute; inset: 0; z-index: 1; mix-blend-mode: soft-light; background: radial-gradient(ellipse 60% 70% at 85% 20%, rgba(var(--color-accent-rgb), 0.20) 0%, transparent 60%);"></div>
 
     <!-- Edge vignette -->
     <div class="hero-vignette absolute inset-0 z-[2]"></div>
 
     <div class="hero-outer relative z-10 max-w-6xl mx-auto px-5 w-full">
-      <div class="hero-text-block max-w-2xl fade-up">
+      <div class="hero-text-block hero-scrim max-w-2xl fade-up">
 
         <nav class="crumbs" aria-label="Breadcrumb">
           <a href="/">Home</a><span class="sep" aria-hidden="true">/</span>
@@ -757,11 +767,11 @@
 
         <p class="eyebrow" style="margin-bottom: 18px; text-shadow: 0 1px 8px rgba(var(--color-ink-rgb),0.45);">Serving Edinburg, TX</p>
 
-        <h1 id="page-h1" class="text-white mb-6 display-xl" style="font-size: clamp(2.35rem, 4.8vw, 3.6rem); text-shadow: 0 2px 24px rgba(var(--color-ink-rgb),0.45);">
+        <h1 id="page-h1" class="text-white mb-6 display-xl" style="font-size: clamp(2.35rem, 4.8vw, 3.6rem);">
           Laundromat &amp; Laundry Service Near Edinburg,&nbsp;TX
         </h1>
 
-        <p class="mb-9 max-w-xl" style="color: rgba(255,255,255,0.90); font-size: clamp(1.05rem, 2.2vw, 1.2rem); line-height: 1.7; text-shadow: 0 1px 8px rgba(var(--color-ink-rgb),0.35);">
+        <p class="mb-9 max-w-xl" style="color: rgba(255,255,255,0.90); font-size: clamp(1.05rem, 2.2vw, 1.2rem); line-height: 1.7;">
           Mr. Sudz is a family-owned laundromat in Pharr, straight down <span class="whitespace-nowrap">I-69C</span> from Edinburg. Drop off for wash, dry &amp; fold or wash it yourself, any day from 7am to 10pm.
         </p>
 
@@ -1051,11 +1061,11 @@
     <section class="dark-section relative py-28 overflow-hidden" aria-labelledby="final-cta-heading">
       <!-- OFF-LIMITS: cta-background — dedicated named file only (brand_assets/cta-background.webp, 1920×1080), never a content photo. AI-generated placeholder — replace with a real purpose-made photo later. -->
       <div class="absolute inset-0" style="background: url('/brand_assets/cta-background.webp') center center / cover no-repeat;"></div>
-      <div class="absolute inset-0" style="background: rgba(var(--color-dark-rgb), 0.78);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 55% 60% at 50% 110%, rgba(var(--color-accent-rgb), 0.28) 0%, transparent 60%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 120% 110% at 50% 50%, transparent 35%, rgba(var(--color-ink-rgb),0.45) 100%); pointer-events: none;"></div>
+      <div class="absolute inset-0" style="background: rgba(var(--color-dark-rgb), 0.55);"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 55% 60% at 50% 110%, rgba(var(--color-accent-rgb), 0.15) 0%, transparent 60%);"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 120% 110% at 50% 50%, transparent 35%, rgba(var(--color-ink-rgb),0.30) 100%); pointer-events: none;"></div>
 
-      <div class="relative z-10 max-w-3xl mx-auto px-5 text-center fade-up">
+      <div class="cta-scrim relative z-10 max-w-3xl mx-auto px-5 text-center fade-up">
         <p class="eyebrow">Laundry Day Made Easy</p>
         <h2 id="final-cta-heading" class="text-white mb-5 display-xl" style="font-size: clamp(2.3rem, 5.4vw, 3.9rem);">
           Skip the Pile.<br /><span style="color: var(--color-accent-bright);">Book a Pickup or Stop By.</span>

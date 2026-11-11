@@ -442,8 +442,17 @@ intro + unique "why [City] chooses us" per page.
   A photo/layout prompt must not touch these two backgrounds unless it is explicitly about
   them.
 - Static full-bleed image is the default hero on every page including the homepage
-  (`min-h-screen`, left-anchored text block, image + dark overlay ~0.7 + edge vignette +
+  (`min-h-screen`, left-anchored text block, image + dark overlay + edge vignette +
   text-shadows).
+  **Client override (Juan, Nov 11 2026) — lighter overlays so the photos show through:**
+  - Hero: vertical gradient 0.50 / 0.35 / 0.35 / 0.60 · left radial 0.62 · sky soft-light
+    tint 0.20 · edge vignette 0.35. (thank-you, centered: flat 0.50 + tint 0.20 + vignette 0.35.)
+  - Final CTA: flat overlay 0.55 · accent glow 0.15 · vignette 0.30.
+  - Text scrims carry legibility instead of darkening the whole image: `.hero-scrim` (0.55)
+    and `.cta-scrim` (0.60) — feathered navy radials behind the text block only, solid to
+    70% — plus tight ink text-shadows on the H1/H2, sky-blue lines and body text.
+    Pixel-checked on all 15 pages at 1440 + 390: body ≥ 4.5:1, headings ≥ 3:1. If a
+    background image is swapped, re-run the check and nudge only the scrim behind failing text.
 
 ### Hero video — enhancement, homepage only
 Only when the client provides a usable clip. Replaces the static homepage hero; the
