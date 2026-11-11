@@ -12,8 +12,8 @@ All paths are root-relative (`/brand_assets/…`).
 
 | File | Ratio | Dimensions | Used by |
 |---|---|---|---|
-| `hero-background.jpg` | 16:9 | 1920×1080 | Hero background on every page (incl. `about.html`, `thank-you.html`) |
-| `cta-background.jpg` | 16:9 | 1920×1080 | Final-CTA background on every page with a final-CTA |
+| `hero-background.webp` | 16:9 | 1920×1080 | Hero background on every page (incl. `about.html`, `thank-you.html`) — **AI-generated — replace with real photo later.** |
+| `cta-background.webp` | 16:9 | 1920×1080 | Final-CTA background on every page with a final-CTA — **AI-generated — replace with real photo later.** |
 
 > These two slots are marked `<!-- OFF-LIMITS: … -->` in the HTML. A client content photo
 > or gallery image is **never** promoted into either one.
@@ -22,7 +22,7 @@ All paths are root-relative (`/brand_assets/…`).
 
 | File | Ratio | Dimensions | Used by |
 |---|---|---|---|
-| `og-image.jpg` | 1.91:1 | 1200×630 | `og:image` + `twitter:image` on every indexable page |
+| `og-image.jpg` | 1.91:1 | 1200×630 | `og:image` + `twitter:image` on every page — built locally (navy `#153E66`, logo card, "Laundry Day Made Easy"). Rebuild when the client's high-res logo arrives. |
 
 ## Content photos — uniform container (`.photo-frame`)
 
@@ -57,3 +57,40 @@ these sizes:
 | `photo-logo-payment-wall.jpg` | client batch 1, cropped 4:3 from 960×1280 portrait | 960×720 | about (who we are) |
 
 Never used for `hero-background` / `cta-background` (dedicated slots only).
+
+## AI-generated images (Nov 11 2026) — **AI-generated — replace with real photo later**
+
+Generated with Gemini `gemini-3.1-flash-lite-image` (Nano Banana 2 Lite), one call per image,
+cropped to slot size and saved as webp. Stand-ins only: they do not show the real Mr. Sudz
+facility, and their alt text describes the image without claiming it is Mr. Sudz.
+
+| File | Size | Used on | Status |
+|---|---|---|---|
+| `hero-background.webp` | 1920×1080 | Hero on every page | AI-generated — replace with real photo later |
+| `cta-background.webp` | 1920×1080 | Final CTA on every page with one | AI-generated — replace with real photo later |
+| `ai-laundry-baskets.webp` | 1200×900 | services/wash-and-fold (who it's for) | AI-generated — replace with real photo later |
+| `ai-laundry-bag-folded.webp` | 1200×900 | services/wash-and-fold (pickup option) | AI-generated — replace with real photo later |
+| `ai-delivery-bag-carry.webp` | 1200×900 | services/laundry-pickup-delivery (intro) | AI-generated — replace with real photo later |
+| `ai-pickup-bag-door.webp` | 1200×900 | services/laundry-pickup-delivery (get ready) | AI-generated — replace with real photo later |
+| `ai-ironing-collar.webp` | 1200×900 | services/ironing-steaming (intro) | AI-generated — replace with real photo later |
+| `ai-starched-shirts.webp` | 1200×900 | services/ironing-steaming (starch) | AI-generated — replace with real photo later |
+| `ai-comforter-folded.webp` | 1200×900 | services/comforter-cleaning (intro) | AI-generated — replace with real photo later |
+| `ai-blankets-stack.webp` | 1200×900 | services/comforter-cleaning (what we clean) | AI-generated — replace with real photo later |
+| `ai-dry-cleaning-shirts-blazer.webp` | 1200×900 | services/dry-cleaning (intro) | AI-generated — replace with real photo later |
+| `ai-dry-cleaning-blazer-coat.webp` | 1200×900 | services/dry-cleaning (tips) | AI-generated — replace with real photo later |
+
+### Real client photos placed in storefront/interior slots (Nov 11 2026)
+
+`photo-storefront.webp` — 510×383, cropped 4:3 from the client's `storefront.png` (510×510,
+low-res — request original). No counter photo exists yet, so the counter slot uses the
+closest real interior shot, with alt text rewritten to match what's shown:
+
+| Slot | Real photo used |
+|---|---|
+| index (areas section — storefront) | `photo-storefront.webp` |
+| services/laundry-pickup-delivery (availability — front of store) | `photo-storefront.webp` |
+| areas/pharr (intro) | `photo-seating-tvs.jpg` |
+| areas/hidalgo (intro) | `photo-dryers-carts.webp` |
+| services/wash-and-fold (how it works — was "drop-off counter") | `photo-washers-row.webp` |
+
+Still wanted from the client: a high-res storefront original and a drop-off counter photo.
